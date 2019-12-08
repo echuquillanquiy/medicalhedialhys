@@ -32,7 +32,7 @@ class MedicalController extends Controller
             ->room($room)
             ->shift($shift)
             ->created_at($created_at)
-            ->paginate(50);
+            ->paginate(15);
         return view('medicals.index', compact('medicals', 'order', 'rooms', 'shifts'));
     }
 

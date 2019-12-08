@@ -32,7 +32,7 @@ class UserController extends Controller
             ->name($name)
             ->email($email)
             ->dni($dni)
-            ->paginate(5);
+            ->paginate(25);
         
         return view('users.index', compact('users'));
     }

@@ -30,7 +30,7 @@ class OrderController extends Controller
         $shifts = Shift::all();
         $users = User::all();
         $orders = Order::orderBy('created_at', 'desc')
-            ->paginate(50);
+            ->paginate(15);
         return view('orders.index', compact('orders','patients', 'rooms', 'shifts', 'users'));
     }
 

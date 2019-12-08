@@ -25,7 +25,7 @@ class PatientController extends Controller
             ->name($name)
             ->dni($dni)
             ->code($code)
-            ->paginate(6);
+            ->paginate(25);
 
         return view('patients.index', compact('patients'));
     }
