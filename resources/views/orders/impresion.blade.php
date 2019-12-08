@@ -102,7 +102,7 @@
 
 <table width="100%" style="border: 1px solid black; margin:-1px 0px auto">
   <tr>
-    <td style="font-size:13px">INDICACIONES DURANTE LA SESIÓN: {{ $order->medical->indications }}</td>
+    <td style="font-size:10px">INDICACIONES DURANTE LA SESIÓN: {{ $order->medical->indications }}</td>
   </tr>
 
 </table>
