@@ -20,7 +20,7 @@
 						<a href="/nurses" class="btn btn-info">Listado Enfermeria</a>
 					</div>
 				</div>
-				@else (auth()->user()->role == 'doctor')
+				@else (auth()->user()->role == 'doctor' || 'administrador')
 				<div class="row form-group bg-">
 					<div class="col-lg-2">
 						<a href="/orders/create" class="btn btn-warning">Generar Orden</a>
