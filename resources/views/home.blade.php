@@ -120,9 +120,9 @@
 								<div class="card-body">
 									<div class="row">
 										<div class="col">
-											<h5 class="card-title text-uppercase text-muted mb-0">USUARIOS REGISTRADOS</h5>
+											<h5 class="card-title text-uppercase text-muted mb-0">USUARIOS</h5>
 											<span class="h2 font-weight-bold mb-0">{{ $total_users }}</span>
-											<p>Usuarios</p>
+											<p>Registrado(s)</p>
 										</div>
 										<div class="col-auto">
 											<div class="icon icon-shape bg-danger text-white rounded-circle shadow">
@@ -143,7 +143,7 @@
 										<div class="col">
 											<h5 class="card-title text-uppercase text-muted mb-0">PACIENTES</h5>
 											<span class="h2 font-weight-bold mb-0">{{ $total_patients }}</span>
-											<p>Pacientes</p>
+											<p>Registrado(s)</p>
 										</div>
 										<div class="col-auto">
 											<div class="icon icon-shape bg-warning text-white rounded-circle shadow">
@@ -164,7 +164,7 @@
 										<div class="col">
 											<h5 class="card-title text-uppercase text-muted mb-0">ORDENES</h5>
 											<span class="h2 font-weight-bold mb-0">{{ $total_orders }}</span>
-											<p>Pacientes</p>
+											<p>Resgistradas</p>
 										</div>
 										<div class="col-auto">
 											<div class="icon icon-shape bg-info text-white rounded-circle shadow">
