@@ -52,9 +52,9 @@ class MedicalController extends Controller
             'start_weight' => 'required|min:2',
             'start_pa' => 'required|min:2',
             'fc' => 'required|min:2',
-            'clinical_trouble' => 'required|min:5',
-            'evaluation' => 'required|min:15',
-            'indications' => 'required|min:15',
+            'clinical_trouble' => 'min:5',
+            'evaluation' => 'min:10',
+            'indications' => 'min:10',
             'hour_hd' => 'required|min:2',
             'heparin' => 'required|min:2',
             'dry_weight' => 'required|min:2',
@@ -74,12 +74,13 @@ class MedicalController extends Controller
         ];
 
         $messages = [
+
             'start_weight.required' => 'Es necesario ingresar el peso.',
             'start_pa.required' => 'Es necesario la presión inicial',
             'fc.required' => 'Es necesaria la frecuencia cardiaca',
             'clinical_trouble.min' => 'Los problemas clínicos deben tener mínimo 5 caracteres.',
-            'evaluation.min' => 'La evaluación de tener mínimo 15 caracteres.',
-            'indications.min' => 'La evaluación de tener mínimo 15 caracteres.',
+            'evaluation.min' => 'La evaluación de tener mínimo 10 caracteres.',
+            'indications.min' => 'La evaluación de tener mínimo 10 caracteres.',
             'hour_hd.required' => 'Las horas de HD son requeridas',
             'heparin.required' => 'La dosis de Heparina es requerida',
 

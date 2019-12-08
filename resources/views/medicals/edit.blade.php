@@ -54,17 +54,17 @@
       
       <div class="form-group col-sm-12 col-lg-4">
         <label for="clinical_trouble">Problemas Clínicos</label>
-        <textarea class="form-control" id="" name="clinical_trouble" rows="2" value="{{ old('clinical_trouble') }}">{{ $medical->clinical_trouble }}</textarea>
+        <textarea class="form-control" id="" name="clinical_trouble" rows="2">{{ old('clinical_trouble', 'ERC-5 HD' ,$medical->clinical_trouble) }}</textarea>
       </div>
 
       <div class="form-group col-sm-12 col-lg-4">
         <label for="evaluation">Evaluación</label>
-        <textarea class="form-control" id="" name="evaluation" rows="2" value="{{ old('evaluation') }}">{{ $medical->evaluation }}</textarea>
+        <textarea class="form-control" id="" name="evaluation" rows="2">{{ old('evaluation' ,$medical->evaluation) }}</textarea>
       </div>
 
       <div class="form-group col-sm-12 col-lg-4">
         <label for="indications">Indicaciones</label>
-        <textarea class="form-control" id="" name="indications" rows="2" value="{{ old('indications') }}">{{ $medical->indications }}</textarea>
+        <textarea class="form-control" id="" name="indications" rows="2">{{ old('indications', $medical->indications) }}</textarea>
       </div>
 
     </div>      
