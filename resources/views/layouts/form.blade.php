@@ -51,7 +51,7 @@
       </div>
     </nav>
     <!-- Header -->
-    <div class="header bg-gradient-primary py-4 py-lg-7">
+    <div class="header bg-gradient-primary py-6 py-lg-7">
       <div class="container">
         <div class="header-body text-center mb-3">
           <div class="row justify-content-center">
