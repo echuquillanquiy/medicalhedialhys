@@ -10,7 +10,7 @@
 				<p>Seleccione una opción del Panel Izquierdo o de las opciones
 				debajo</p>
 
-				@if (auth()->user()->role == 'enfermera')
+				@if (auth()->user()->role == 'enfermera' || 'administrador')
 				<div class="row form-group">
 					<div class="col-lg-2">
 						<a href="/orders/create" class="btn btn-warning">Generar Orden</a>
