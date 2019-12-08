@@ -191,7 +191,7 @@
   
   <li class="nav-item">
     <a class="nav-link" href="{{ url('/charts/orders/line') }}">
-      <i class="ni ni-sound-wave text-yellow"></i>Atenciones diarias
+      <i class="ni ni-sound-wave text-yellow"></i>Atenciones por mes
     </a>
   </li>
 
