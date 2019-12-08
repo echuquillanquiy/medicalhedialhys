@@ -195,10 +195,10 @@
     </a>
   </li>
 
-  <li class="nav-item">
+  <!--<li class="nav-item">
     <a class="nav-link" href="{{ url('/charts/room/bar') }}">
       <i class="ni ni-spaceship text-orange"></i>Salas mas activas
     </a>
-  </li>
+  </li>-->
 </ul>
 @endif
