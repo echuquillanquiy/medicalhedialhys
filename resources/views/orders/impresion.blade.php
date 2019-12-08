@@ -1,5 +1,5 @@
 
-<table width="100%" border="2px" style="border-collapse:collapse;">
+<table width="100%" border="2px" style="border-collapse:collapse; margin-top: -41px -auto">
     <tr>
       <th style="text-align: center"><img src="{{ asset('img/brand/logo_hysdialisis.png') }}" alt="LOGO" width="80px"></th>
       <th width="39%" style="text-align:center;"><h3>HISTORIA CLINICA DE CONTROL</h3></th>
@@ -55,7 +55,7 @@
 
 <table width="100%" style="border: 1px solid black; margin:-1px 0px auto">
   <tr>
-    <td tr style="font-size:0.8rem">EVALUACIÓN: Signos y Síntomas: <br> {{ $order->medical->evaluation }}</td>
+    <td tr style="font-size:0.7rem"><strong>EVALUACIÓN: </strong> Signos y Síntomas: {{ $order->medical->evaluation }}</td>
   </tr>
 </table>
 
@@ -102,7 +102,7 @@
 
 <table width="100%" style="border: 1px solid black; margin:-1px 0px auto">
   <tr>
-    <td style="font-size:11px">INDICACIONES DURANTE LA SESIÓN: {{ $order->medical->indications }}</td>
+    <td style="font-size:0.7rem"><strong>INDICACIONES DURANTE LA SESIÓN: </strong> {{ $order->medical->indications }}</td>
   </tr>
 
 </table>
@@ -132,11 +132,11 @@
 
 <table width="100%" style="border: 1px solid black; margin:-1px 0px auto">
   <tr>
-    <td style="font-size:0.8rem">OBSERVACION INICIAL: {{ $order->nurse->start_observation }}</td>
+    <td style="font-size:0.7rem"><strong>OBSERVACION INICIAL:</strong> {{ $order->nurse->start_observation }}</td>
   </tr>
 </table>
 
-<span style="font-size:0.8rem;">EVOLUCIÓN DEL TRATAMIENTO:</span>
+<span style="font-size:0.7rem;">EVOLUCIÓN DEL TRATAMIENTO:</span>
 
 <table width="100%" style="border-collapse:collapse;text-align:center;" border="1px;">
   <tr style="font-size:0.7rem;">
@@ -250,10 +250,10 @@
 
 <table width="100%" style="border: 1px solid black; margin:-1px 0px auto;">
   <tr>
-    <td style="font-size:0.8rem">OBSERVACION FINAL:</td>
+    <td style="font-size:0.7rem"><strong>OBSERVACION FINAL:</strong></td>
   </tr>
   <tr>
-    <td style="font-size:0.8rem;text-align:center;">{{ $order->nurse->end_observation }}</td>
+    <td style="font-size:0.7rem;text-align:center;">{{ $order->nurse->end_observation }}</td>
   </tr>
 </table>
 
@@ -276,8 +276,9 @@
 <br>
 <br>
 <br>
+<br>
 
-<table width="100%" style="text-align:center">
+<table width="100%" style="text-align:center; margin-bottom: -41px">
   <tr>
     <td style="font-size:0.8rem">Firma / Sello</td>
     <td style="font-size:0.8rem">Firma / Sello</td>
