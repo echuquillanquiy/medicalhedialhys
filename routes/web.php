@@ -15,7 +15,9 @@ Route::get('/', function () {
     return redirect('login');
 });
 
-Auth::routes();
+$options['register'] = false;
+
+Auth::routes($options);
 
 Route::get('/home', 'HomeController@index')->name('home');
 
