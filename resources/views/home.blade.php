@@ -9,38 +9,38 @@
 			<div class="card-body ">
 				<p>Seleccione una opción del Panel Izquierdo o de las opciones
 				debajo</p>
-
+				@if (auth()->user()->role == 'administrador')
 				<div class="row form-group text-center">
-					<div class="col-lg-2">
+					<div class="col-lg-2 col-sm-12 col-md-2">
 						<a href="/orders/create" class="btn btn-warning">Generar Orden</a>
 					</div>
 
-					<div class="col-lg-2">
+					<div class="col-lg-2 col-sm-12 col-md-2">
 						<a href="/nurses" class="btn btn-info">Listado Enfermeria</a>
 					</div>
 
-					<div class="col-lg-2">
+					<div class="col-lg-2 col-sm-12 col-md-2">
 						<a href="/medicals" class="btn btn-success">Listado Medicina</a>
 					</div>
 				</div>
 
-				@if (auth()->user()->role == 'enfermera')
+				@elseif (auth()->user()->role == 'enfermera')
 				<div class="row form-group">
-					<div class="col-lg-2">
+					<div class="col-lg-2 col-sm-12 col-md-2">
 						<a href="/orders/create" class="btn btn-warning">Generar Orden</a>
 					</div>
 
-					<div class="col-lg-2">
+					<div class="col-lg-2 col-sm-12 col-md-2">
 						<a href="/nurses" class="btn btn-info">Listado Enfermeria</a>
 					</div>
 				</div>
 				@elseif (auth()->user()->role == 'doctor')
 				<div class="row form-group bg-">
-					<div class="col-lg-2">
+					<div class="col-lg-2 col-sm-12 col-md-2">
 						<a href="/orders/create" class="btn btn-warning">Generar Orden</a>
 					</div>
 
-					<div class="col-lg-2">
+					<div class="col-lg-2 col-sm-12 col-md-2">
 						<a href="/medicals" class="btn btn-info">Listado Medicina</a>
 					</div>
 				</div>
