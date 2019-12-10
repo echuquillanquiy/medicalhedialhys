@@ -55,13 +55,13 @@
       @if ($medical->clinical_trouble == null)
       
         <div class="form-group col-sm-12 col-lg-4">
-          <label for="clinical_trouble">Problemas Clínicos</label>
-          <textarea class="form-control" id="" name="clinical_trouble" rows="2">{{ old('clinical_trouble', 'ERC-5 HD' ,$medical->clinical_trouble) }}</textarea>
+          <label for="clinical_trouble">Problemas Clínicos:</label>
+          <textarea class="form-control" id="" name="clinical_trouble" rows="2">{{ old('clinical_trouble', 'ERC-5 HD') }}</textarea>
         </div>
       @else
         <div class="form-group col-sm-12 col-lg-4">
           <label for="clinical_trouble">Problemas Clínicos</label>
-          <textarea class="form-control" id="" name="clinical_trouble" rows="2">{{$medical->clinical_trouble) }}</textarea>
+          <textarea class="form-control" id="" name="clinical_trouble" rows="2">{{ $medical->clinical_trouble }}</textarea>
         </div>
       @endif
 
