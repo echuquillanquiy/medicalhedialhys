@@ -43,4 +43,17 @@ class Order extends Model
     {
         return $this->hasOne(Nurse::class)->withDefault();
     }
+
+    /*public function scopePatient($query, $patient)
+    {
+        if($patient)
+            return $query->where('patient_id', 'LIKE', "%$patient%");
+    }*/
+
+    public function scopeCreated_at($query, $created_at)
+    {
+        if($created_at)
+            return $query->where('created_at', 'LIKE', "%$created_at%");
+    }
+
 }

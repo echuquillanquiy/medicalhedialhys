@@ -29,8 +29,13 @@ class OrderController extends Controller
         $rooms = Room::all();
         $shifts = Shift::all();
         $users = User::all();
+
+        /*$patient = $request->get('patient');*/
+        $created_at = $request->get('created_at');
+
         $orders = Order::orderBy('created_at', 'desc')
-            ->paginate(15);
+            ->created_at($created_at)
+            ->paginate(30);
         return view('orders.index', compact('orders','patients', 'rooms', 'shifts', 'users'));
     }
 

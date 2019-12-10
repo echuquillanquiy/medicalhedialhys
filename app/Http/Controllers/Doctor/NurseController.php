@@ -31,7 +31,7 @@ class NurseController extends Controller
             ->room($room)
             ->shift($shift)
             ->created_at($created_at)
-            ->paginate(15);
+            ->paginate(30);
         return view('nurses.index', compact('nurses','shifts', 'rooms'));
     }
 
