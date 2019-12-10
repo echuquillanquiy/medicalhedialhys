@@ -197,7 +197,7 @@
 
   <!--<li class="nav-item">
     <a class="nav-link" href="{{ url('/charts/room/bar') }}">
-      <i class="ni ni-spaceship text-orange"></i>Salas mas activas
+      <i class="ni ni-spaceship text-orange"></i>Pacientes por mes
     </a>
   </li>-->
 </ul>

@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Doctor;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\OrdersExport;
 use App\Order;
 use App\Patient;
 use App\Room;
@@ -13,16 +15,24 @@ use App\User;
 use App\Medical;
 use App\Nurse;
 
-
 use PDF;
 
 class OrderController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function exportOrderExcel() 
+    {
+        return Excel::download(new OrdersExport, 'order-list.xlsx');
+    }
+
+    public function show()
+    {
+        $nurse_list = Nurse::select('id', 'patient', 'created_at','room', 'shift')
+            ->orderBy('id', 'asc')
+            ->get();
+
+        return view('orders.cuadroPaciente', compact('nurse_list'));
+    }
+
     public function index(Request $request)
     {
         $patients = Patient::all();

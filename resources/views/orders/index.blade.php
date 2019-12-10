@@ -14,6 +14,10 @@
           Nueva orden
         </a>
       </div>
+
+      <a href="{{ route('orders.excel') }}" class="btn btn-sm btn-info">
+        Excel
+      </a>
     </div>
   </div>
   <div class="card-body">
