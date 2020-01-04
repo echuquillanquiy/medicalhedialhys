@@ -117,7 +117,7 @@
     </table>
   </div>
   <div class="card-body">
-    {{ $medicals->links() }}
+    {{ $medicals->appends($_GET)->links() }}
   </div>
 </div>
 @endsection

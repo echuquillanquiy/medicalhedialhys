@@ -55,7 +55,7 @@
     </table>
   </div>
   <div class="card-body">
-    {{ $evolutions->links() }}
+    {{ $evolutions->appends($_GET)->links() }}
   </div>
 </div>
 @endsection
