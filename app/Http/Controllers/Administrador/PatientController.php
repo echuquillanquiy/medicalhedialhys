@@ -32,7 +32,7 @@ class PatientController extends Controller
     }
 
     public function create(Request $request)
-    {        
+    {
         return view('patients.create');
     }
 
@@ -85,12 +85,7 @@ class PatientController extends Controller
     public function edit($id)
     {
         $patient = Patient::findOrFail($id);
-
-        $fecha = $patient->date_of_birth;
-
-        $age = Carbon::parse($fecha)->age;
-
-        return view('patients.edit', compact('patient', 'age'));
+        return view('patients.edit', compact('patient'));
     }
 
     public function update(Request $request, $id)

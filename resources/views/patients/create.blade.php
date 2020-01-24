@@ -49,9 +49,9 @@
             <div class="input-group-prepend">
             <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
             </div>
-            <input class="form-control datepicker" placeholder="Seleccionar fecha" 
+            <input class="form-control datepicker" onchange="Anos();" placeholder="Seleccionar fecha" 
                 id="date_of_birth" name="date_of_birth" type="text" 
-                value="{{ old('date_of_birth', date('Y-m-d')) }}" 
+                value="{{ old('date_of_birth', date('Y-m-d')) }}"
                 data-date-format="yyyy-mm-dd" 
                 >
           </div>
@@ -67,7 +67,7 @@
 
         <div class="form-group col-lg-1">
           <label for="age">Edad</label>
-          <input type="text" name="age" class="form-control" value="{{ old('age') }}" required>
+          <input type="text" name="age" id="age" class="form-control" value="" required>
         </div>
 
         <div class="form-group col-lg-5">
@@ -158,4 +158,5 @@
 
 @section('scripts')
 <script src="{{ asset('vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js') }}"></script>
+<script src="{{ asset('js/edad.js') }}"></script>
 @endsection
