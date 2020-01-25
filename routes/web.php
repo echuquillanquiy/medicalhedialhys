@@ -50,6 +50,7 @@ Route::middleware(['auth', 'administrador'])->namespace('Administrador')->group(
 	Route::get('/charts/orders/line', 'ChartController@orders');
 
 	Route::get('user-list-excel', 'UserController@exportExcel')->name('users.excel');
+	Route::resource('tracings', 'TracingController');
 });
 
 Route::middleware(['auth', 'doctor'])->namespace('Doctor')->group(function () {
@@ -67,6 +68,8 @@ Route::middleware(['auth', 'doctor'])->namespace('Doctor')->group(function () {
 
 	Route::get('/orders/{order}/impresion', 'OrderController@showPdf');
 	Route::get('order-list-excel', 'OrderController@exportOrderExcel')->name('orders.excel');
+
+	Route::resource('tracings', 'TracingController');
 
 });
 

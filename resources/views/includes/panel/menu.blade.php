@@ -64,6 +64,12 @@
           <ul class="text-gray">
             <i class="ni ni-bold-right text-Secondary"></i> Enfermeria
           </ul>
+        </a>
+
+        <a class="nav-link" href="/tracings">
+          <ul class="text-gray">
+            <i class="ni ni-bold-right text-Secondary"></i> Seguimiento
+          </ul>
         </a> 
 
       </div>
