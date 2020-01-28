@@ -54,6 +54,12 @@
           </ul>
         </a>
 
+        <a class="nav-link" href="/tracings">
+          <ul class="text-gray">
+            <i class="ni ni-bold-right text-Secondary"></i> Generar seguimiento
+          </ul>
+        </a>
+
         <a class="nav-link" href="/medicals">
           <ul class="text-gray">
             <i class="ni ni-bold-right text-Secondary"></i> Medicina
@@ -65,30 +71,13 @@
             <i class="ni ni-bold-right text-Secondary"></i> Enfermeria
           </ul>
         </a>
-
-        <a class="nav-link" href="/tracings">
-          <ul class="text-gray">
-            <i class="ni ni-bold-right text-Secondary"></i> Generar seguimiento
-          </ul>
-        </a>
       </div>
     </li>
 
-    <li class="nav-item acordion" id="atenciones">
-
-      <div class="nav-link card-header" id="headingOne" data-toggle="collapse" data-target="#seguimientos" aria-expanded="true" aria-controls="collapseOne">
-        <i class="ni ni-archive-2 text-red"></i> Seguimientos
-      </div>
-
-      <div id="seguimientos" class="collapse hide" aria-labelledby="headingOne" data-parent="#atenciones">
-
+    <li class="nav-item">
         <a class="nav-link" href="/format006s">
-          <ul class="text-gray">
-            <i class="ni ni-bold-right text-Secondary"></i> Formato006
-          </ul>
+            <i class="ni ni-curved-next text-dark"></i> Formato006
         </a> 
-
-      </div>
     </li>
 
     <!--<li class="nav-item acordion" id="almacen">

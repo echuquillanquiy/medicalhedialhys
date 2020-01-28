@@ -89,7 +89,7 @@
             <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
             </div>
             <input class="form-control datepicker" 
-                id="date_predl" name="date_predl" type="text" 
+                id="date_predl" name="date_predl" type="text" placeholder="Fecha primera dialisis"
                 value="{{ old('date_predl', $format006->date_predl )}}"
                 data-date-format="yyyy-mm-dd" 
                 >
@@ -116,51 +116,229 @@
       <h4>ACCESO VASCULAR</h4>
       <hr class="mt--1">
 
-      <div class="row mt--4 text-center ml-9">
+      <div class="row mt--4 text-center">
 
-        <div class="table-reponsive">
-          <table class="table align-items-center">
-            <thead class="thead-light">
-              <tr>
-                <th>CVC</th>
-                <th>FAV</th>
-                <th>TRATAMIENTO HIA</th>
-                <th>FRECUENCIA</th>
-              </tr>
-              
-            </thead>
-            <tbody>
-              <tr>
-                <td><input type="text" class="form-control"></td>
-                <td><input type="text" class="form-control"></td>
-                <td><input type="text" class="form-control"></td>
-                <td><input type="text" class="form-control"></td>
-              </tr>
+        <div class="col-12">
+          <div class="table-responsive">
+            <div>
+              <table class="table align-items-center">
+                <thead class="thead-light">
+                  <tr>
+                    <th>ITEM</th>
+                    <th>CVC</th>
+                    <th>FAV</th>
+                    <th colspan="2">TRATAMIENTO HIA / FRECUENCIA</th>
+                  </tr>
+                  
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span>TIEMPO PROM PERMANENCIA</span></td>
+                    <td><input type="text" class="form-control" name="tpp_acc_cvc" value="{{ $format006->tpp_acc_cvc }}"></td>
+                    <td><input type="text" class="form-control" name="tpp_acc_fav" value="{{ $format006->tpp_acc_fav }}"></td>
+                    <td><input type="text" class="form-control" name="hia1" value="{{ $format006->hia1 }}"></td>
+                    <td><input type="text" class="form-control" name="frecuency1" value="{{ $format006->frecuency1 }}"></td>
+                  </tr>
+    
+                  <tr>
+                    <td><span>NUMERO</span></td>
+                    <td><input type="text" class="form-control" name="num_acc_cvc" value="{{ $format006->num_acc_cvc }}"></td>
+                    <td><input type="text" class="form-control" name="num_acc_fav" value="{{ $format006->num_acc_fav }}"></td>
+                    <td><input type="text" class="form-control" name="hia2" value="{{ $format006->hia2 }}"></td>
+                    <td><input type="text" class="form-control" name="frecuency2" value="{{ $format006->frecuency2 }}"></td>
+                  </tr>
+    
+                  <tr>
+                    <td><span>CAUSA DE CAMBIO Y/O PÉRDIDA</span></td>
+                    <td><input type="text" class="form-control" name="lost_acc_cvc" value="{{ $format006->lost_acc_cvc }}"></td>
+                    <td><input type="text" class="form-control" name="lost_acc_fav" value="{{ $format006->lost_acc_fav }}"></td>
+                    <td><input type="text" class="form-control" name="hia3" value="{{ $format006->hia3 }}"></td>
+                    <td><input type="text" class="form-control" name="frecuency3" value="{{ $format006->frecuency3 }}"></td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
 
-              <tr>
-                <td><input type="text" class="form-control"></td>
-                <td><input type="text" class="form-control"></td>
-                <td><input type="text" class="form-control"></td>
-                <td><input type="text" class="form-control"></td>
-              </tr>
+        <div class="form-group col-sm-12 col-lg-2 ml-0 mt-2">
+          <span>Transplante</span>
+        </div>
 
-              <tr>
-                <td><input type="text" class="form-control"></td>
-                <td><input type="text" class="form-control"></td>
-                <td><input type="text" class="form-control"></td>
-                <td><input type="text" class="form-control"></td>
-              </tr>
-              
-            </tbody>
-          </table>
+        <div class="col-lg-2 form-group">
+          <select class="form-control" name="transplant" data-toggle="select" title="Simple select" data-placeholder="Select a state">
+            <option value="SI">SI</option>
+            <option value="NO">NO</option>
+          </select>
+        </div>
+
+        <div class="form-group col-sm-12 col-lg-2 ml-0 mt-2">
+          <span>fecha de transplante </span>
         </div>
         
+        <div class="form-group col-lg-3">
+          <div class="input-group">
+            <div class="input-group-prepend">
+            <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+            </div>
+            <input class="form-control datepicker" 
+                id="date_transplant" name="date_transplant" type="text" placeholder="Fecha de transplante"
+                value="{{ old('date_transplant', $format006->date_transplant )}}"
+                data-date-format="yyyy-mm-dd" 
+                >
+          </div>
+        </div>
+      </div>
+
+      <h3>Tabla de datos</h3>
+      <hr class="mt--1">
+      
+      <div class="table-responsive mb-2 text-center">
+        <div>
+          <caption class="text-center text-dark">PARTE I</caption>
+          <table class="table align-items-center table-dark table-bordered">
+            
+            <thead class="thead-dark">
+              <tr>
+                <td rowspan="3">N°</td>
+                <td rowspan="3">Mes</td>
+                <td rowspan="3">Fecha</td>
+                <td colspan="3">CONDICION DEL ACCESO VASCULAR ACTUAL</td>
+                <td colspan="2">FACTOR CLINICO</td>
+              </tr>
+              
+              <tr>
+                <td rowspan="2">TIPO</td>
+                <td rowspan="2">TIEMPO.</td>
+                <td rowspan="2">UBICAC.</td>
+                <td colspan="2">TRILL</td>
+              </tr>
+
+              <tr>
+                <td>CARAC</td>
+                <td>DIST.</td>
+              </tr>
+            </thead>
+
+            <tbody class="list">
+              <th width="7%">
+              <input class="form-control text-center" type="text" name="position" id="position" value="{{ $format006->position }}">
+              </th>
+              <th>
+                <select name="month" id="month" class="form-control">
+                  <option value="{{ $format006->month }}" disabled selected>{{ $format006->month }}</option>
+                  <option value="ENERO">ENERO</option>
+                  <option value="FEBRERO">FEBRERO</option>
+                  <option value="MARZO">MARZO</option>
+                  <option value="ABRIL">ABRIL</option>
+                  <option value="MAYO">MAYO</option>
+                  <option value="JUNIO">JUNIO</option>
+                  <option value="JULIO">JULIO</option>
+                  <option value="AGOSTO">AGOSTO</option>
+                  <option value="SETIEMBRE">SETIEMBRE</option>
+                  <option value="OCTUBRE">OCTUBRE</option>
+                  <option value="NOVIEMBRE">NOVIEMBRE</option>
+                  <option value="DICIEMBRE">DICIEMBRE</option>
+                </select>
+              </th>
+
+              <th>
+                <input class="form-control datepicker" 
+                id="date_register" name="date_register" type="text" placeholder="Fecha"
+                value="{{ old('date_register', $format006->date_register )}}"
+                data-date-format="yyyy-mm-dd" 
+                >
+              </th>
+
+              <th>
+                <input type="text" name="type" id="type" class="form-control" value="{{ $format006->type }}">
+              </th>
+
+              <th>
+                <input type="text" name="time" id="time" class="form-control" value="{{ $format006->time }}">
+              </th>
+
+              <th>
+                <input type="text" name="location" id="location" class="form-control" value="{{ $format006->location }}">
+              </th>
+
+              <th>
+                <input type="text" name="carac" id="carac" class="form-control" value="{{ $format006->carac }}">
+              </th>
+
+              <th>
+                <input type="text" name="dist" id="dist" class="form-control" value="{{ $format006->dist }}">
+              </th>
+            </tbody>
+
+          </table>
+
+          <div class="table-responsive mb-2 text-center mt-2">
+            <div>
+              <caption class="text-center text-dark">PARTE II</caption>
+              <table class="table align-items-center table-dark table-bordered">
+                
+                <thead class="thead-dark">
+                  <tr>
+                    <td colspan="5">FACTORES HEMODINAMICOS</td>
+                    <td rowspan="3">PROBLEMAS</td>
+                    <td rowspan="3">OBSERVACION</td>
+                  </tr>
+                  
+                  <tr>
+                    <td colspan="3">PRESION ARTERIAL</td>
+                    <td colspan="2">PARAMETROS</td>
+                  </tr>
+    
+                  <tr>
+                    <td>INIC.</td>
+                    <td>FIN</td>
+                    <td>QB</td>
+                    <td>RA</td>
+                    <td>RV</td>
+                  </tr>
+                </thead>
+    
+                <tbody class="list">
+    
+                  <th width="6%">
+                    <input type="text" name="start" id="start" class="form-control" value="{{ $format006->start }}">
+                  </th>
+    
+                  <th width="6%">
+                    <input type="text" name="end" id="end" class="form-control" value="{{ $format006->end }}">
+                  </th>
+    
+                  <th width="6%">
+                    <input type="text" name="qb" id="qb" class="form-control" value="{{ $format006->qb }}">
+                  </th>
+    
+                  <th width="6%">
+                    <input type="text" name="ra" id="ra" class="form-control" value="{{ $format006->ra }}">
+                  </th>
+    
+                  <th width="6%">
+                    <input type="text" name="rv" id="rv" class="form-control" value="{{ $format006->rv }}">
+                  </th>
+    
+                  <th width="6%">
+                    <input type="text" name="trouble" id="trouble" class="form-control" value="{{ $format006->trouble }}">
+                  </th>
+    
+                  <th width="6%">
+                    <input type="text" name="observation" id="observation" class="form-control" value="{{ $format006->observation }}">
+                  </th>
+                </tbody>
+    
+              </table>
+            </div>
+          </div>
+        </div>
       </div>
 
       <button type="submit" class="btn btn-primary">Guardar</button>
     </form>
-
-
 
   </div>
 </div>

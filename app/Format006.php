@@ -33,7 +33,7 @@ class Format006 extends Model
         'tpp_acc_cvc',
         'tpp_acc_fav',
         'num_acc_cvc',
-        'nom_acc_fav',
+        'num_acc_fav',
         'lost_acc_cvc',
         'lost_acc_fav',
 
