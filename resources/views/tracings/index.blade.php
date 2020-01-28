@@ -76,6 +76,8 @@
 
               <a href="{{ url('/tracings/'.$tracing->id.'/edit') }}" class="btn btn-sm btn-primary">Editar</a>
 
+              <button class="btn btn-sm btn-danger" onclick="return confirm('¿Seguro que desea eliminar el seguimiento del paciente {{ $tracing->patient->name }}?, ya que al borrarlo eliminara los registros que tenga del día {{ $tracing->created_at }}');" type="submit">Eliminar</button>
+
               <a href="{{ url('/tracings/'.$tracing->id.'/impresion') }}" class="btn btn-sm btn-info" target="_blank">Impresión</a>
             </form>
           </td>

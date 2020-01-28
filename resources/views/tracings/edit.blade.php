@@ -1,23 +1,31 @@
 @extends('layouts.panel')
 
-@section('content')
+@section('styles')
 
-<div class="card shadow">
-  <div class="card-header border-0">
-    <div class="row align-items-center">
-      <div class="col">
-        <h3 class="mb-0">Editar paciente</h3>
-      </div>
-      <div class="col text-right">
-        <a href="{{ url('tracings') }}" class="btn btn-sm btn-default">
-          Cancelar y volver
-        </a>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
+
+@endsection
+
+@section('content')
+<form action="{{ url('tracings/'.$tracing->id) }}" method="POST">
+  @csrf
+  @method('PUT')
+  <div class="card shadow">
+    <div class="card-header border-0">
+      <div class="row align-items-center">
+        <div class="col">
+          <h3 class="mb-0">Generar Seguimeinto Mensual</h3>
+        </div>
+        <div class="col text-right">
+          <a href="{{ url('tracings') }}" class="btn btn-sm btn-default">
+            Cancelar y volver
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="card-body">
+    <div class="card-body">
 
-    @if ($errors->any())
+      @if ($errors->any())
       <div class="alert alert-danger" role="alert">
         <ul>
           @foreach ($errors->all() as $error)
@@ -25,136 +33,51 @@
           @endforeach
         </ul>
       </div>
-    @endif
+      @endif
 
-  	<form action="{{ url('tracings/'.$tracing->id) }}" method="POST">
-  		@csrf
-      @method('PUT')
-	  	<div class="form-group">
-	  		<label for="name">Nombres y Apellidos</label>
-	  		<input type="text" name="name" class="form-control" value="{{ old('name', $tracing->name) }}" required>
-	  	</div>
-
+      @csrf
       <div class="row">
-
-        <div class="form-group col-lg-2">
-          <label for="dni">DNI</label>
-          <input type="text" name="dni" class="form-control" value="{{ old('dni', $tracing->dni) }}" required>
+        <div class="form-group col-sm-12 col-lg-6">
+          <label for="patient_id">Pacientes</label
+>          <select name="patient_id" id="patient_id" class="form-control selectpicker" data-live-search="true" data-style="btn-info">
+            <option value="{{ $tracing->patient->id }}">{{ $tracing->patient->name }}</option>
+          </select>
         </div>
 
-        <div class="form-group col-lg-2">
-            <label for="date_of_birth">Fecha de nacimiento</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
-            </div>
-            <input class="form-control datepicker" onchange="Anos();" placeholder="Seleccionar fecha" 
-                id="date_of_birth" name="date_of_birth" type="text" 
-                value="{{ old('date_of_birth', $tracing->date_of_birth) }}" 
-                data-date-format="yyyy-mm-dd" >
-          </div>
+        <div class="form-group col-sm-12 col-lg-3">
+          <label for="room_id">Salas</label>
+          <select data-live-search="true" name="room_id" id="room_id" class="form-control selectpicker" data-style="btn-info">
+            <option value="{{ $tracing->room->id }}">{{ $tracing->room->name }}</option>
+            @foreach ($rooms as $room)
+            <option value="{{ $room->id }}">{{ $room->name }}</option>
+            @endforeach
+          </select>
         </div>
 
-        <div class="form-group col-lg-2">
-            <label for="sex">Sexo</label>
-            <select class="form-control" name="sex" data-toggle="select" title="Simple select" data-placeholder="Select a state" value="{{ old('sex', $tracing->sex) }}">
-                <option value="MASCULINO">MASCULINO</option>
-                <option value="FEMENINO">FEMENINO</option>
-            </select>
+        <div class="form-group col-sm-12 col-lg-3">
+          <label for="shift_id">Turnos</label>
+          <select name="shift_id" id="shift_id" class="form-control selectpicker" data-live-search="true" data-style="btn-info">
+            <option value="{{ $tracing->shift->id }}">{{ $tracing->shift->name }}</option>
+            @foreach ($shifts as $shift)
+            <option value="{{ $shift->id }}">{{ $shift->name }}</option>
+
+            @endforeach
+          </select>
         </div>
 
-        <div class="form-group col-lg-1">
-          <label for="age">Edad</label>
-          <input type="text" name="age" id="age" class="form-control" value="{{ old('age', $tracing->age) }}" required>
-        </div>
-
-        <div class="form-group col-lg-5">
-          <label for="address">Dirección</label>
-          <input type="text" name="address" class="form-control" value="{{ old('address', $tracing->address) }}" required>
+        <div class="form-group">
+          <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
         </div>
       </div>
 
-      <div class="row">
-        
-        <div class="form-group col-lg-2">
-          <label for="phone">Telefono</label>
-          <input type="text" name="phone" class="form-control" value="{{ old('phone', $tracing->phone) }}" required>
-        </div>
 
-        <div class="form-group col-lg-2">
-            <label for="civil_status">Estado Civil</label>
-            <select class="form-control" name="civil_status" data-toggle="select" title="Simple select" data-placeholder="Select a state">
-                <option value="{{ $tracing->civil_status }}">{{ $tracing->civil_status }}</option>
-                <option value="Casado">Casado</option>
-                <option value="Soltero">Soltero</option>
-                <option value="Conviviente">Conviviente</option>
-                <option value="Viudo">Viudo</option>
-                <option value="Divorciado">Divorciado</option>
-
-            </select>
-        </div>
-
-        <div class="form-group col-lg-3">
-            <label for="instruction">Grado de Instrucción</label>
-            <select class="form-control" name="instruction" data-toggle="select" title="Simple select" data-placeholder="Select a state">
-                <option value="{{ $tracing->instruction }}">{{ $tracing->instruction }}</option>
-                <option value="Analfabeto">Analfabeto</option>
-                <option value="Primaria Completa">Primaria Completa</option>
-                <option value="Secundadia Completa">Secundadia Completa</option>
-                <option value="Técnico Completa">Técnico Completa</option>
-                <option value="Universitario Completa">Universitario Completa</option>
-                <option value="Primaria Incompleta">Primaria Incompleta</option>
-                <option value="Secundadia Incompleta">Secundadia Incompleta</option>
-                <option value="Técnico Incompleta">Técnico Incompleta</option>
-                <option value="Universitario Incompleta">Universitario Incompleta</option>
-            </select>
-        </div>
-
-        <div class="form-group col-lg-5">
-          <label for="ocupation">Ocupación Actual</label>
-          <input type="text" name="ocupation" class="form-control" value="{{ old('ocupation', $tracing->ocupation) }}">
-        </div>
-      </div> 	
-
-      <div class="row">
-        
-        <div class="form-group col-lg-4">
-          <label for="condition">Condición Actual</label>
-          <input type="text" name="condition" class="form-control" value="{{ old('condition', $tracing->condition) }}">
-        </div>
-
-        <div class="form-group col-lg-3">
-            <label for="last_job">Fecha de último trabajo</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
-            </div>
-            <input class="form-control datepicker" placeholder="Seleccionar fecha" 
-                id="date" name="last_job" type="text" 
-                value="{{ old('last_job', $tracing->last_job) }}" 
-                data-date-format="yyyy-mm-dd" >
-          </div>
-        </div> 
-
-        <div class="form-group col-lg-5">
-          <label for="hosp_origin">Hospital de origen</label>
-          <input type="text" name="hosp_origin" class="form-control" value="{{ old('hosp_origin', $tracing->hosp_origin) }}" required>
-        </div>     
-
-      </div>
-    
-      <div class="form-group">
-        <label for="code">Codigo (Autogenerado)</label>
-        <input type="text" name="code" class="form-control" value="{{ old('code', $tracing->code) }}" required>
-      </div>       
-
-	  	<button type="submit" class="btn btn-primary">Guardar</button>
-	  </form>
+      <button type="submit" class="btn btn-primary">Guardar</button>
+    </form>
   </div>
 </div>
 @endsection
 
 @section('scripts')
 <script src="{{ asset('vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js') }}"></script>
-<script src="{{ asset('js/edad.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
 @endsection
