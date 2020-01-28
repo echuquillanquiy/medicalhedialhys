@@ -51,6 +51,7 @@ Route::middleware(['auth', 'administrador'])->namespace('Administrador')->group(
 
 	Route::get('user-list-excel', 'UserController@exportExcel')->name('users.excel');
 	Route::resource('tracings', 'TracingController');
+	Route::resource('format006s', 'Format006Controller');
 });
 
 Route::middleware(['auth', 'doctor'])->namespace('Doctor')->group(function () {
@@ -70,6 +71,7 @@ Route::middleware(['auth', 'doctor'])->namespace('Doctor')->group(function () {
 	Route::get('order-list-excel', 'OrderController@exportOrderExcel')->name('orders.excel');
 
 	Route::resource('tracings', 'TracingController');
+	Route::resource('format006s', 'Format006Controller');
 
 });
 
