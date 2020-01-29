@@ -14,7 +14,8 @@
 
 <table width="100%" style="margin:-8px auto; border:hidden">
 
-    <p style="border: solid 1px">NOMBRE DEL PACIENTE: {{ $tracing->patient->name }}</p>
+    <p style="border: solid 1px">NOMBRE DEL PACIENTE: {{ $tracing->format006->frec }}</p>
+
 <tr>
     <th style="font-size:0.7rem; font-family:Arial, Helvetica, sans-serif;"></th> 
 </tr>
