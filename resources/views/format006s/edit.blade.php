@@ -323,11 +323,11 @@
                   </th>
     
                   <th width="6%">
-                    <input type="text" name="trouble" id="trouble" class="form-control" value="{{ $format006->trouble }}">
+                    <textarea type="text" name="trouble" id="trouble" class="form-control" rows="6" cols="10">{{ $format006->trouble }}</textarea>
                   </th>
     
                   <th width="6%">
-                    <input type="text" name="observation" id="observation" class="form-control" value="{{ $format006->observation }}">
+                    <textarea type="text" name="observation" id="observation" class="form-control" rows="6" cols="10">{{ $format006->observation }}</textarea>
                   </th>
                 </tbody>
     

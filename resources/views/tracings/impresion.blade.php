@@ -46,8 +46,8 @@
         <td style="text-align: center !important; border: 1px solid !important; width: 200px">{{ $tracing->format006->nefro_treat }}</td>
     </tr>
     <tr>
-        <td style="margin-right:5px !important;">APODERADO:</strong></td>
-        <td style="text-align: center !important; border: 1px solid !important;height:10px !important">{{$tracing->format006->attorney }}</td>
+        <td style="margin-right:5px !important;">AUTOGENERADO:</strong></td>
+        <td style="text-align: center !important; border: 1px solid !important;height:10px !important">{{$tracing->patient->code }}</td>
         <td></td>
         <td></td>
         <td></td>
@@ -154,48 +154,61 @@
 </table>
 
 
-<table style="margin-top:8px; margin-left:-5px; margin-right:-13px; font-family:Arial, Helvetica, sans-serif; font-size:0.7rem; border-collapse:collapse;border:1px solid">
-    <tr>
-        <td rowspan="3">N°</td>
-        <td rowspan="3">Mes</td>
-        <td rowspan="3">Fecha</td>
-        <td colspan="3">CONDICION DEL ACCESO VASCULAR ACTUAL</td>
-        <td colspan="2">FACTOR CLINICO</td>
-        <td colspan="5">FACTORES HEMODINAMICO</td>
-        <td rowspan="3">PROBLEMAS</td>
-        <td rowspan="3">OBSERVACION</td>
-    </tr>
+<table style="margin-top:18px; margin-left:-20px; margin-right:-3px; font-family:Arial, Helvetica, sans-serif; font-size:0.6rem; border-collapse:collapse;border:1px solid black; text-align:center !important;">
+    
+    <thead style="border: 1px solid black">
+        <tr>
+            <td style="border: 1px solid black" rowspan="3">N°</td>
+            <td style="border: 1px solid black" rowspan="3">Mes</td>
+            <td style="border: 1px solid black" rowspan="3">Fecha</td>
+            <td style="border: 1px solid black" colspan="3">CONDICION DEL ACCESO VASCULAR ACTUAL</td>
+            <td style="border: 1px solid black" colspan="2">FACTOR CLINICO</td>
+            <td style="border: 1px solid black" colspan="5">FACTORES HEMODINAMICO</td>
+            <td style="border: 1px solid black" rowspan="3">PROBLEMAS</td>
+            <td style="border: 1px solid black" rowspan="3">OBSERVACION</td>
+        </tr>
+    
+        <tr>
+            <td style="border: 1px solid black" rowspan="2">TIPO</td>
+            <td style="border: 1px solid black" rowspan="2">TIEMPO.</td>
+            <td style="border: 1px solid black" rowspan="2">UBICAC.</td>
+            <td style="border: 1px solid black" colspan="2">TRILL</td>
+            <td style="border: 1px solid black" colspan="3">PRESION ARTERIAL</td>
+            <td style="border: 1px solid black" colspan="2">PARAMETROS</td>
+        </tr>
+    
+        <tr>
+            <td style="border: 1px solid black">CARAC</td>
+            <td style="border: 1px solid black">DIST.</td>
+            <td style="border: 1px solid black">INIC.</td>
+            <td style="border: 1px solid black">FIN</td>
+            <td style="border: 1px solid black">QB</td>
+            <td style="border: 1px solid black">RA</td>
+            <td style="border: 1px solid black">RV</td>
+        </tr>
+    </thead>
 
-    <tr>
-        <td rowspan="2">TIPO</td>
-        <td rowspan="2">TIEMPO.</td>
-        <td rowspan="2">UBICAC.</td>
-        <td colspan="2">TRILL</td>
-        <td colspan="3">PRESION ARTERIAL</td>
-        <td colspan="2">PARAMETROS</td>
-    </tr>
+    <tbody style="border: 1px solid black">
+        <tr>
+            <td style="border: 1px solid black; width:10 px">{{ $tracing->format006->position }}</td>
+            <td style="border: 1px solid black; width:50 px;">{{ $tracing->format006->month }}</td>
+            <td style="border: 1px solid black; width:50 px">{{ $tracing->format006->date_register }}</td>
+            <td style="border: 1px solid black; width:50 px">{{ $tracing->format006->type }}</td>
+            <td style="border: 1px solid black; width:50 px">{{ $tracing->format006->time }}</td>
+            <td style="border: 1px solid black; width:40 px">{{ $tracing->format006->location }}</td>
+            <td style="border: 1px solid black; width:40 px">{{ $tracing->format006->carac }}</td>
+            <td style="border: 1px solid black; width:30 px">{{ $tracing->format006->dist }}</td>
+            <td style="border: 1px solid black; width:30 px">{{ $tracing->format006->start }}</td>
+            <td style="border: 1px solid black; width:30 px">{{ $tracing->format006->end }}</td>
+            <td style="border: 1px solid black; width:30 px">{{ $tracing->format006->qb }}</td>
+            <td style="border: 1px solid black; width:30 px">{{ $tracing->format006->ra }}</td>
+            <td style="border: 1px solid black; width:30 px">{{ $tracing->format006->rv }}</td>
+            <td style="border: 1px solid black; width:100px">{{ $tracing->format006->trouble }}</td>
+            <td style="border: 1px solid black; width:150px">{{ $tracing->format006->observation }}</td> 
+        </tr>
+          
+    </tbody>
 
-    <tr>
-        <td>CARAC</td>
-        <td>DIST.</td>
-        <td>INIC.</td>
-        <td>FIN</td>
-        <td>QB</td>
-        <td>RA</td>
-        <td>RV</td>
-    </tr>
 
-    <th>{{ $tracing->format006->position }}</th>
-    <th>{{ $tracing->format006->month }}</th>
-    <th>{{ $tracing->format006->position }}</th>
-    <th>{{ $tracing->format006->position }}</th>
-    <th>{{ $tracing->format006->position }}</th>
-    <th>{{ $tracing->format006->position }}</th>
-    <th>{{ $tracing->format006->position }}</th>
-    <th>{{ $tracing->format006->position }}</th>
-    <th>{{ $tracing->format006->position }}</th>
-    <th>{{ $tracing->format006->position }}</th>
-    <th>{{ $tracing->format006->position }}</th>
-    <th>{{ $tracing->format006->position }}</th>
 
 </table>

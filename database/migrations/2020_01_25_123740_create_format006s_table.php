@@ -74,8 +74,8 @@ class CreateFormat006sTable extends Migration
             $table->string('qb', 10)->nullable();
             $table->string('ra', 10)->nullable();
             $table->string('rv', 10)->nullable();
-            $table->string('trouble', 100)->nullable();
-            $table->string('observation', 100)->nullable();
+            $table->text('trouble', 100)->nullable();
+            $table->text('observation', 100)->nullable();
             
             $table->timestamps();
         });
