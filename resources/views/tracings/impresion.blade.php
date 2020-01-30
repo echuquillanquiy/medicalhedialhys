@@ -19,7 +19,7 @@
         <td style="margin-left:5px !important;">EDAD</td>
         <td style="text-align: center !important; border: 1px solid !important; width: 120px">{{ $tracing->patient->age }}</td>
         <td style="margin-left:5px !important;">SEXO</td>
-        <td style="text-align: center !important; border: 1px solid !important; width: 80px;">{{ $tracing->patient->sex }}</td>
+        <td style="text-align: center !important; border: 1px solid !important; width: 90px;">{{ $tracing->patient->sex }}</td>
         <td style="margin-left:5px !important;">HOPS. DE REFERENCIA</td>
         <td style="text-align: center !important; border: 1px solid !important; width: 220px">{{ $tracing->patient->hosp_origin }}</td>
     </tr>
