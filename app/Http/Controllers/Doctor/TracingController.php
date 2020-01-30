@@ -65,7 +65,7 @@ class TracingController extends Controller
 
         $format006s = $tracing->format006()->create($tracings_data);
         $notification = 'Se registro el seguimiento correctamente.';
-        return redirect('/tracings/')->with(compact('notification'));
+        return redirect('/tracings')->with(compact('notification'));
     }
 
     public function edit ($id)

@@ -20,4 +20,16 @@ class Format006Controller extends Controller
         $format006 = Format006::findOrFail($id);
         return view('format006s.edit', compact('format006'));
     }
+
+    public function update(Request $request, $id)
+    {
+        $format006 = Format006::findOrFail($id); 
+
+        $data = $request->all();
+
+        $format006->fill($data);
+        $format006->save();
+
+        $notification = 'La información fue establecida correctamente.';
+        return redirect('/format006s')->with(compact('notification'));
 }

@@ -63,6 +63,52 @@ class TracingController extends Controller
 
         $format006s = $tracing->format006()->create($tracings_data);
         $notification = 'Se registro el seguimiento correctamente.';
-        return redirect('/tracings/')->with(compact('notification'));
+        return redirect('/tracings')->with(compact('notification'));
+    }
+
+    public function edit ($id)
+    {
+        $patients = Patient::all();
+        $rooms = Room::all();
+        $shifts = Shift::all();
+        $tracing = Tracing::findOrFail($id);
+
+        return view('tracings.edit', compact('tracing','patients', 'rooms', 'shifts'));
+    }
+
+    public function update (Request $request, $id)
+    {
+        $tracing = Tracing::findOrFail($id);
+
+        $data = $request->only([
+            'room_id',
+            'shift_id'
+        ]);
+
+        $tracing->fill($data);
+        $tracing->save();
+
+        $notification = 'El seguimiento se ha actualizado correctamente.';
+        return redirect('/tracings')->with(compact('notification'));
+
+    }
+
+    public function showPdf($tracing)
+    {
+        $tracing = Tracing::findOrFail($tracing);
+
+        $pdf = PDF::loadView('tracings.impresion', compact('tracing'));
+        $pdf->setPaper('A4', 'landscape');
+        return $pdf->stream();
+    }
+
+    public function destroy(Tracing $tracing)
+    {
+        $tracingName = $tracing->patient->name;
+        $tracing->format006->delete();
+        $tracing->delete();
+
+        $notification = "El seguimiento del paciente: $tracingName se ha eliminado correctamente.";
+        return redirect('/tracings')->with(compact('notification'));
     }
 }

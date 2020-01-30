@@ -32,9 +32,8 @@
           <th scope="col">Nombres</th>
           <th scope="col">Sala</th>
           <th scope="col">Turno</th>
+          <th scope="col">Fecha y Hora</th>
           <th scope="col">DNI</th>
-          <th scope="col">edad</th>
-          <th scope="col">Sexo</th>
           <th scope="col">Hospital de referncia</th>
           <th scope="col">Opciones</th>
         </tr>
@@ -53,15 +52,11 @@
           </td>
 
           <td>
+            {{$tracing->created_at}}
+          </td>
+
+          <td>
             {{$tracing->patient->dni}}
-          </td>
-
-          <td>
-            {{$tracing->patient->age}}
-          </td>
-
-          <td>
-            {{$tracing->patient->sex}}
           </td>
 
           <td>

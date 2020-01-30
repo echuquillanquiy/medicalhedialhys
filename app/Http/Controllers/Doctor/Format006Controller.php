@@ -23,7 +23,7 @@ class Format006Controller extends Controller
 
     public function update(Request $request, $id)
     {
-        $format006 = Format006::findOrFail($id);
+        $format006 = Format006::findOrFail($id); 
 
         $data = $request->all();
 
