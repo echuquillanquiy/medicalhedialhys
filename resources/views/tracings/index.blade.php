@@ -32,7 +32,7 @@
           <th scope="col">Nombres</th>
           <th scope="col">Sala</th>
           <th scope="col">Turno</th>
-          <th scope="col">Fecha y Hora</th>
+          <th scope="col">Creación</th>
           <th scope="col">DNI</th>
           <th scope="col">Hospital de referncia</th>
           <th scope="col">Opciones</th>
