@@ -141,8 +141,15 @@
           <ul class="text-gray">
             <i class="ni ni-bold-right text-Secondary"></i> Enfermeria
           </ul>
-        </a> 
+        </a>
       </div>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="/format006s">
+            <i class="ni ni-curved-next text-dark"></i> Formato006
+        </a> 
+    </li>
     </li>
   @elseif (auth()->user()->role == 'logistica')
   

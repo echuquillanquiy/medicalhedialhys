@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="card shadow">
-  <div class="card-header border-0">
+  <div class="card-header border-0 mb--6">
     <div class="row align-items-center">
       <div class="col-lg">
         <h3 class="mb-0">Ordenes de Atención</h3>
@@ -20,7 +20,7 @@
       </a>
     </div>
   </div>
-  <div class="card-body">
+  <div class="card-body mt-5 mb--5">
     @if (session('notification'))
     <div class="alert alert-success" role="alert">
       <span class="alert-icon"><i class="ni ni-curved-next"></i></span>
@@ -29,13 +29,12 @@
     @endif
   </div>
 
-  <div class="card-body">
+  <div class="card-body mb--4">
     <form action="{{ url('orders') }}" method="GET">
       <div class="row">
 
         <div class="form-group col-lg-4">
-            <label for="created_at">Fecha</label>
-          <div class="input-group">
+            <div class="input-group">
             <div class="input-group-prepend">
             <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
             </div>
@@ -46,16 +45,19 @@
                 >
           </div>
         </div>
+        <div class="col-lg-3">
+          <button class="btn btn-info btn-md" type="submit">Buscar</button>
+        </div>
 
-
+        
       </div>
-      <button class="btn btn-info btn-sm" type="submit">Buscar</button>
+      
     </form>
   </div>
 
   <div class="table-responsive">
     <!-- Projects table -->
-    <table class="table align-items-center table-flush">
+    <table class="table align-items-center table-flush table-hover">
       <thead class="thead-light">
         <tr>
           <th scope="col">ID</th>
@@ -96,6 +98,8 @@
               <button class="btn btn-sm btn-danger" onclick="return confirm('¿Seguro que desea eliminar la orden del paciente {{ $order->patient->name }}?, ya que al borrarlo eliminara los registros que tenga del día {{ $order->created_at }}');" type="submit">Eliminar</button>
 
               <a href="{{ url('/orders/'.$order->id.'/impresion') }}" class="btn btn-sm btn-info" target="_blank">Impresión</a>
+
+              <a href="{{ url('/orders/'.$order->id.'/impresion2020') }}" class="btn btn-sm btn-success" target="_blank">Anexo03</a>
             </form>           
 
           </td>
@@ -105,7 +109,7 @@
     </table>
   </div>
   <div class="card-body">
-    {{ $orders->links() }}
+    {{ $orders->appends($_GET)->links() }}
   </div>
 </div>
 

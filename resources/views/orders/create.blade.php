@@ -34,7 +34,7 @@
       @endif
 
       @csrf
-      <div class="row">
+      <div class="row mt--4">
         <div class="form-group col-sm-12 col-lg-6">
           <label for="patient_id">Pacientes</label
 >          <select name="patient_id" id="patient_id" class="form-control selectpicker" data-live-search="true" data-style="btn-info">
