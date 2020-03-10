@@ -78,9 +78,9 @@
       </tr>
       <tr>
         <td style="font-size: 0.7rem; width: 9%">Tiempo Dialisis:</td>
-        <td style="font-size: 0.7rem; border-bottom: 1px solid; width: 10%">{{ $order->medical->hour_hd }} h</td>
+        <td style="font-size: 0.7rem; border-bottom: 1px solid; width: 10%">{{ $order->medical->hour_hd }} HRSS</td>
         <td style="font-size: 0.7rem; width: 10%">Flujo Sanguineo(Qb):</td>
-        <td style="font-size: 0.7rem; border-bottom: 1px solid; width: 10%">{{ $order->medical->qb }} m/min</td>
+        <td style="font-size: 0.7rem; border-bottom: 1px solid; width: 10%">{{ $order->medical->qb }} cc</td>
         <td style="font-size: 0.7rem; width: 5%">Perfil UF:</td>
         <td style="font-size: 0.7rem; border-bottom: 1px solid; width: 8%">{{ $order->medical->profile_uf }} </td>
         <td style="font-size: 0.7rem; width: 6%">Dializador:</td>
@@ -88,28 +88,28 @@
       </tr>
       <tr>
         <td style="font-size: 0.7rem; width: 2%">Heparina:</td>
-        <td style="font-size: 0.7rem; border-bottom: 1px solid; width: 5%">{{ $order->medical->heparin }} Ul</td>
+        <td style="font-size: 0.7rem; border-bottom: 1px solid; width: 5%">{{ $order->medical->heparin }} UI</td>
         <td style="font-size: 0.7rem; width: 11%">Flujo Dializado(Qd):</td>
-        <td style="font-size: 0.7rem; border-bottom: 1px solid; width: 10%">{{ $order->medical->qd }} m/min</td>
+        <td style="font-size: 0.7rem; border-bottom: 1px solid; width: 10%">{{ $order->medical->qd }} cc</td>
         <td style="font-size: 0.7rem; width: 7%">Sodio Inicial:</td>
-        <td style="font-size: 0.7rem; border-bottom: 1px solid; width: 8%">{{ $order->medical->start_na }} Meg/l</td>
+        <td style="font-size: 0.7rem; border-bottom: 1px solid; width: 8%">{{ $order->medical->start_na }} Meq/L</td>
         <td style="font-size: 0.7rem; width: 9%">Tipo Membrana:</td>
         <td style="font-size: 0.7rem; border-bottom: 1px solid; width: 10%">{{ $order->medical->membrane }} </td>
       </tr>
 
       <tr>
         <td style="font-size: 0.7rem; width: 9%">Peso Seco:</td>
-        <td style="font-size: 0.7rem; border-bottom: 1px solid; width: 10%">{{ $order->medical->dry_weight }}</td>
+        <td style="font-size: 0.7rem; border-bottom: 1px solid; width: 10%">{{ $order->medical->dry_weight }} Kg</td>
         <td style="font-size: 0.7rem; width: 10%">Solución:</td>
         <td style="font-size: 0.7rem; border-bottom: 1px solid; width: 10%">{{ $order->medical->bathroom }}</td>
         <td style="font-size: 0.7rem; width: 5%">Sodio Final:</td>
-        <td style="font-size: 0.7rem; border-bottom: 1px solid; width: 8%">{{ $order->medical->end_na }} Meg/l</td>
+        <td style="font-size: 0.7rem; border-bottom: 1px solid; width: 8%">{{ $order->medical->end_na }} Meq/L</td>
         <td style="font-size: 0.7rem; width: 6%">Área:</td>
         <td style="font-size: 0.7rem; border-bottom: 1px solid; width: 10%">{{ $order->medical->area_filter }} m2 </td>
       </tr>
       <tr>
         <td style="font-size: 0.7rem; width: 9%">Ultrafiltración:</td>
-        <td style="font-size: 0.7rem; border-bottom: 1px solid; width: 10%">{{ $order->medical->uf }}</td>
+        <td style="font-size: 0.7rem; border-bottom: 1px solid; width: 10%">{{ $order->medical->uf }} cc</td>
         <td style="font-size: 0.7rem; width: 10%">Bicarbonato:</td>
         <td style="font-size: 0.7rem; border-bottom: 1px solid; width: 10%">{{ $order->medical->bircarbonat }}</td>
         <td style="font-size: 0.7rem; width: 5%" colspan="1"></td>
