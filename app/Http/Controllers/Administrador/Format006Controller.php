@@ -23,7 +23,7 @@ class Format006Controller extends Controller
 
     public function update(Request $request, $id)
     {
-        $format006 = Format006::findOrFail($id); 
+        $format006 = Format006::findOrFail($id);
 
         $data = $request->all();
 
@@ -32,4 +32,5 @@ class Format006Controller extends Controller
 
         $notification = 'La información fue establecida correctamente.';
         return redirect('/format006s')->with(compact('notification'));
+    }
 }

@@ -109,6 +109,15 @@ class Nurse extends Model
      'rv8',
      'ptm8',
      'obs8',
+     
+     'position',
+     's',
+     'o',
+     'a',
+     'p',
+     'aspect_dializer'
+
+
 ];
 
      public function order()

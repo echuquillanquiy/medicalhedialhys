@@ -109,7 +109,7 @@
       </div>
 
       <div class="form-group col-sm-12 col-lg-2">
-        <label for="bathroom">BAÑO</label>
+        <label for="bathroom">Solución</label>
         <input type="text" name="bathroom" class="form-control" value="{{ old('bathroom', $medical->bathroom) }}">
       </div>
     </div>
@@ -152,6 +152,33 @@
           <option value="NEGATIVO">NEGATIVO</option>
           <option value="POSITIVO">POSITIVO</option>
         </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group col-sm-12 col-lg-3">
+        <label for="profile_uf">Perfil UF:</label>
+        <input type="text" name="profile_uf" class="form-control" value="{{ old('profile_uf', $medical->profile_uf) }}">
+      </div>
+
+      <div class="form-group col-sm-12 col-lg-3">
+        <label for="dializer">Dializador</label>
+        @if ( $medical->dializar != null )
+          <input type="text" name="dializer" class="form-control" value="{{ $medical->dializer }}">
+        @else
+          <input type="text" name="dializer" class="form-control" value="{{ old('dializer', 'ELISIO') }}">
+        @endif
+        
+      </div>
+
+      <div class="form-group col-sm-12 col-lg-3">
+        <label for="bircarbonat">Bicarbonato</label>
+        <input type="text" name="bircarbonat" class="form-control" value="{{ old('bircarbonat', $medical->bircarbonat) }}">
+      </div>
+
+      <div class="form-group col-sm-12 col-lg-3">
+        <label for="na_in_solution">Calcio en solución</label>
+        <input type="text" name="na_in_solution" class="form-control" value="{{ old('na_in_solution', $medical->na_in_solution) }}">
       </div>
     </div>
 

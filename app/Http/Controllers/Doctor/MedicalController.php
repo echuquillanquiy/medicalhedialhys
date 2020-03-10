@@ -68,7 +68,10 @@ class MedicalController extends Controller
             'area_filter' => 'required|min:2',
             'membrane' => 'required|min:2',
             'serological' => 'required|min:2',
-
+            'profile_uf' => 'required|min:2',
+            'dializer' => 'required|min:5',
+            'bircarbonat' => 'required|min:2',
+            'na_in_solution' => 'required|min:2'
 
         ];
 
@@ -110,6 +113,17 @@ class MedicalController extends Controller
             'area_filter.required' => 'El Área / Filtro es requerido.',
             'membrane.required' => 'La membrana es requerida.',
             'serological.required' => 'La condición Serologica es requerida.',
+
+            'profile_uf.required' => 'El perfil UF es requerido.',
+            'dializer.required' => 'El campo dializador es requerido.',
+            'bircarbonat.required' => 'El bicarbonato es requerido.',
+            'na_in_solution.required' => 'El calcio en solución es requerido.',
+
+            'profile_uf.min' => 'El campo Perfil UF debe tener mínimo 2 carácteres',
+            'dializer.min' => 'El campo dializador debe tener mínimo 5 carácteres',
+            'bircarbonat.min' => 'El campo Bicarbonatodebe tener mínimo 2 carácteres',          
+            'na_in_solution.min' => 'El campo Calcio en solución debe tener mínimo 2 carácteres',
+            
         ];
 
         $this->validate($request, $rules, $messages);  

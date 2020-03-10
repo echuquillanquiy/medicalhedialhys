@@ -120,7 +120,7 @@
                 </div>
 
                 <div class="form-group col-sm-12 col-lg-2">
-                  <label for="bathroom">BAÑO</label>
+                  <label for="bathroom">Solución</label>
                   <input type="text" name="bathroom" class="form-control" value="{{$nurse->order->medical->bathroom}}" disabled>
                 </div>
               </div>
@@ -164,33 +164,65 @@
                 </div>
               </div>
 
+              <div class="row">
+                <div class="form-group col-sm-12 col-lg-3">
+                  <label for="profile_uf">Perfil UF:</label>
+                  <input type="text" class="form-control" value="{{ $nurse->order->medical->profile_uf }}" disabled>
+                </div>
+          
+                <div class="form-group col-sm-12 col-lg-3">
+                  <label for="dializer">Dializador</label>
+                  <input type="text" class="form-control" value="{{ $nurse->order->medical->dializer }}" disabled>
+                </div>
+          
+                <div class="form-group col-sm-12 col-lg-3">
+                  <label for="bircarbonat">Bicarbonato</label>
+                  <input type="text" class="form-control" value="{{ $nurse->order->medical->bircarbonat }}" disabled>
+                </div>
+          
+                <div class="form-group col-sm-12 col-lg-3">
+                  <label for="na_in_solution">Calcio en solución</label>
+                  <input type="text" class="form-control" value="{{ $nurse->order->medical->na_in_solution }}" disabled>
+                </div>
+              </div>
+
             </div>
 
             <div class="tab-pane fade" id="nurse" role="tabpanel" aria-labelledby="tabs-icons-text-2-tab">
 
               <div class="row">
-                <div class="form-group col-sm-12 col-lg-3">
+                <div class="form-group col-sm-12 col-lg-2">
                   <label for="hcl">H.CL</label>
                   <input type="text" name="hcl" class="form-control" value="{{ old('hcl', $nurse->hcl) }}">
                 </div>
 
-                <div class="form-group col-sm-12 col-lg-3">
+                <div class="form-group col-sm-12 col-lg-2">
                   <label for="frequency">Frecuencia HD</label>
                   <input type="text" name="frequency" class="form-control" value="{{ old('frequency', '3 VECES POR SEMANA', $nurse->frequency) }}">
                 </div>
 
-                <div class="form-group col-sm-12 col-lg-3">
+                <div class="form-group col-sm-12 col-lg-2">
                   <label for="nhd">N° HD</label>
                   <input type="text" name="nhd" class="form-control" value="{{ old('nhd', $nurse->nhd) }}">
                 </div>
 
-                <div class="form-group col-sm-12 col-lg-3">
-                  <label for="others">Otros</label>
+                <div class="form-group col-sm-12 col-lg-2">
+                  <label for="others">Turno</label>
                   <select class="form-control" name="others" data-toggle="select" title="Simple select" data-placeholder="Select a state">
                     <option value="{{$nurse->others}}" disabled selected>{{$nurse->others}}</option>
                     <option value="L - M - V">L - M - V</option>
                     <option value="M - J - S">M - J - S</option>
                   </select>
+                </div>
+
+                <div class="form-group col-sm-12 col-lg-2">
+                  <label for="position">Puesto</label>
+                  <input type="number" name="position" class="form-control" value="{{ old('position', $nurse->position) }}">
+                </div>
+
+                <div class="form-group col-sm-12 col-lg-2">
+                  <label for="aspect_dializer">Aspecto del dializador</label>
+                  <input type="number" name="aspect_dializer" class="form-control" value="{{ old('aspect_dializer', $nurse->aspect_dializer) }}">
                 </div>
               </div>      
 
@@ -299,12 +331,36 @@
 
                 <div class="form-group col-sm-12 col-lg-6">
                   <label for="start_observation">Observación Inicial</label>
-                  <textarea class="form-control" id="" name="start_observation" rows="4" value="">{{ old('start_observation', $nurse->start_observation) }}</textarea>
+                  <textarea class="form-control" id="" name="start_observation" rows="3" value="">{{ old('start_observation', $nurse->start_observation) }}</textarea>
                 </div>
 
                 <div class="form-group col-sm-12 col-lg-6">
                   <label for="end_observation">Observación Final</label>
-                  <textarea class="form-control" id="" name="end_observation" rows="4" value="">{{ old('end_observation', $nurse->end_observation) }}</textarea>
+                  <textarea class="form-control" id="" name="end_observation" rows="3" value="">{{ old('end_observation', $nurse->end_observation) }}</textarea>
+                </div>
+
+              </div>
+
+              <div class="row text-center">
+
+                <div class="form-group col-sm-12 col-lg-3">
+                  <label for="s">S.- </label>
+                  <textarea class="form-control" id="" name="s" rows="2" value="">{{ old('s', $nurse->s) }}</textarea>
+                </div>
+
+                <div class="form-group col-sm-12 col-lg-3">
+                  <label for="o">O.- </label>
+                  <textarea class="form-control" id="" name="o" rows="2" value="">{{ old('o', $nurse->o) }}</textarea>
+                </div>
+
+                <div class="form-group col-sm-12 col-lg-3">
+                  <label for="a">A.- </label>
+                  <textarea class="form-control" id="" name="a" rows="2" value="">{{ old('a', $nurse->a) }}</textarea>
+                </div>
+
+                <div class="form-group col-sm-12 col-lg-3">
+                  <label for="p">P.- </label>
+                  <textarea class="form-control" id="" name="p" rows="2" value="">{{ old('p', $nurse->p) }}</textarea>
                 </div>
 
               </div>

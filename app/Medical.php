@@ -30,7 +30,11 @@ class Medical extends Model
         'end_na',
         'area_filter',
         'membrane',
-        'serological'
+        'serological',
+        'profile_uf',
+        'dializer',
+        'bircarbonat',
+        'na_in_solution'
     ];
 
     public function order()
