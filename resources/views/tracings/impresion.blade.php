@@ -15,7 +15,7 @@
 <table width="95%" style="margin-top:-8px; margin-left:-5px; margin-right:-1px; font-family:Arial, Helvetica, sans-serif; font-size:0.6rem; border-collapse:collapse">
     <tr>
         <td style="margin-right:5px !important; width:90px">NOMBRE DEL PACIENTE:</strong></td>
-        <td style="text-align: center !important; border: 1px solid !important; width:200px;height:20px !important">{{$tracing->patient->name }}</td>
+        <td style="text-align: center !important; border: 1px solid !important; width:180px;height:20px !important">{{$tracing->patient->name }}</td>
         <td style="margin-left:5px !important; width:0px">EDAD</td>
         <td style="text-align: center !important; border: 1px solid !important; width: 60px">{{ $tracing->patient->age }}</td>
         <td style="margin-left:5px !important; width:35px">SEXO</td>
