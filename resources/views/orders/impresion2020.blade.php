@@ -212,25 +212,25 @@
     <table width="100%" width="100%" style="border:1px solid; border-collapse: collapse;">
       
       <tr>
-        <td style="font-size: 0.7rem; border-bottom:1px solid; height:25px !important">
+        <td style="font-size: 0.6rem; border-bottom:1px solid; height:25px !important">
           OBSERVACIÓN INICIAL: {{ $order->nurse->start_observation }}
         </td>
       </tr>
 
       <tr>
-        <td style="font-size: 0.7rem; border-bottom:1px solid; height:25px !important " >S.- {{ $order->nurse->s }}</td>
+        <td style="font-size: 0.6rem; border-bottom:1px solid; height:25px !important " >S.- {{ $order->nurse->s }}</td>
       </tr>
 
       <tr>
-        <td style="font-size: 0.7rem; border-bottom:1px solid; height:25px !important " >O.- {{ $order->nurse->o }}</td>
+        <td style="font-size: 0.6rem; border-bottom:1px solid; height:25px !important " >O.- {{ $order->nurse->o }}</td>
       </tr>
 
       <tr>
-        <td style="font-size: 0.7rem; border-bottom:1px solid; height:25px !important " >A.- {{ $order->nurse->a }}</td>
+        <td style="font-size: 0.6rem; border-bottom:1px solid; height:25px !important " >A.- {{ $order->nurse->a }}</td>
       </tr>
 
       <tr>
-        <td style="font-size: 0.7rem; border-bottom:1px solid; height:25px !important " >P.- {{ $order->nurse->p }}</td>
+        <td style="font-size: 0.6rem; border-bottom:1px solid; height:25px !important " >P.- {{ $order->nurse->p }}</td>
       </tr>
     </table>
 
