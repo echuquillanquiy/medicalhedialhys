@@ -15,39 +15,39 @@
 <table width="95%" style="margin-top:-8px; margin-left:-5px; margin-right:-1px; font-family:Arial, Helvetica, sans-serif; font-size:0.6rem; border-collapse:collapse">
     <tr>
         <td style="margin-right:5px !important; width:90px">NOMBRE DEL PACIENTE:</strong></td>
-        <td style="text-align: center !important; border: 1px solid !important; width:180px;height:20px !important">{{$tracing->patient->name }}</td>
+        <td style="text-align: center !important; border: 1px solid !important; width:180px;height:20px !important; font-size:0.8rem;">{{$tracing->patient->name }}</td>
         <td style="margin-left:5px !important; width:0px">EDAD</td>
-        <td style="text-align: center !important; border: 1px solid !important; width: 60px">{{ $tracing->patient->age }}</td>
+        <td style="text-align: center !important; border: 1px solid !important; width: 60px; font-size:0.7rem;">{{ $tracing->patient->age }}</td>
         <td style="margin-left:5px !important; width:35px">SEXO</td>
-        <td style="text-align: center !important; border: 1px solid !important; width: 70px;">{{ $tracing->patient->sex }}</td>
+        <td style="text-align: center !important; border: 1px solid !important; width: 70px; font-size:0.7rem;">{{ $tracing->patient->sex }}</td>
         <td style="margin-left:5px !important; width:120px">HOPS. DE REFERENCIA</td>
-        <td style="text-align: center !important; border: 1px solid !important; width: 200px">{{ $tracing->patient->hosp_origin }}</td>
+        <td style="text-align: center !important; border: 1px solid !important; width: 200px; font-size:0.7rem;">{{ $tracing->patient->hosp_origin }}</td>
     </tr>
 
     <tr>
         <td></td>
         <td></td>
         <td style="margin-left:5px !important; height:20px">SALA</td>
-        <td style="text-align: center !important; border: 1px solid !important">{{$tracing->room->name }}</td>
+        <td style="text-align: center !important; border: 1px solid !important; font-size:0.7rem;">{{$tracing->room->name }}</td>
         <td style="margin-left:5px !important;">TURNO</td>
-        <td style="text-align: center !important; border: 1px solid !important">{{$tracing->shift->name }}</td>
+        <td style="text-align: center !important; border: 1px solid !important; font-size:0.7rem;">{{$tracing->shift->name }}</td>
         <td style="margin-left:5px !important;">UNIDAD DE DIALISIS</td>
-        <td style="text-align: center !important; border: 1px solid !important; width: 200px">{{ $tracing->format006->unit_dial }}</td>
+        <td style="text-align: center !important; border: 1px solid !important; width: 200px; font-size:0.7rem;">{{ $tracing->format006->unit_dial }}</td>
     </tr>
 
     <tr>
         <td></td>
         <td></td>
         <td style="margin-left:5px !important; height:20px">FREC.</td>
-        <td style="text-align: center !important; border: 1px solid !important">{{$tracing->format006->frec }}</td>
+        <td style="text-align: center !important; border: 1px solid !important; font-size:0.7rem;">{{$tracing->format006->frec }}</td>
         <td></td>
         <td></td>
         <td style="margin-left:5px !important;">NEFROLOGO TRATANTE</td>
-        <td style="text-align: center !important; border: 1px solid !important; width: 200px">{{ $tracing->format006->nefro_treat }}</td>
+        <td style="text-align: center !important; border: 1px solid !important; width: 200px; font-size:0.7rem;">{{ $tracing->format006->nefro_treat }}</td>
     </tr>
     <tr>
         <td style="margin-right:5px !important;">AUTOGENERADO:</strong></td>
-        <td style="text-align: center !important; border: 1px solid !important;height:10px !important">{{$tracing->patient->code }}</td>
+        <td style="text-align: center !important; border: 1px solid !important;height:10px !important; font-size:0.8rem;">{{$tracing->patient->code }}</td>
         <td></td>
         <td></td>
         <td></td>
