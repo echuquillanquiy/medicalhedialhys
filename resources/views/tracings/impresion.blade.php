@@ -15,13 +15,13 @@
 <table width="100%" style="margin-top:-8px; margin-left:-5px; margin-right:-13px; font-family:Arial, Helvetica, sans-serif; font-size:0.6rem; border-collapse:collapse">
     <tr>
         <td style="margin-right:5px !important; width:120px">NOMBRE DEL PACIENTE:</strong></td>
-        <td style="text-align: center !important; border: 1px solid !important; width:250px;height:20px !important">{{$tracing->patient->name }}</td>
-        <td style="margin-left:5px !important; width:40px">EDAD</td>
-        <td style="text-align: center !important; border: 1px solid !important; width: 90px">{{ $tracing->patient->age }}</td>
-        <td style="margin-left:5px !important; width:50px">SEXO</td>
-        <td style="text-align: center !important; border: 1px solid !important; width: 90px;">{{ $tracing->patient->sex }}</td>
-        <td style="margin-left:5px !important; width:140px">HOPS. DE REFERENCIA</td>
-        <td style="text-align: center !important; border: 1px solid !important; width: 220px">{{ $tracing->patient->hosp_origin }}</td>
+        <td style="text-align: center !important; border: 1px solid !important; width:200px;height:20px !important">{{$tracing->patient->name }}</td>
+        <td style="margin-left:5px !important; width:0px">EDAD</td>
+        <td style="text-align: center !important; border: 1px solid !important; width: 60px">{{ $tracing->patient->age }}</td>
+        <td style="margin-left:5px !important; width:40px">SEXO</td>
+        <td style="text-align: center !important; border: 1px solid !important; width: 70px;">{{ $tracing->patient->sex }}</td>
+        <td style="margin-left:5px !important; width:120px">HOPS. DE REFERENCIA</td>
+        <td style="text-align: center !important; border: 1px solid !important; width: 200px">{{ $tracing->patient->hosp_origin }}</td>
     </tr>
 
     <tr>
