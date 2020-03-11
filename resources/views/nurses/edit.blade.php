@@ -207,7 +207,7 @@
                 </div>
 
                 <div class="form-group col-sm-12 col-lg-2">
-                  <label for="others">Turno</label>
+                  <label for="others">Otros</label>
                   <select class="form-control" name="others" data-toggle="select" title="Simple select" data-placeholder="Select a state">
                     <option value="{{$nurse->others}}" disabled selected>{{$nurse->others}}</option>
                     <option value="L - M - V">L - M - V</option>
