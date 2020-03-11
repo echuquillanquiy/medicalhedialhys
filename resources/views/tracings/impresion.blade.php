@@ -12,13 +12,13 @@
 
 <p style="margin-left:-5px; font-size:0.7rem; font-family:Arial, Helvetica, sans-serif;"><strong>I. DATOS DE FILIACIÓN</strong></p>
 
-<table width="100%" style="margin-top:-8px; margin-left:-5px; margin-right:-13px; font-family:Arial, Helvetica, sans-serif; font-size:0.6rem; border-collapse:collapse">
+<table width="100%" style="margin-top:-8px; margin-left:-5px; margin-right:-1px; font-family:Arial, Helvetica, sans-serif; font-size:0.6rem; border-collapse:collapse">
     <tr>
-        <td style="margin-right:5px !important; width:120px">NOMBRE DEL PACIENTE:</strong></td>
+        <td style="margin-right:5px !important; width:90px">NOMBRE DEL PACIENTE:</strong></td>
         <td style="text-align: center !important; border: 1px solid !important; width:200px;height:20px !important">{{$tracing->patient->name }}</td>
         <td style="margin-left:5px !important; width:0px">EDAD</td>
         <td style="text-align: center !important; border: 1px solid !important; width: 60px">{{ $tracing->patient->age }}</td>
-        <td style="margin-left:5px !important; width:40px">SEXO</td>
+        <td style="margin-left:5px !important; width:35px">SEXO</td>
         <td style="text-align: center !important; border: 1px solid !important; width: 70px;">{{ $tracing->patient->sex }}</td>
         <td style="margin-left:5px !important; width:120px">HOPS. DE REFERENCIA</td>
         <td style="text-align: center !important; border: 1px solid !important; width: 200px">{{ $tracing->patient->hosp_origin }}</td>
