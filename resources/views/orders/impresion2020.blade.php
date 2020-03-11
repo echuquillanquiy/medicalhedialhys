@@ -1,10 +1,12 @@
-<table style="margin-top:-30px;border:solid 1px black; float: right; height: 5%">
+<table style="margin-top:-25px;border:solid 1px black; float: right; height: 12%">
   <th style="font-size: 0.7rem;">
     <p>Coloque el adhesivo del Código de Barras y/o Lote de Dializador</p>
   </th>
 </table>
-
-<table width="100%" style="margin-top: 50px;">
+<br>
+<br>
+<br>
+<table width="100%" style="margin-top: 60px;">
   <tr>
     <th style="text-align: center">
       <h3 width="100%">FICHA DE PRESCRIPCION Y EVOLUCIÓN DE LA SESIÓN DE HEMODIALISIS</h3>
@@ -12,7 +14,7 @@
   </tr>
 </table>
 
-    <table>
+    <table style="margin-top:-15px;">
       <tr>
         <td colspan="4" style="font-size: 0.8rem"><strong>Apellidos y Nombres: </strong></th>
           <td width="453px" style="border-bottom: solid 1px; font-size: 0.8rem">{{ $order->patient->name }}</td>
@@ -354,9 +356,9 @@
       </tr>
     </table>
 
-    <p style="font-size:0.5rem">(*)El número de maquina asignado debe coincidir con el número de serie del equipo.</p>
+    <p style="font-size:0.5rem; margin-top:0px">(*)El número de maquina asignado debe coincidir con el número de serie del equipo.</p>
 
-    <table width="100%" style="text-align:center;">
+    <table width="100%" style="text-align:center; margin-top:-12px">
       <tr>
         <td style="font-size: 0.6rem">ENFERMERA(O) QUE INICIA LA DIALISIS</td>
         <td style="font-size: 0.6rem">ENFERMERA(O) QUE FINALIZA LA DIALISIS</td>
