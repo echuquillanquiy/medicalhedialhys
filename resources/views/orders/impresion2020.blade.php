@@ -355,3 +355,11 @@
     </table>
 
     <p style="font-size:0.5rem">(*)El número de maquina asignado debe coincidir con el número de serie del equipo.</p>
+
+    <table width="100%" style="text-align:center;">
+      <tr>
+        <td style="font-size: 0.6rem">ENFERMERA(O) QUE INICIA LA DIALISIS</td>
+        <td style="font-size: 0.6rem">ENFERMERA(O) QUE FINALIZA LA DIALISIS</td>
+      </tr>  
+    
+    </table>
