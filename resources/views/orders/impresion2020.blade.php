@@ -66,7 +66,7 @@
       <tr>
         <table width="100%" style="border:2px solid; border-collapse: collapse; border-top: none; margin-top: -2px">
           <tr>
-            <td style="font-size: 0.6rem; margin-bottom: 1px; height: 40px" colspan="2">EXAMEN {{ $order->medical->evaluation }}</td>
+            <td style="font-size: 0.6rem; margin-bottom: 1px; height: 30px" colspan="2">EXAMEN: {{ $order->medical->evaluation }}</td>
           </tr>
         </table>
       </tr>
@@ -135,13 +135,11 @@
           <br>
           <br>
           <br>
-          <br>
           __________________________
           <br>
           Firma y Sellos de <br>Médico que Inicia HD
         </td>
         <td colspan="4" style="font-size: 0.7rem; text-align: center">
-          <br>
           <br>
           <br>
           <br>
