@@ -17,7 +17,7 @@
         <td style="margin-right:5px !important; width:90px">NOMBRE DEL PACIENTE:</strong></td>
         <td style="text-align: center !important; border: 1px solid !important; width:180px;height:20px !important; font-size:0.8rem;">{{$tracing->patient->name }}</td>
         <td style="margin-left:5px !important; width:0px">EDAD</td>
-        <td style="text-align: center !important; border: 1px solid !important; width: 60px; font-size:0.7rem;">{{ $tracing->patient->age }}</td>
+        <td style="text-align: center !important; border: 1px solid !important; width: 80px; font-size:0.7rem;">{{ $tracing->patient->age }}</td>
         <td style="margin-left:5px !important; width:35px">SEXO</td>
         <td style="text-align: center !important; border: 1px solid !important; width: 70px; font-size:0.7rem;">{{ $tracing->patient->sex }}</td>
         <td style="margin-left:5px !important; width:120px">HOPS. DE REFERENCIA</td>
