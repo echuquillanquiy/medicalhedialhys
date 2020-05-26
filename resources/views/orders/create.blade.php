@@ -7,9 +7,16 @@
 @endsection
 
 @section('content')
+
 <form action="{{ url('orders') }}" method="POST">
   <div class="card shadow">
     <div class="card-header border-0">
+      @if (session('notification'))
+        <div class="alert alert-success" role="alert">
+          <span class="alert-icon"><i class="ni ni-curved-next"></i></span>
+          {{ session('notification') }}
+        </div>
+        @endif
       <div class="row align-items-center">
         <div class="col">
           <h3 class="mb-0">Nueva Orden</h3>

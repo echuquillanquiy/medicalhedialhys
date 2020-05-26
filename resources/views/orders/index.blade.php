@@ -20,14 +20,6 @@
       </a>
     </div>
   </div>
-  <div class="card-body mt-5 mb--5">
-    @if (session('notification'))
-    <div class="alert alert-success" role="alert">
-      <span class="alert-icon"><i class="ni ni-curved-next"></i></span>
-      {{ session('notification') }}
-    </div>
-    @endif
-  </div>
 
   <div class="card-body mb--4">
     <form action="{{ url('orders') }}" method="GET">

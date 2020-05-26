@@ -87,7 +87,7 @@ class OrderController extends Controller
             ->whereDate('created_at', date('Y-m-d'))->exists();
         if ($existsOrdersToday) {
             $notification = 'Este paciente ya tiene una orden registrada hoy. Intente nuevamente mañana.';
-            return redirect('/orders/')->with(compact('notification'));            
+            return back()->with(compact('notification'));            
         }
 
         $order = Order::create($request->all());
@@ -101,7 +101,7 @@ class OrderController extends Controller
         $nurse = $order->nurse()->create($orders_data);
         $medical = $order->medical()->create($orders_data);
         $notification = 'La orden fue creada correctamente.';
-        return redirect('/orders/')->with(compact('notification'));
+        return back()->with(compact('notification'));
     }
 
     public function showMedical($id)
