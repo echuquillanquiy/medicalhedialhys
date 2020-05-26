@@ -198,7 +198,7 @@ class MedicalController extends Controller
         $medical->save();
 
         $notification = 'El Parte Médico se ha actualizado correctamente.';
-        return redirect('/medicals')->with(compact('notification'));
+        return back()->with(compact('notification'));
     }
 
     /**

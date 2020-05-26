@@ -10,14 +10,6 @@
       </div>
     </div>
   </div>
-  <div class="card-body">
-    @if (session('notification'))
-    <div class="alert alert-success" role="alert">
-      <span class="alert-icon"><i class="ni ni-curved-next"></i></span>
-      {{ session('notification') }}
-    </div>
-    @endif
-  </div>
 
   <div class="card-body">
     <form action="{{ url('medicals') }}" method="GET">

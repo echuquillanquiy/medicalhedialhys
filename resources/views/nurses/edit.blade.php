@@ -3,6 +3,14 @@
 @section('content')
 
 <div class="card shadow">
+
+  @if (session('notification'))
+    <div class="alert alert-success" role="alert">
+      <span class="alert-icon"><i class="ni ni-curved-next"></i></span>
+      {{ session('notification') }}
+    </div>
+  @endif
+  
   <div class="card-header border-0">
     <div class="row align-items-center">
       <div class="col">

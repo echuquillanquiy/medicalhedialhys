@@ -111,7 +111,7 @@ class NurseController extends Controller
         $nurse->save();
 
         $notification = 'El Parte de enfermeria se ha actualizado correctamente.';
-        return redirect('/nurses')->with(compact('notification'));
+        return back()->with(compact('notification'));
     }
 
     /**
