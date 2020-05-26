@@ -6,15 +6,15 @@
 <br>
 <br>
 <br>
-<table width="100%" style="margin-top: 60px;">
+<table width="100%" style="margin-top: 35px;">
   <tr>
     <th style="text-align: center">
-      <h3 width="100%">FICHA DE PRESCRIPCION Y EVOLUCIÓN DE LA SESIÓN DE HEMODIALISIS</h3>
+      <h4 width="100%">FICHA DE PRESCRIPCION Y EVOLUCIÓN DE LA SESIÓN DE HEMODIALISIS</h4>
     </th>
   </tr>
 </table>
 
-    <table style="margin-top:-15px;">
+    <table style="margin-top:-20px;">
       <tr>
         <td colspan="4" style="font-size: 0.8rem"><strong>Apellidos y Nombres: </strong></th>
           <td width="453px" style="border-bottom: solid 1px; font-size: 0.8rem">{{ $order->patient->name }}</td>
@@ -26,7 +26,7 @@
     <table style="margin-top: 0px; font-size: 0.8rem;" width="100%">
       <tr>
         <td style="width: 5%;"><strong>Frecuencia:</strong></td>
-        <td style="border:solid 1px; width: 15%; text-align: center; font-size:0.9rem;">{{ $order->nurse->frequency }} ( {{ $order->nurse->others }} )<</td>
+        <td style="border:solid 1px; width: 15%; text-align: center; font-size:0.7rem;">{{ $order->nurse->frequency }} ( {{ $order->nurse->others }} )<</td>
 
         <td style="width: 3%"><strong>Turno: </strong></td>
         <td style="border:solid 1px;width: 7%; text-align: center">{{ $order->shift->name}}</td>
@@ -218,19 +218,19 @@
       </tr>
 
       <tr>
-        <td style="font-size: 0.6rem; border-bottom:1px solid; height:25px !important " ><strong style="font-size:1.3rem; text-style:UPPERCASE">S.-</strong>  {{ $order->nurse->s }}</td>
+        <td style="font-size: 0.6rem; border-bottom:1px solid; height:25px !important " ><strong style="font-size:0.9rem;">S.-</strong>  {{ $order->nurse->s }}</td>
       </tr>
 
       <tr>
-        <td style="font-size: 0.6rem; border-bottom:1px solid; height:25px !important " ><strong style="font-size:1.3rem">O.-</strong> {{ $order->nurse->o }}</td>
+        <td style="font-size: 0.6rem; border-bottom:1px solid; height:25px !important " ><strong style="font-size:0.9rem">O.-</strong> {{ $order->nurse->o }}</td>
       </tr>
 
       <tr>
-        <td style="font-size: 0.6rem; border-bottom:1px solid; height:25px !important " ><strong style="font-size:1.3rem">A.-</strong> {{ $order->nurse->a }}</td>
+        <td style="font-size: 0.6rem; border-bottom:1px solid; height:25px !important " ><strong style="font-size:0.9rem">A.-</strong> {{ $order->nurse->a }}</td>
       </tr>
 
       <tr>
-        <td style="font-size: 0.6rem; border-bottom:1px solid; height:25px !important " ><strong style="font-size:1.3rem">P.-</strong> {{ $order->nurse->p }}</td>
+        <td style="font-size: 0.6rem; border-bottom:1px solid; height:25px !important " ><strong style="font-size:0.9rem">P.-</strong> {{ $order->nurse->p }}</td>
       </tr>
     </table>
 

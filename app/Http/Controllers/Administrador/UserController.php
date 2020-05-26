@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\User;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Exports\UsersExport;
+use Illuminate\Support\Str;
 
 use App\Http\Controllers\Controller;
 
