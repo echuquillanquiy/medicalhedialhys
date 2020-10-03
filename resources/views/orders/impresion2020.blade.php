@@ -1,4 +1,4 @@
-<table style="margin-top:-25px;border:solid 1px black; float: right; height: 12%">
+<table style="margin-top:-25px;border:solid 1px black; float: right; height: 9%">
   <th style="font-size: 0.7rem;">
     <p>Coloque el adhesivo del Código de Barras y/o Lote de Dializador</p>
   </th>
@@ -6,7 +6,7 @@
 <br>
 <br>
 <br>
-<table width="100%" style="margin-top: 35px;">
+<table width="100%" style="margin-top: -5px;">
   <tr>
     <th style="text-align: center">
       <h4 width="100%">FICHA DE PRESCRIPCION Y EVOLUCIÓN DE LA SESIÓN DE HEMODIALISIS</h4>
@@ -135,15 +135,11 @@
         <td colspan="4" style="font-size: 0.7rem; text-align: center;">
           <br>
           <br>
-          <br>
-          <br>
           __________________________
           <br>
           Firma y Sellos de <br>Médico que Inicia HD
         </td>
         <td colspan="4" style="font-size: 0.7rem; text-align: center">
-          <br>
-          <br>
           <br>
           <br>
           __________________________
@@ -218,23 +214,23 @@
       </tr>
 
       <tr>
-        <td style="font-size: 0.6rem; border-bottom:1px solid; height:25px !important " ><strong style="font-size:0.9rem;">S.-</strong>  {{ $order->nurse->s }}</td>
+        <td style="font-size: 0.6rem; border-bottom:1px solid; height:25px !important " ><strong style="font-size:0.8rem;">S.-</strong>  {{ $order->nurse->s }}</td>
       </tr>
 
       <tr>
-        <td style="font-size: 0.6rem; border-bottom:1px solid; height:25px !important " ><strong style="font-size:0.9rem">O.-</strong> {{ $order->nurse->o }}</td>
+        <td style="font-size: 0.6rem; border-bottom:1px solid; height:25px !important " ><strong style="font-size:0.8rem">O.-</strong> {{ $order->nurse->o }}</td>
       </tr>
 
       <tr>
-        <td style="font-size: 0.6rem; border-bottom:1px solid; height:25px !important " ><strong style="font-size:0.9rem">A.-</strong> {{ $order->nurse->a }}</td>
+        <td style="font-size: 0.6rem; border-bottom:1px solid; height:25px !important " ><strong style="font-size:0.8rem">A.-</strong> {{ $order->nurse->a }}</td>
       </tr>
 
       <tr>
-        <td style="font-size: 0.6rem; border-bottom:1px solid; height:25px !important " ><strong style="font-size:0.9rem">P.-</strong> {{ $order->nurse->p }}</td>
+        <td style="font-size: 0.6rem; border-bottom:1px solid; height:25px !important " ><strong style="font-size:0.8rem">P.-</strong> {{ $order->nurse->p }}</td>
       </tr>
     </table>
 
-    <table width="100%" style="border-collapse:collapse;text-align:center; margin-top:10px" border="1px;">
+    <table width="100%" style="border-collapse:collapse;text-align:center; margin-top:0px" border="1px;">
 
       <tr>
         <td style="font-size: 0.8rem; color: white; background-color: black; text-align: left;" colspan="9"><strong>I. EVOLUCIÓN DE ENFERMERÍA</strong></td>
@@ -358,7 +354,16 @@
 
     <p style="font-size:0.5rem; margin-top:0px">(*)El número de maquina asignado debe coincidir con el número de serie del equipo.</p>
 
-    <table width="100%" style="text-align:center; margin-top:-12px">
+    <table width="100%" style="border: 0px solid black; margin:-20px 0px auto;">
+      <tr>
+        <td style="font-size:0.7rem"><strong>ADMINSTRACION: DE MEDICAMENTOS</strong></td>
+        <td style="font-size:0.8rem">EPO: <span style="border:1px solid #000; padding:16px">{{ $order->nurse->epo }} </span></td>
+        <td style="font-size:0.8rem">HIERRO: <span style="border:1px solid #000; padding:16px">{{ $order->nurse->iron }}</span> </td>
+        <td style="font-size:0.8rem">VIT B12: <span style="border:1px solid #000; padding:16px">{{ $order->nurse->vitb12 }} </span> </td>
+      </tr>
+    </table>
+
+    <table width="100%" style="text-align:center; margin-bottom:0px">
       <tr>
         <td style="font-size: 0.6rem">ENFERMERA(O) QUE INICIA LA DIALISIS</td>
         <td style="font-size: 0.6rem">ENFERMERA(O) QUE FINALIZA LA DIALISIS</td>
