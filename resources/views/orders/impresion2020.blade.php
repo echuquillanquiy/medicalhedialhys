@@ -46,23 +46,26 @@
 
       <table width="100%" style="border:2px solid; border-collapse: collapse; margin-top: -3px;">
         <tr>
-          <td style="font-size: 0.6rem; width: 40%">PROBLEMAS CLINICOS: {{ $order->medical->clinical_trouble }} </td>
-          <td style="font-size: 0.6rem; width: 40%; text-align:right">P.A: {{ $order->medical->start_pa }}</td>
+          <td style="font-size: 0.6rem; width: 95%" colspan="10">PROBLEMAS CLINICOS: {{ $order->medical->clinical_trouble }} </td>
+          <td style="font-size: 0.6rem; width: 5%; text-align:right" colspan="2">P.A: {{ $order->medical->start_pa }}</td>
         </tr>
 
         <tr>
-          <td style="font-size: 0.6rem; width: 40%"></td>
-          <td style="font-size: 0.6rem; width: 40%; text-align:right">F.C: {{ $order->medical->fc }}</td>
+          <td style="font-size: 0.6rem; width: 10%" colspan="11"></td>
+          <td style="font-size: 0.6rem; width: 10%; text-align:right" colspan="1">F.C: {{ $order->medical->fc }}</td>
         </tr>
 
         <tr>
-          <td style="font-size: 0.6rem; width: 2%;"></td>
-          <td style="width: 98%;"></td>
+          <td style="font-size: 0.6rem;" colspan="10"></td>
+          <td colspan="2"></td>
         </tr>
+
         <tr>
-          <td style="font-size: 0.6rem; width: 2%;"></td>
-          <td style="width: 98%;"></td>
+          <td style="font-size: 0.6rem;" colspan="1"></td>
+          <td colspan="11"></td>
         </tr>
+
+        
       </table>
 
       <tr>
