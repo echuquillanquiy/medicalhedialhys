@@ -17,7 +17,7 @@
     <table style="margin-top:-20px;">
       <tr>
         <td colspan="4" style="font-size: 0.8rem"><strong>Apellidos y Nombres: </strong></th>
-          <td width="453px" style="border-bottom: solid 1px; font-size: 0.8rem">{{ $order->patient->name }}</td>
+          <td width="453px" style="border-bottom: solid 1px; font-size: 0.8rem; text-transform:uppercase;">{{ $order->patient->name }}</td>
           <td style="font-size: 0.8rem"><strong>Fecha: </strong></td>
             <td style="border: solid 1px; padding: 2px; font-size: 0.8rem">{{ $date }}</td>
           </tr>
