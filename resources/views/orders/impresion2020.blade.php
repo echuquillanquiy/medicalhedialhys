@@ -46,7 +46,7 @@
 
       <table width="100%" style="border:2px solid; border-collapse: collapse; margin-top: -3px;">
         <tr>
-          <td style="font-size: 0.6rem; width: 95%" colspan="10">PROBLEMAS CLINICOS: {{ $order->medical->clinical_trouble }} </td>
+          <td style="font-size: 0.6rem; width: 95%; text-transform:uppercase;" colspan="10">PROBLEMAS CLINICOS: {{ $order->medical->clinical_trouble }} </td>
           <td style="font-size: 0.6rem; width: 5%; text-align:right" colspan="2">P.A: {{ $order->medical->start_pa }}</td>
         </tr>
 
@@ -131,7 +131,11 @@
         <td style="font-size: 0.7rem; width: 5%"> Temperatura</td>
         <td style="font-size: 0.7rem; border-bottom: 1px solid; width: 8%">{{ $order->medical->temperature }} °C </td>
         <td style="font-size: 0.7rem; width: 6%"></td>
-        <td style="font-size: 0.7rem; width: 10%"> </td>
+        <td style="font-size: 0.7rem; width: 10%"></td>
+      </tr>
+
+      <tr>
+        <td style="border:solid 1px; font-size:0.6rem; text-transform:uppercase;" colspan="8"><strong>indicaciones: </strong>{{ $order->medical->indications }}</td>
       </tr>
 
       <tr>
@@ -251,99 +255,99 @@
         <th>OBSERVACIONES</th>
       </tr>
       <tr style="font-size:0.7rem;">
-        <td height="15">{{ $order->nurse->hr }}</td>
-        <td height="15">{{ $order->nurse->pa }}</td>
-        <td height="15">{{ $order->nurse->px }}</td>
-        <td height="15">{{ $order->nurse->qb }}</td>
-        <td height="15">{{ $order->nurse->cnd }}</td>
-        <td height="15">{{ $order->nurse->ra }}</td>
-        <td height="15">{{ $order->nurse->rv }}</td>
-        <td height="15">{{ $order->nurse->ptm }}</td>
-        <td height="15">{{ $order->nurse->obs }}</td>
+        <td height="14">{{ $order->nurse->hr }}</td>
+        <td height="14">{{ $order->nurse->pa }}</td>
+        <td height="14">{{ $order->nurse->px }}</td>
+        <td height="14">{{ $order->nurse->qb }}</td>
+        <td height="14">{{ $order->nurse->cnd }}</td>
+        <td height="14">{{ $order->nurse->ra }}</td>
+        <td height="14">{{ $order->nurse->rv }}</td>
+        <td height="14">{{ $order->nurse->ptm }}</td>
+        <td height="14" style="font-size:0.6rem !important">{{ $order->nurse->obs }}</td>
       </tr>
     
       <tr style="font-size:0.7rem;">
-        <td height="15">{{ $order->nurse->hr2 }}</td>
-        <td height="15">{{ $order->nurse->pa2 }}</td>
-        <td height="15">{{ $order->nurse->px2 }}</td>
-        <td height="15">{{ $order->nurse->qb2 }}</td>
-        <td height="15">{{ $order->nurse->cnd2 }}</td>
-        <td height="15">{{ $order->nurse->ra2 }}</td>
-        <td height="15">{{ $order->nurse->rv2 }}</td>
-        <td height="15">{{ $order->nurse->ptm2 }}</td>
-        <td height="15">{{ $order->nurse->obs2 }}</td>
+        <td height="14">{{ $order->nurse->hr2 }}</td>
+        <td height="14">{{ $order->nurse->pa2 }}</td>
+        <td height="14">{{ $order->nurse->px2 }}</td>
+        <td height="14">{{ $order->nurse->qb2 }}</td>
+        <td height="14">{{ $order->nurse->cnd2 }}</td>
+        <td height="14">{{ $order->nurse->ra2 }}</td>
+        <td height="14">{{ $order->nurse->rv2 }}</td>
+        <td height="14">{{ $order->nurse->ptm2 }}</td>
+        <td height="14" style="font-size:0.6rem !important">{{ $order->nurse->obs2 }}</td>
       </tr>
     
       <tr style="font-size:0.7rem;">
-        <td height="15">{{ $order->nurse->hr3 }}</td>
-        <td height="15">{{ $order->nurse->pa3 }}</td>
-        <td height="15">{{ $order->nurse->px3 }}</td>
-        <td height="15">{{ $order->nurse->qb3 }}</td>
-        <td height="15">{{ $order->nurse->cnd3 }}</td>
-        <td height="15">{{ $order->nurse->ra3 }}</td>
-        <td height="15">{{ $order->nurse->rv3 }}</td>
-        <td height="15">{{ $order->nurse->ptm3 }}</td>
-        <td height="15">{{ $order->nurse->obs3 }}</td>
+        <td height="14">{{ $order->nurse->hr3 }}</td>
+        <td height="14">{{ $order->nurse->pa3 }}</td>
+        <td height="14">{{ $order->nurse->px3 }}</td>
+        <td height="14">{{ $order->nurse->qb3 }}</td>
+        <td height="14">{{ $order->nurse->cnd3 }}</td>
+        <td height="14">{{ $order->nurse->ra3 }}</td>
+        <td height="14">{{ $order->nurse->rv3 }}</td>
+        <td height="14">{{ $order->nurse->ptm3 }}</td>
+        <td height="14" style="font-size:0.6rem !important">{{ $order->nurse->obs3 }}</td>
       </tr>
     
       <tr style="font-size:0.7rem;">
-        <td height="15">{{ $order->nurse->hr4 }}</td>
-        <td height="15">{{ $order->nurse->pa4 }}</td>
-        <td height="15">{{ $order->nurse->px4 }}</td>
-        <td height="15">{{ $order->nurse->qb4 }}</td>
-        <td height="15">{{ $order->nurse->cnd4 }}</td>
-        <td height="15">{{ $order->nurse->ra4 }}</td>
-        <td height="15">{{ $order->nurse->rv4 }}</td>
-        <td height="15">{{ $order->nurse->ptm4 }}</td>
-        <td height="15">{{ $order->nurse->obs4 }}</td>
+        <td height="14">{{ $order->nurse->hr4 }}</td>
+        <td height="14">{{ $order->nurse->pa4 }}</td>
+        <td height="14">{{ $order->nurse->px4 }}</td>
+        <td height="14">{{ $order->nurse->qb4 }}</td>
+        <td height="14">{{ $order->nurse->cnd4 }}</td>
+        <td height="14">{{ $order->nurse->ra4 }}</td>
+        <td height="14">{{ $order->nurse->rv4 }}</td>
+        <td height="14">{{ $order->nurse->ptm4 }}</td>
+        <td height="14" style="font-size:0.6rem !important">{{ $order->nurse->obs4 }}</td>
       </tr>
     
       <tr style="font-size:0.7rem;">
-        <td height="15">{{ $order->nurse->hr5 }}</td>
-        <td height="15">{{ $order->nurse->pa5 }}</td>
-        <td height="15">{{ $order->nurse->px5 }}</td>
-        <td height="15">{{ $order->nurse->qb5 }}</td>
-        <td height="15">{{ $order->nurse->cnd5 }}</td>
-        <td height="15">{{ $order->nurse->ra5 }}</td>
-        <td height="15">{{ $order->nurse->rv5 }}</td>
-        <td height="15">{{ $order->nurse->ptm5 }}</td>
-        <td height="15">{{ $order->nurse->obs5 }}</td>
+        <td height="14">{{ $order->nurse->hr5 }}</td>
+        <td height="14">{{ $order->nurse->pa5 }}</td>
+        <td height="14">{{ $order->nurse->px5 }}</td>
+        <td height="14">{{ $order->nurse->qb5 }}</td>
+        <td height="14">{{ $order->nurse->cnd5 }}</td>
+        <td height="14">{{ $order->nurse->ra5 }}</td>
+        <td height="14">{{ $order->nurse->rv5 }}</td>
+        <td height="14">{{ $order->nurse->ptm5 }}</td>
+        <td height="14" style="font-size:0.6rem !important">{{ $order->nurse->obs5 }}</td>
       </tr>
     
       <tr style="font-size:0.7rem;">
-        <td height="15">{{ $order->nurse->hr6 }}</td>
-        <td height="15">{{ $order->nurse->pa6 }}</td>
-        <td height="15">{{ $order->nurse->px6 }}</td>
-        <td height="15">{{ $order->nurse->qb6 }}</td>
-        <td height="15">{{ $order->nurse->cnd6 }}</td>
-        <td height="15">{{ $order->nurse->ra6 }}</td>
-        <td height="15">{{ $order->nurse->rv6 }}</td>
-        <td height="15">{{ $order->nurse->ptm6 }}</td>
-        <td height="15">{{ $order->nurse->obs6 }}</td>
+        <td height="14">{{ $order->nurse->hr6 }}</td>
+        <td height="14">{{ $order->nurse->pa6 }}</td>
+        <td height="14">{{ $order->nurse->px6 }}</td>
+        <td height="14">{{ $order->nurse->qb6 }}</td>
+        <td height="14">{{ $order->nurse->cnd6 }}</td>
+        <td height="14">{{ $order->nurse->ra6 }}</td>
+        <td height="14">{{ $order->nurse->rv6 }}</td>
+        <td height="14">{{ $order->nurse->ptm6 }}</td>
+        <td height="14" style="font-size:0.6rem !important">{{ $order->nurse->obs6 }}</td>
       </tr>
     
       <tr style="font-size:0.7rem;">
-        <td height="15">{{ $order->nurse->hr7 }}</td>
-        <td height="15">{{ $order->nurse->pa7 }}</td>
-        <td height="15">{{ $order->nurse->px7 }}</td>
-        <td height="15">{{ $order->nurse->qb7 }}</td>
-        <td height="15">{{ $order->nurse->cnd7 }}</td>
-        <td height="15">{{ $order->nurse->ra7 }}</td>
-        <td height="15">{{ $order->nurse->rv7 }}</td>
-        <td height="15">{{ $order->nurse->ptm7 }}</td>
-        <td height="15">{{ $order->nurse->obs7 }}</td>
+        <td height="14">{{ $order->nurse->hr7 }}</td>
+        <td height="14">{{ $order->nurse->pa7 }}</td>
+        <td height="14">{{ $order->nurse->px7 }}</td>
+        <td height="14">{{ $order->nurse->qb7 }}</td>
+        <td height="14">{{ $order->nurse->cnd7 }}</td>
+        <td height="14">{{ $order->nurse->ra7 }}</td>
+        <td height="14">{{ $order->nurse->rv7 }}</td>
+        <td height="14">{{ $order->nurse->ptm7 }}</td>
+        <td height="14" style="font-size:0.6rem !important">{{ $order->nurse->obs7 }}</td>
       </tr>
     
       <tr style="font-size:0.7rem;">
-        <td height="15">{{ $order->nurse->hr8 }}</td>
-        <td height="15">{{ $order->nurse->pa8 }}</td>
-        <td height="15">{{ $order->nurse->px8 }}</td>
-        <td height="15">{{ $order->nurse->qb8 }}</td>
-        <td height="15">{{ $order->nurse->cnd8 }}</td>
-        <td height="15">{{ $order->nurse->ra8 }}</td>
-        <td height="15">{{ $order->nurse->rv8 }}</td>
-        <td height="15">{{ $order->nurse->ptm8 }}</td>
-        <td height="15">{{ $order->nurse->obs8 }}</td>
+        <td height="14">{{ $order->nurse->hr8 }}</td>
+        <td height="14">{{ $order->nurse->pa8 }}</td>
+        <td height="14">{{ $order->nurse->px8 }}</td>
+        <td height="14">{{ $order->nurse->qb8 }}</td>
+        <td height="14">{{ $order->nurse->cnd8 }}</td>
+        <td height="14">{{ $order->nurse->ra8 }}</td>
+        <td height="14">{{ $order->nurse->rv8 }}</td>
+        <td height="14">{{ $order->nurse->ptm8 }}</td>
+        <td height="14" style="font-size:0.6rem !important">{{ $order->nurse->obs8 }}</td>
       </tr>
     
       <tr>
