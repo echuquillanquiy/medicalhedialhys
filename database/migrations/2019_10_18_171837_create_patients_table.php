@@ -17,7 +17,7 @@ class CreatePatientsTable extends Migration
             $table->bigIncrements('id');
 
             $table->string('name');
-            $table->string('dni')->unique();
+            $table->string('dni');
             $table->date('date_of_birth')->nullable();
             $table->string('sex');
             $table->string('age');
@@ -30,6 +30,7 @@ class CreatePatientsTable extends Migration
             $table->date('last_job')->nullable();
             $table->string('hosp_origin');
             $table->string('code'); //15 digitos
+            $table->string('nafiliation');
 
             $table->timestamps();
         });

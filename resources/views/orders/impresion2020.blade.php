@@ -33,7 +33,7 @@
         <tr>
 
             <td colspan="5" style="font-size: 0.7rem"><strong>N° de afiliacion a aseguradora: </strong></td>
-            <td width="250px" style="border-bottom: solid 1px; font-size: 0.7rem; text-transform:uppercase;">{{ $order->patient->nafiliation }}</td>
+            <td width="250px" style="border-bottom: solid 1px; font-size: 0.7rem; text-transform:uppercase;">{{ $order->patient->code }}</td>
 
             <td style="width: 6%; font-size: 0.7rem"><strong>N° de historia clinica: </strong></td>
             <td style="border:solid 1px; text-align: center; font-size: 0.7rem;" width="50px">{{ $order->nurse->hcl }}</td>
