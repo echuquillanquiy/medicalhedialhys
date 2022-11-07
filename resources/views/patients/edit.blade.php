@@ -48,9 +48,9 @@
             <div class="input-group-prepend">
               <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
             </div>
-            <input class="form-control datepicker" onchange="Anos();" placeholder="Seleccionar fecha" 
-                id="date_of_birth" name="date_of_birth" type="text" 
-                value="{{ old('date_of_birth', $patient->date_of_birth) }}" 
+            <input class="form-control datepicker" onchange="Anos();" placeholder="Seleccionar fecha"
+                id="date_of_birth" name="date_of_birth" type="text"
+                value="{{ old('date_of_birth', $patient->date_of_birth) }}"
                 data-date-format="yyyy-mm-dd" >
           </div>
         </div>
@@ -75,7 +75,7 @@
       </div>
 
       <div class="row">
-        
+
         <div class="form-group col-lg-2">
           <label for="phone">Telefono</label>
           <input type="text" name="phone" class="form-control" value="{{ old('phone', $patient->phone) }}" required>
@@ -114,10 +114,10 @@
           <label for="ocupation">Ocupación Actual</label>
           <input type="text" name="ocupation" class="form-control" value="{{ old('ocupation', $patient->ocupation) }}">
         </div>
-      </div> 	
+      </div>
 
       <div class="row">
-        
+
         <div class="form-group col-lg-4">
           <label for="condition">Condición Actual</label>
           <input type="text" name="condition" class="form-control" value="{{ old('condition', $patient->condition) }}">
@@ -129,24 +129,31 @@
             <div class="input-group-prepend">
               <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
             </div>
-            <input class="form-control datepicker" placeholder="Seleccionar fecha" 
-                id="date" name="last_job" type="text" 
-                value="{{ old('last_job', $patient->last_job) }}" 
+            <input class="form-control datepicker" placeholder="Seleccionar fecha"
+                id="date" name="last_job" type="text"
+                value="{{ old('last_job', $patient->last_job) }}"
                 data-date-format="yyyy-mm-dd" >
           </div>
-        </div> 
+        </div>
 
         <div class="form-group col-lg-5">
           <label for="hosp_origin">Hospital de origen</label>
           <input type="text" name="hosp_origin" class="form-control" value="{{ old('hosp_origin', $patient->hosp_origin) }}" required>
-        </div>     
+        </div>
 
       </div>
-    
-      <div class="form-group">
-        <label for="code">Codigo (Autogenerado)</label>
-        <input type="text" name="code" class="form-control" value="{{ old('code', $patient->code) }}" required>
-      </div>       
+
+        <div class="row">
+            <div class="form-group col-lg-6">
+                <label for="code">Codigo (Autogenerado)</label>
+                <input type="text" name="code" class="form-control" value="{{ old('code', $patient->code) }}" required>
+            </div>
+
+            <div class="form-group col-lg-6">
+                <label for="nafiliation">N° de afiliación a aseguradora</label>
+                <input type="text" name="nafiliation" class="form-control" value="{{ old('nafiliation', $patient->nafiliation) }}" required>
+            </div>
+        </div>
 
 	  	<button type="submit" class="btn btn-primary">Guardar</button>
 	  </form>

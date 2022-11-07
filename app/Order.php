@@ -11,7 +11,8 @@ class Order extends Model
 		'patient_id',
         'room_id',
         'shift_id',
-        'user_id'
+        'user_id',
+        'covid'
 	];
 
     public function user()

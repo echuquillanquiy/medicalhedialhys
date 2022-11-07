@@ -44,12 +44,12 @@
           @endforeach
         </ul>
       </div>
-      @endif 
+      @endif
 
 
-      
+
       <div class="row">
-        <div class="form-group col-sm-12 col-lg-6">
+        <div class="form-group col-sm-12 col-lg-4">
         <label for="name">Nombres y Apellidos</label>
         <input type="text" name="name" class="form-control" value="{{ old('name', $order->patient->name) }}" disabled>
       </div>
@@ -75,6 +75,15 @@
             @endforeach
           </select>
         </div>
+
+          <div class="form-group col-sm-12 col-lg-2">
+              <label for="covid">Turnos</label>
+              <select name="covid" id="covid" class="form-control selectpicker" data-live-search="true" data-style="btn-info">
+                  <option value="{{ $order->covid }}" disabled selected>{{ $order->covid }}</option>
+                  <option value="NO">NO</option>
+                  <option value="SI">SI</option>
+              </select>
+          </div>
 
         <div class="form-group">
           <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">

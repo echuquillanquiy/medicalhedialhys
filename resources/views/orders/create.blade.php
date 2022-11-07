@@ -42,7 +42,7 @@
 
       @csrf
       <div class="row mt--4">
-        <div class="form-group col-sm-12 col-lg-6">
+        <div class="form-group col-sm-12 col-lg-4">
           <label for="patient_id">Pacientes</label
 >          <select name="patient_id" id="patient_id" class="form-control selectpicker" data-live-search="true" data-style="btn-info">
             @foreach ($patients as $patient)
@@ -71,6 +71,14 @@
             @endforeach
           </select>
         </div>
+
+          <div class="form-group col-sm-12 col-lg-2">
+              <label for="covid">Paciente Con COVID-19</label>
+              <select name="covid" id="covid" class="form-control selectpicker" data-live-search="true" data-style="btn-info">
+                  <option value="NO">NO</option>
+                  <option value="SI">SI</option>
+              </select>
+          </div>
 
         <div class="form-group">
           <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">

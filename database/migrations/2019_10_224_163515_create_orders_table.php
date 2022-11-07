@@ -17,7 +17,7 @@ class CreateOrdersTable extends Migration
             $table->bigIncrements('id');
 
             $table->unsignedBigInteger('patient_id');
-            $table->foreign('patient_id')->references('id')->on('patients'); 
+            $table->foreign('patient_id')->references('id')->on('patients');
 
             $table->unsignedBigInteger('room_id');
             $table->foreign('room_id')->references('id')->on('rooms');
@@ -27,6 +27,8 @@ class CreateOrdersTable extends Migration
 
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
+
+            $table->enum('covid', ['SI', 'NO'])->default('NO');
 
             $table->timestamps();
         });

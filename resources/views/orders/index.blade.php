@@ -30,10 +30,10 @@
             <div class="input-group-prepend">
             <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
             </div>
-            <input class="form-control datepicker" placeholder="Seleccionar fecha" 
-                id="created_at" name="created_at" type="text" 
-                value="{{ old('date', date('Y-m-d')) }}" 
-                data-date-format="yyyy-mm-dd" 
+            <input class="form-control datepicker" placeholder="Seleccionar fecha"
+                id="created_at" name="created_at" type="text"
+                value="{{ old('date', date('Y-m-d')) }}"
+                data-date-format="yyyy-mm-dd"
                 >
           </div>
         </div>
@@ -41,26 +41,27 @@
           <button class="btn btn-info btn-md" type="submit">Buscar</button>
         </div>
 
-        
+
       </div>
-      
+
     </form>
   </div>
 
   <div class="table-responsive">
     <!-- Projects table -->
     <table class="table align-items-center table-flush table-hover">
-      <thead class="thead-light">
+      <thead class="thead-light text-center">
         <tr>
           <th scope="col">ID</th>
           <th scope="col">Paciente</th>
           <th scope="col">Sala</th>
           <th scope="col">Turno</th>
+          <th scope="col">Paciente con COVID</th>
           <th scope="col">Fecha y hora de creación</th>
           <th>Opciones</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody class="text-center">
         @foreach ($orders as $order)
         <tr>
           <th scope="row">
@@ -75,7 +76,9 @@
           <td>
             {{$order->shift->name}}
           </td>
-
+          <td>
+            {{$order->covid}}
+          </td>
           <td>
             {{$order->created_at}}
           </td>
@@ -93,7 +96,7 @@
               @else
               <a href="{{ url('/orders/'.$order->id.'/impresion2020') }}" class="btn btn-sm btn-success" target="_blank">Historia</a>
               @endif
-            </form>           
+            </form>
 
           </td>
         </tr>

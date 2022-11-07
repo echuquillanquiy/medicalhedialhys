@@ -60,18 +60,18 @@ class MedicalController extends Controller
             'uf' => 'required|min:4',
             'qb' => 'required|min:2',
             'qd' => 'required|min:2',
-            'bathroom' => 'required|min:2',
-            'temperature' => 'required|min:2',
+            //'bathroom' => 'required|min:2',
+            //'temperature' => 'required|min:2',
             'cnd' => 'required|min:1',
             'start_na' => 'required|min:2',
             'end_na' => 'required|min:2',
             'area_filter' => 'required|min:2',
             'membrane' => 'required|min:2',
-            'serological' => 'required|min:2',
+            //'serological' => 'required|min:2',
             'profile_uf' => 'required|min:2',
-            'dializer' => 'required|min:5',
-            'bircarbonat' => 'required|min:2',
-            'na_in_solution' => 'required|min:2'
+            //'dializer' => 'required|min:5',
+            'bicarbonat' => 'required|min:2',
+            //'na_in_solution' => 'required|min:2'
 
         ];
 
@@ -116,17 +116,17 @@ class MedicalController extends Controller
 
             'profile_uf.required' => 'El perfil UF es requerido.',
             'dializer.required' => 'El campo dializador es requerido.',
-            'bircarbonat.required' => 'El bicarbonato es requerido.',
+            'bicarbonat.required' => 'El bicarbonato es requerido.',
             'na_in_solution.required' => 'El calcio en solución es requerido.',
 
             'profile_uf.min' => 'El campo Perfil UF debe tener mínimo 2 carácteres',
             'dializer.min' => 'El campo dializador debe tener mínimo 5 carácteres',
-            'bircarbonat.min' => 'El campo Bicarbonatodebe tener mínimo 2 carácteres',          
+            'bircarbonat.min' => 'El campo Bicarbonatodebe tener mínimo 2 carácteres',
             'na_in_solution.min' => 'El campo Calcio en solución debe tener mínimo 2 carácteres',
-            
+
         ];
 
-        $this->validate($request, $rules, $messages);  
+        $this->validate($request, $rules, $messages);
 
     }
 
@@ -148,7 +148,7 @@ class MedicalController extends Controller
 
         if ($existsMedicalsToday) {
             $notification = 'Este paciente ya tiene un parte medico registrada hoy. Intente nuevamente mañana.';
-            return redirect('/medicals/')->with(compact('notification'));            
+            return redirect('/medicals/')->with(compact('notification'));
         }
 
         Medical::create($request->all());

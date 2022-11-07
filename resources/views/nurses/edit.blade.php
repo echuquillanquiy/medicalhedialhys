@@ -10,7 +10,7 @@
       {{ session('notification') }}
     </div>
   @endif
-  
+
   <div class="card-header border-0">
     <div class="row align-items-center">
       <div class="col">
@@ -60,145 +60,146 @@
 
             <div class="tab-pane fade show active" id="medical" role="tabpanel" aria-labelledby="tabs-icons-text-1-tab">
 
-              <div class="row">
-                <div class="form-group col-sm-12 col-lg-4">
-                  <label for="start_weight">Peso Inicial</label>
-                  <input type="text" name="start_weight" class="form-control" value="{{ $nurse->order->medical->start_weight}}" disabled>
+                <div class="row">
+
+                    <div class="form-group col-sm-12 col-lg-2">
+                        <label for="start_hour">Hora Inicial</label>
+                        <input type="time" name="start_hour" class="form-control" readonly value="{{ $nurse->order->medical->start_hour }}">
+                    </div>
+
+                    <div class="form-group col-sm-12 col-lg-3">
+                        <label for="start_weight">Peso Inicial</label>
+                        <input type="text" name="start_weight" class="form-control" readonly value="{{ $nurse->order->medical->start_weight }}">
+                    </div>
+
+                    <div class="form-group col-sm-12 col-lg-3">
+                        <label for="start_pa">PA Inicial</label>
+                        <input type="text" name="start_pa" class="form-control" readonly value="{{ $nurse->order->medical->start_pa }}">
+                    </div>
+
+                    <div class="form-group col-sm-12 col-lg-4">
+                        <label for="fc">Frecuencia Cardiaca</label>
+                        <input type="text" name="fc" class="form-control" readonly value="{{ $nurse->order->medical->fc }}">
+                    </div>
                 </div>
 
-                <div class="form-group col-sm-12 col-lg-4">
-                  <label for="start_pa">PA Inicial</label>
-                  <input type="text" name="start_pa" class="form-control" value="{{$nurse->order->medical->start_pa}}" disabled>
+                <div class="row">
+                    <div class="form-group col-sm-12 col-lg-4">
+                        <label for="clinical_trouble">Problemas Clínicos:</label>
+                        <textarea class="form-control" id="" name="clinical_trouble" rows="2" disabled>{{ $nurse->order->medical->clinical_trouble }}</textarea>
+                    </div>
+
+                    <div class="form-group col-sm-12 col-lg-4">
+                        <label for="evaluation">Evaluación</label>
+                        <textarea class="form-control" id="" name="evaluation" rows="2" disabled>{{ $nurse->order->medical->evaluation }}</textarea>
+                    </div>
+
+                    <div class="form-group col-sm-12 col-lg-4">
+                        <label for="indications">Indicaciones</label>
+                        <textarea class="form-control" id="" name="indications" rows="2" disabled>{{ $nurse->order->medical->indications }}</textarea>
+                    </div>
+
                 </div>
 
-                <div class="form-group col-sm-12 col-lg-4">
-                  <label for="fc">Frecuencia Cardiaca</label>
-                  <input type="text" name="fc" class="form-control" value="{{$nurse->order->medical->fc}}" disabled>
-                </div>
-              </div>
+                <div class="row">
+                    <div class="form-group col-sm-12 col-lg-1">
+                        <label for="hour_hd">HORA HD</label>
+                        <input type="text" name="hour_hd" class="form-control" readonly value="{{ $nurse->order->medical->hour_hd }}">
+                    </div>
 
-              <div class="row">
+                    <div class="form-group col-sm-12 col-lg-1">
+                        <label for="heparin">Heparina</label>
+                        <input type="text" name="heparin" class="form-control" readonly value="{{ $nurse->order->medical->heparin }}">
+                    </div>
 
-                <div class="form-group col-sm-12 col-lg-4">
-                  <label for="clinical_trouble">Problemas Clínicos</label>
-                  <textarea class="form-control" id="" name="clinical_trouble" rows="2" disabled>{{$nurse->order->medical->clinical_trouble}}</textarea>
-                </div>
+                    <div class="form-group col-sm-12 col-lg-2">
+                        <label for="dry_weight">Peso Seco</label>
+                        <input type="text" name="dry_weight" class="form-control" readonly value="{{ $nurse->order->medical->dry_weight }}">
+                    </div>
 
-                <div class="form-group col-sm-12 col-lg-4">
-                  <label for="evaluation">Evaluación</label>
-                  <textarea class="form-control" id="" name="evaluation" rows="2" disabled>{{$nurse->order->medical->evaluation}}</textarea>
-                </div>
+                    <div class="form-group col-sm-12 col-lg-2">
+                        <label for="uf">UF</label>
+                        <input type="text" name="uf" class="form-control" readonly value="{{ $nurse->order->medical->uf }}">
+                    </div>
 
-                <div class="form-group col-sm-12 col-lg-4">
-                  <label for="indications">Indicaciones</label>
-                  <textarea class="form-control" id="" name="indications" rows="2" disabled>{{$nurse->order->medical->indications}}</textarea>
-                </div>
+                    <div class="form-group col-sm-12 col-lg-2">
+                        <label for="qb">QB</label>
+                        <input type="text" name="qb" class="form-control" readonly value="{{ $nurse->order->medical->qb }}">
+                    </div>
 
-              </div>      
+                    <div class="form-group col-sm-12 col-lg-2">
+                        <label for="qd">QD</label>
+                        <input type="text" name="qd" class="form-control" readonly value="{{ $nurse->order->medical->qd }}">
+                    </div>
 
-              <div class="row">
-                <div class="form-group col-sm-12 col-lg-1">
-                  <label for="hour_hd">HORA HD</label>
-                  <input type="text" name="hour_hd" class="form-control" value="{{$nurse->order->medical->hour_hd}}" disabled>
-                </div>
-
-                <div class="form-group col-sm-12 col-lg-1">
-                  <label for="heparin">Heparina</label>
-                  <input type="text" name="heparin" class="form-control" value="{{$nurse->order->medical->heparin}}" disabled>
-                </div>
-
-                <div class="form-group col-sm-12 col-lg-2">
-                  <label for="dry_weight">Peso Seco</label>
-                  <input type="text" name="dry_weight" class="form-control" value="{{$nurse->order->medical->dry_weight}}" disabled>
+                    <div class="form-group col-sm-12 col-lg-2">
+                        <label for="bicarbonat">Bicarbonato</label>
+                        <input type="text" name="bicarbonat" class="form-control" readonly value="{{ $nurse->order->medical->bicarbonat }}">
+                    </div>
                 </div>
 
-                <div class="form-group col-sm-12 col-lg-2">
-                  <label for="uf">UF</label>
-                  <input type="text" name="uf" class="form-control" value="{{$nurse->order->medical->uf}}" disabled>
+                <div class="row">
+
+                    <div class="form-group col-sm-12 col-lg-2">
+                        <label for="start_na">NA INICIAL</label>
+                        <input type="text" name="start_na" class="form-control" readonly value="{{ $nurse->order->medical->start_na }}">
+                    </div>
+
+                    <div class="form-group col-sm-12 col-lg-1">
+                        <label for="cnd">CND</label>
+                        <input type="text" name="cnd" class="form-control" readonly value="{{ $nurse->order->medical->cnd }}">
+                    </div>
+
+                    <div class="form-group col-sm-12 col-lg-2">
+                        <label for="end_na">NA FINAL</label>
+                        <input type="text" name="end_na" class="form-control" readonly value="{{ $nurse->order->medical->end_na }}">
+                    </div>
+
+                    <div class="form-group col-sm-12 col-lg-1">
+                        <label for="profile_na">Perfil Na</label>
+                        <input type="text" name="profile_na" class="form-control" readonly value="{{ $nurse->order->medical->profile_na }}">
+                    </div>
+
+                    <div class="form-group col-sm-12 col-lg-2">
+                        <label for="area_filter">ÁREA/FILTRO</label>
+                        <input type="text" name="area_filter" class="form-control" readonly value="{{ $nurse->order->medical->area_filter }}">
+                    </div>
+
+                    <div class="form-group col-sm-12 col-lg-2">
+                        <label for="membrane">MEMBRANA</label>
+                        <input type="text" name="membrane" class="form-control" readonly value="{{ $nurse->order->medical->membrane }}">
+                    </div>
+
+                    <div class="form-group col-sm-12 col-lg-2">
+                        <label for="profile_uf">Perfil UF:</label>
+                        <input type="text" name="profile_uf" class="form-control" readonly value="{{ $nurse->order->medical->profile_uf }}">
+                    </div>
                 </div>
 
-                <div class="form-group col-sm-12 col-lg-2">
-                  <label for="qb">QB</label>
-                  <input type="text" name="qb" class="form-control" value="{{$nurse->order->medical->qb}}" disabled>
-                </div>
+                <div class="row">
 
-                <div class="form-group col-sm-12 col-lg-2">
-                  <label for="qd">QD</label>
-                  <input type="text" name="qd" class="form-control" value="{{$nurse->order->medical->qd}}" disabled>
-                </div>
+                    <div class="form-group col-sm-12 col-lg-2">
+                        <label for="bicarbonat">Bicarbonato</label>
+                        <input type="text" name="bicarbonat" class="form-control" readonly value="{{ $nurse->order->medical->bicarbonat }}">
+                    </div>
 
-                <div class="form-group col-sm-12 col-lg-2">
-                  <label for="bathroom">Solución</label>
-                  <input type="text" name="bathroom" class="form-control" value="{{$nurse->order->medical->bathroom}}" disabled>
-                </div>
-              </div>
+                    <div class="form-group col-sm-12 col-lg-4">
+                        <label for="end_evaluation">Evaluación Final</label>
+                        <textarea class="form-control" readonly id="" name="end_evaluation" rows="2">{{ $nurse->order->medical->evaluation }}</textarea>
+                    </div>
 
-              <div class="row">
-                <div class="form-group col-sm-12 col-lg-1">
-                  <label for="temperature">T°</label>
-                  <input type="text" name="temperature" class="form-control" value="{{$nurse->order->medical->temperature}}" disabled>
-                </div>
+                    <div class="form-group col-sm-12 col-lg-2">
+                        <label for="end_hour">Hora final</label>
+                        <input type="time" name="end_hour" class="form-control" readonly value="{{ $nurse->order->medical->end_hour }}">
+                    </div>
 
-                <div class="form-group col-sm-12 col-lg-1">
-                  <label for="cnd">CND</label>
-                  <input type="text" name="cnd" class="form-control" value="{{$nurse->order->medical->cnd}}" disabled>
                 </div>
-
-                <div class="form-group col-sm-12 col-lg-2">
-                  <label for="start_na">NA INICIAL</label>
-                  <input type="text" name="start_na" class="form-control" value="{{$nurse->order->medical->start_na}}" disabled>
-                </div>
-
-                <div class="form-group col-sm-12 col-lg-2">
-                  <label for="end_na">NA FINAL</label>
-                  <input type="text" name="end_na" class="form-control" value="{{$nurse->order->medical->end_na}}" disabled>
-                </div>
-
-                <div class="form-group col-sm-12 col-lg-2">
-                  <label for="area_filter">ÁREA/FILTRO</label>
-                  <input type="text" name="area_filter" class="form-control" value="{{$nurse->order->medical->area_filter}}" disabled>
-                </div>
-
-                <div class="form-group col-sm-12 col-lg-2">
-                  <label for="membrane">MEMBRANA</label>
-                  <input type="text" name="membrane" class="form-control" value="{{$nurse->order->medical->membrane}}" disabled>
-                </div>
-
-                <div class="form-group col-sm-12 col-lg-2">
-                  <label for="serological">Cond. Serologica</label>
-                  <select class="form-control" name="serological" data-toggle="select" title="Simple select" disabled>
-                    <option value="{{$nurse->order->medical->serological}}">{{$nurse->order->medical->serological}}</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="form-group col-sm-12 col-lg-3">
-                  <label for="profile_uf">Perfil UF:</label>
-                  <input type="text" class="form-control" value="{{ $nurse->order->medical->profile_uf }}" disabled>
-                </div>
-          
-                <div class="form-group col-sm-12 col-lg-3">
-                  <label for="dializer">Dializador</label>
-                  <input type="text" class="form-control" value="{{ $nurse->order->medical->dializer }}" disabled>
-                </div>
-          
-                <div class="form-group col-sm-12 col-lg-3">
-                  <label for="bircarbonat">Bicarbonato</label>
-                  <input type="text" class="form-control" value="{{ $nurse->order->medical->bircarbonat }}" disabled>
-                </div>
-          
-                <div class="form-group col-sm-12 col-lg-3">
-                  <label for="na_in_solution">Calcio en solución</label>
-                  <input type="text" class="form-control" value="{{ $nurse->order->medical->na_in_solution }}" disabled>
-                </div>
-              </div>
 
             </div>
 
             <div class="tab-pane fade" id="nurse" role="tabpanel" aria-labelledby="tabs-icons-text-2-tab">
 
-              <div class="row">
+              <div class="row text-center">
                 <div class="form-group col-sm-12 col-lg-2">
                   <label for="hcl">H.CL</label>
                   <input type="text" name="hcl" class="form-control" value="{{ old('hcl', $nurse->hcl) }}">
@@ -230,14 +231,14 @@
 
                 <div class="form-group col-sm-12 col-lg-2">
                   <label for="aspect_dializer">Aspecto del dializador</label>
-                  <input type="number" name="aspect_dializer" class="form-control" value="{{ old('aspect_dializer', $nurse->aspect_dializer) }}">
+                  <input type="text" name="aspect_dializer" class="form-control" value="{{ old('aspect_dializer', $nurse->aspect_dializer) }}">
                 </div>
-              </div>      
+              </div>
 
-              <div class="row">
+              <div class="row text-center">
                 <div class="form-group col-sm-12 col-lg-2">
                   <label for="start_pa">P.A. Inicial</label>
-                  <input type="text" name="start_pa" class="form-control" 
+                  <input type="text" name="start_pa" class="form-control"
                   @if ($nurse->start_pa == null)
                     value="{{ old('start_pa', $nurse->order->medical->start_pa) }}"
                   @else
@@ -278,7 +279,7 @@
                 </div>
               </div>
 
-              <div class="row">
+              <div class="row text-center">
                 <div class="form-group col-sm-12 col-lg-2">
                   <label for="filter">Filtro</label>
                   <input type="text" name="filter" class="form-control" value="{{ old('filter', $nurse->filter) }}">
@@ -296,58 +297,61 @@
                 </div>
 
                 <div class="form-group col-sm-12 col-lg-2">
-                  <label for="access1">ACCESO</label>
-                  <select class="form-control" name="access1" data-toggle="select" title="Simple select" data-placeholder="Select a state">
-                    <option value="{{ $nurse->access1 }}">{{ old('access1',$nurse->access1) }}</option>
-                    <option value="CVCT">CVCT</option>
-                    <option value="ART">ART</option>
+                  <label for="access_arterial">ARTERIAL</label>
+                  <select class="form-control" name="access_arterial" data-toggle="select" title="Simple select" data-placeholder="Select a state">
+                    <option value="{{ $nurse->access_arterial }}">{{ old('access_arterial',$nurse->access_arterial) }}</option>
                     <option value="FAV">FAV</option>
                     <option value="INJ">INJ</option>
+                    <option value="CVCL">CVCL</option>
                     <option value="CVCLP">CVCLP</option>
                   </select>
                 </div>
 
                 <div class="form-group col-sm-12 col-lg-2">
-                  <label for="access2">ACCESO</label>
-                  <select class="form-control" name="access2" data-toggle="select" title="Simple select" data-placeholder="Select a state">
-                    <option value="{{ $nurse->access2 }}">{{ old('access2', $nurse->access2) }}</option>
-                    <option value="CVCT">CVCT</option>
-                    <option value="ART">ART</option>
-                    <option value="FAV">FAV</option>
-                    <option value="INJ">INJ</option>
-                    <option value="CVCLP">CVCLP</option>
+                  <label for="access_venoso">VENOSO</label>
+                  <select class="form-control" name="access_venoso" data-toggle="select" title="Simple select" data-placeholder="Select a state">
+                    <option value="{{ $nurse->access_venoso }}">{{ old('access_venoso', $nurse->access_venoso) }}</option>
+                      <option value="FAV">FAV</option>
+                      <option value="VP">VP</option>
+                      <option value="INJ">INJ</option>
+                      <option value="CVCL">CVCL</option>
+                      <option value="CVCLP">CVCLP</option>
                   </select>
                 </div>
 
-                <div class="form-group col-sm-12 col-lg-1">
-                  <label for="epo">EPO</label>
-                  <input type="text" name="epo" class="form-control" value="{{ old('epo', $nurse->epo) }}">
-                </div>
-
-                <div class="form-group col-sm-12 col-lg-1">
-                  <label for="iron">Hierro</label>
-                  <input type="text" name="iron" class="form-control" value="{{ old('iron', $nurse->iron) }}">
-                </div>
-
-                <div class="form-group col-sm-12 col-lg-2">
-                  <label for="vitb12">Vitamina b12</label>
-                  <input type="text" name="vitb12" class="form-control" value="{{ old('vitb12', $nurse->vitb12) }}">
-                </div>
-              </div>
-
-              <div class="row">
-
-                <div class="form-group col-sm-12 col-lg-6">
-                  <label for="start_observation">Observación Inicial</label>
-                  <textarea class="form-control" id="" name="start_observation" rows="3" value="">{{ old('start_observation', $nurse->start_observation) }}</textarea>
-                </div>
-
-                <div class="form-group col-sm-12 col-lg-6">
-                  <label for="end_observation">Observación Final</label>
-                  <textarea class="form-control" id="" name="end_observation" rows="3" value="">{{ old('end_observation', $nurse->end_observation) }}</textarea>
-                </div>
+                  <div class="form-group col-sm-12 col-lg-4">
+                      <label for="iron">Hierro</label>
+                      <input type="text" name="iron" class="form-control" value="{{ old('iron', $nurse->iron) }}">
+                  </div>
 
               </div>
+
+                <div class="row text-center">
+                    <div class="form-group col-sm-12 col-lg-2">
+                        <label for="epo2000">EPO 2000</label>
+                        <input type="text" name="epo2000" class="form-control" value="{{ old('epo2000', $nurse->epo2000) }}">
+                    </div>
+
+                    <div class="form-group col-sm-12 col-lg-2">
+                        <label for="epo4000">EPO 4000</label>
+                        <input type="text" name="epo4000" class="form-control" value="{{ old('epo4000', $nurse->epo4000) }}">
+                    </div>
+
+                    <div class="form-group col-sm-12 col-lg-2">
+                        <label for="hidroxi">Hidroxicobalamina</label>
+                        <input type="text" name="hidroxi" class="form-control" value="{{ old('hidroxi', $nurse->hidroxi) }}">
+                    </div>
+
+                    <div class="form-group col-sm-12 col-lg-2">
+                        <label for="calcitriol">Calcitriol</label>
+                        <input type="text" name="calcitriol" class="form-control" value="{{ old('calcitriol', $nurse->calcitriol) }}">
+                    </div>
+
+                    <div class="form-group col-sm-12 col-lg-4">
+                        <label for="others_med">Otros Medicamentos</label>
+                        <input type="text" name="others_med" class="form-control" value="{{ old('others_med', $nurse->others_med) }}">
+                    </div>
+                </div>
 
               <div class="row text-center">
 
@@ -372,23 +376,40 @@
                 </div>
 
               </div>
+
+                <div class="row text-center">
+
+                    <div class="form-group col-sm-12 col-lg-12">
+                        <label for="end_observation">Observación Final</label>
+                        <textarea class="form-control" id="" name="end_observation" rows="3" value="">{{ old('end_observation', $nurse->end_observation) }}</textarea>
+                    </div>
+
+                </div>
             </div>
 
             <div class="tab-pane fade" id="treatment" role="tabpanel" aria-labelledby="tabs-icons-text-3-tab">
-              <div class="row">
+
+              <div class="row text-center">
                 <div class="form-group col-sm-12 col-lg-1">
                   <label for="hr">HR</label>
                   <input type="text" name="hr" class="form-control" value="{{ old('hr', $nurse->hr) }}">
                 </div>
 
-                <div class="form-group col-sm-12 col-lg-1">
-                  <label for="pa">PA</label>
-                  <input type="text" name="pa" class="form-control" value="{{ old('pa', $nurse->pa) }}">
-                </div>
+                @if($nurse->pa == null)
+                      <div class="form-group col-sm-12 col-lg-1">
+                          <label for="pa">PA</label>
+                          <input type="text" name="pa" class="form-control" value="{{ old('pa', $nurse->order->medical->start_pa) }}">
+                      </div>
+                @else
+                      <div class="form-group col-sm-12 col-lg-1">
+                          <label for="pa">PA</label>
+                          <input type="text" name="pa" class="form-control" value="{{ old('pa', $nurse->pa) }}">
+                      </div>
+                @endif
 
                 <div class="form-group col-sm-12 col-lg-1">
-                  <label for="px">PX</label>
-                  <input type="text" name="px" class="form-control" value="{{ old('px', $nurse->px) }}">
+                  <label for="fc1">FC</label>
+                  <input type="text" name="fc1" class="form-control" value="{{ old('fc1', $nurse->fc1) }}">
                 </div>
 
                 <div class="form-group col-sm-12 col-lg-1">
@@ -416,13 +437,18 @@
                   <input type="text" name="ptm" class="form-control" value="{{ old('ptm', $nurse->ptm) }}">
                 </div>
 
-                <div class="form-group col-sm-12 col-lg-4">
-                  <label for="obs">Observación Final</label>
+                  <div class="form-group col-sm-12 col-lg-2">
+                      <label for="sol_hemodev">SOL/HEMODERIVADOS</label>
+                      <textarea class="form-control" id="" name="sol_hemodev" rows="1">{{ old('sol_hemodev', $nurse->sol_hemodev) }}</textarea>
+                  </div>
+
+                <div class="form-group col-sm-12 col-lg-2">
+                  <label for="obs">Observación</label>
                   <textarea class="form-control" id="" name="obs" rows="1">{{ old('obs', $nurse->obs) }}</textarea>
                 </div>
               </div>
 
-              <div class="row">
+              <div class="row text-center">
                 <div class="form-group col-sm-12 col-lg-1">
                   <input type="text" name="hr2" class="form-control" value="{{ old('hr2', $nurse->hr2) }}">
                 </div>
@@ -432,7 +458,7 @@
                 </div>
 
                 <div class="form-group col-sm-12 col-lg-1">
-                  <input type="text" name="px2" class="form-control" value="{{ old('px2', $nurse->px2) }}">
+                  <input type="text" name="fc2" class="form-control" value="{{ old('fc2', $nurse->fc2) }}">
                 </div>
 
                 <div class="form-group col-sm-12 col-lg-1">
@@ -455,12 +481,16 @@
                   <input type="text" name="ptm2" class="form-control" value="{{ old('ptm2', $nurse->ptm2) }}">
                 </div>
 
-                <div class="form-group col-sm-12 col-lg-4">
+                  <div class="form-group col-sm-12 col-lg-2">
+                      <textarea class="form-control" id="" name="sol_hemodev2" rows="1">{{ old('sol_hemodev2', $nurse->sol_hemodev2) }}</textarea>
+                  </div>
+
+                <div class="form-group col-sm-12 col-lg-2">
                   <textarea class="form-control" id="" name="obs2" rows="1">{{ old('obs2', $nurse->obs2) }}</textarea>
                 </div>
               </div>
 
-              <div class="row">
+              <div class="row text-center">
                 <div class="form-group col-sm-12 col-lg-1">
                   <input type="text" name="hr3" class="form-control" value="{{ old('hr3', $nurse->hr3) }}">
                 </div>
@@ -470,7 +500,7 @@
                 </div>
 
                 <div class="form-group col-sm-12 col-lg-1">
-                  <input type="text" name="px3" class="form-control" value="{{ old('px3', $nurse->px3) }}">
+                  <input type="text" name="fc3" class="form-control" value="{{ old('fc3', $nurse->fc3) }}">
                 </div>
 
                 <div class="form-group col-sm-12 col-lg-1">
@@ -493,12 +523,16 @@
                   <input type="text" name="ptm3" class="form-control" value="{{ old('ptm3', $nurse->ptm3) }}">
                 </div>
 
-                <div class="form-group col-sm-12 col-lg-4">
+                  <div class="form-group col-sm-12 col-lg-2">
+                      <textarea class="form-control" id="" name="sol_hemodev3" rows="1">{{ old('sol_hemodev3', $nurse->sol_hemodev3) }}</textarea>
+                  </div>
+
+                <div class="form-group col-sm-12 col-lg-2">
                   <textarea class="form-control" id="" name="obs3" rows="1">{{ old('obs3', $nurse->obs3) }}</textarea>
                 </div>
               </div>
 
-              <div class="row">
+              <div class="row text-center">
                 <div class="form-group col-sm-12 col-lg-1">
                   <input type="text" name="hr4" class="form-control" value="{{ old('hr4', $nurse->hr4) }}">
                 </div>
@@ -508,7 +542,7 @@
                 </div>
 
                 <div class="form-group col-sm-12 col-lg-1">
-                  <input type="text" name="px4" class="form-control" value="{{ old('px4', $nurse->px4) }}">
+                  <input type="text" name="fc4" class="form-control" value="{{ old('fc4', $nurse->fc4) }}">
                 </div>
 
                 <div class="form-group col-sm-12 col-lg-1">
@@ -531,12 +565,16 @@
                   <input type="text" name="ptm4" class="form-control" value="{{ old('ptm4', $nurse->ptm4) }}">
                 </div>
 
-                <div class="form-group col-sm-12 col-lg-4">
+                  <div class="form-group col-sm-12 col-lg-2">
+                      <textarea class="form-control" id="" name="sol_hemodev4" rows="1">{{ old('sol_hemodev4', $nurse->sol_hemodev4) }}</textarea>
+                  </div>
+
+                <div class="form-group col-sm-12 col-lg-2">
                   <textarea class="form-control" id="" name="obs4" rows="1">{{ old('obs4', $nurse->obs4) }}</textarea>
                 </div>
               </div>
 
-              <div class="row">
+              <div class="row text-center">
                 <div class="form-group col-sm-12 col-lg-1">
                   <input type="text" name="hr5" class="form-control" value="{{ old('hr5', $nurse->hr5) }}">
                 </div>
@@ -546,7 +584,7 @@
                 </div>
 
                 <div class="form-group col-sm-12 col-lg-1">
-                  <input type="text" name="px5" class="form-control" value="{{ old('px5', $nurse->px5) }}">
+                  <input type="text" name="fc5" class="form-control" value="{{ old('fc5', $nurse->fc5) }}">
                 </div>
 
                 <div class="form-group col-sm-12 col-lg-1">
@@ -569,12 +607,16 @@
                   <input type="text" name="ptm5" class="form-control" value="{{ old('ptm5', $nurse->ptm5) }}">
                 </div>
 
-                <div class="form-group col-sm-12 col-lg-4">
+                  <div class="form-group col-sm-12 col-lg-2">
+                      <textarea class="form-control" id="" name="sol_hemodev5" rows="1">{{ old('sol_hemodev5', $nurse->sol_hemodev5) }}</textarea>
+                  </div>
+
+                <div class="form-group col-sm-12 col-lg-2">
                   <textarea class="form-control" id="" name="obs5" rows="1">{{ old('obs5', $nurse->obs5) }}</textarea>
                 </div>
               </div>
 
-              <div class="row">
+              <div class="row text-center">
                 <div class="form-group col-sm-12 col-lg-1">
                   <input type="text" name="hr6" class="form-control" value="{{ old('hr6' , $nurse->hr6) }}">
                 </div>
@@ -584,7 +626,7 @@
                 </div>
 
                 <div class="form-group col-sm-12 col-lg-1">
-                  <input type="text" name="px6" class="form-control" value="{{ old('px6' , $nurse->px6) }}">
+                  <input type="text" name="fc6" class="form-control" value="{{ old('fc6' , $nurse->fc6) }}">
                 </div>
 
                 <div class="form-group col-sm-12 col-lg-1">
@@ -607,12 +649,16 @@
                   <input type="text" name="ptm6" class="form-control" value="{{ old('ptm6' , $nurse->ptm6) }}">
                 </div>
 
-                <div class="form-group col-sm-12 col-lg-4">
+                  <div class="form-group col-sm-12 col-lg-2">
+                      <textarea class="form-control" id="" name="sol_hemodev6" rows="1">{{ old('sol_hemodev6', $nurse->sol_hemodev6) }}</textarea>
+                  </div>
+
+                <div class="form-group col-sm-12 col-lg-2">
                   <textarea class="form-control" id="" name="obs6" rows="1">{{ old('obs6' , $nurse->obs6) }}</textarea>
                 </div>
               </div>
 
-              <div class="row">
+              <div class="row text-center">
                 <div class="form-group col-sm-12 col-lg-1">
                   <input type="text" name="hr7" class="form-control" value="{{ old('hr7', $nurse->hr7) }}">
                 </div>
@@ -622,7 +668,7 @@
                 </div>
 
                 <div class="form-group col-sm-12 col-lg-1">
-                  <input type="text" name="px7" class="form-control" value="{{ old('px7', $nurse->px7) }}">
+                  <input type="text" name="fc7" class="form-control" value="{{ old('fc7', $nurse->fc7) }}">
                 </div>
 
                 <div class="form-group col-sm-12 col-lg-1">
@@ -645,50 +691,18 @@
                   <input type="text" name="ptm7" class="form-control" value="{{ old('ptm7', $nurse->ptm7) }}">
                 </div>
 
-                <div class="form-group col-sm-12 col-lg-4">
+                  <div class="form-group col-sm-12 col-lg-2">
+                      <textarea class="form-control" id="" name="sol_hemodev7" rows="1">{{ old('sol_hemodev7', $nurse->sol_hemodev7) }}</textarea>
+                  </div>
+
+                <div class="form-group col-sm-12 col-lg-2">
                   <textarea class="form-control" id="" name="obs7" rows="1">{{ old('obs7', $nurse->obs7) }}</textarea>
                 </div>
               </div>
 
-              <div class="row">
-                <div class="form-group col-sm-12 col-lg-1">
-                  <input type="text" name="hr8" class="form-control" value="{{ old('hr8' , $nurse->hr8) }}">
-                </div>
 
-                <div class="form-group col-sm-12 col-lg-1">
-                  <input type="text" name="pa8" class="form-control" value="{{ old('pa8' , $nurse->pa8) }}">
-                </div>
-
-                <div class="form-group col-sm-12 col-lg-1">
-                  <input type="text" name="px8" class="form-control" value="{{ old('px8' , $nurse->px8) }}">
-                </div>
-
-                <div class="form-group col-sm-12 col-lg-1">
-                  <input type="text" name="qb8" class="form-control" value="{{ old('qb8' , $nurse->qb8) }}">
-                </div>
-
-                <div class="form-group col-sm-12 col-lg-1">
-                  <input type="text" name="cnd8" class="form-control" value="{{ old('cnd8' , $nurse->cnd8) }}">
-                </div>
-
-                <div class="form-group col-sm-12 col-lg-1">
-                  <input type="text" name="ra8" class="form-control" value="{{ old('ra8' , $nurse->ra8) }}">
-                </div>
-
-                <div class="form-group col-sm-12 col-lg-1">
-                  <input type="text" name="rv8" class="form-control" value="{{ old('rv8' , $nurse->rv8) }}">
-                </div>
-
-                <div class="form-group col-sm-12 col-lg-1">
-                  <input type="text" name="ptm8" class="form-control" value="{{ old('ptm8' , $nurse->ptm8) }}">
-                </div>
-
-                <div class="form-group col-sm-12 col-lg-4">
-                  <textarea class="form-control" id="" name="obs8" rows="1">{{ old('obs8' , $nurse->obs8) }}</textarea>
-                </div>
-              </div>
-              
             </div>
+
             <button type="submit" class="btn btn-primary" >Guardar</button>
           </div>
 

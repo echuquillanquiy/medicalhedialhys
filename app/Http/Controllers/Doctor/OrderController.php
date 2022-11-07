@@ -19,7 +19,7 @@ use PDF;
 
 class OrderController extends Controller
 {
-    public function exportOrderExcel() 
+    public function exportOrderExcel()
     {
         return Excel::download(new OrdersExport, 'order-list.xlsx');
     }
@@ -68,26 +68,28 @@ class OrderController extends Controller
         $rules = [
            'patient_id' => 'required',
            'room_id' => 'required',
-           'shift_id' => 'required'
+           'shift_id' => 'required',
+           'covid' => 'required'
         ];
 
         $messages = [
             'patient_id.required' => 'Por favor seleccionar un paciente.',
             'room_id.required' => 'Por favor seleccionar una Sala.',
-            'shift_id.required' => 'Por favor seleccionar un Turno.'
+            'shift_id.required' => 'Por favor seleccionar un Turno.',
+            'covid.required' => 'Confirme si el paciente tiene COVID 19.'
         ];
 
-        $this->validate($request, $rules, $messages);  
+        $this->validate($request, $rules, $messages);
     }
 
     public function store(Request $request)
-    {   
+    {
         $this->performValidation($request);
         $existsOrdersToday = Order::where('patient_id', $request->input('patient_id'))
             ->whereDate('created_at', date('Y-m-d'))->exists();
         if ($existsOrdersToday) {
             $notification = 'Este paciente ya tiene una orden registrada hoy. Intente nuevamente mañana.';
-            return back()->with(compact('notification'));            
+            return back()->with(compact('notification'));
         }
 
         $order = Order::create($request->all());
@@ -95,7 +97,7 @@ class OrderController extends Controller
             'order_id' => $order->id,
             'patient' => $order->patient->name,
             'room' => $order->room->name,
-            'shift' => $order->shift->name
+            'shift' => $order->shift->name,
         ];
 
         $nurse = $order->nurse()->create($orders_data);
@@ -156,7 +158,8 @@ class OrderController extends Controller
         $order = Order::findOrFail($id);
         $data = $request->only([
             'room_id',
-            'shift_id'
+            'shift_id',
+            'covid'
         ]);
         $order->fill($data);
         $order->save();

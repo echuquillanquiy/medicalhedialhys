@@ -26,7 +26,7 @@ class PatientController extends Controller
             ->dni($dni)
             ->code($code)
             ->paginate(30);
-            
+
 
         return view('patients.index', compact('patients'));
     }
@@ -62,7 +62,8 @@ class PatientController extends Controller
             'condition' => 'min:5',
             'last_job' => 'date',
             'hosp_origin' => 'required|min:5',
-            'code' => 'required|unique:patients|min:10'
+            'code' => 'required|unique:patients|min:10',
+            'nafiliation' => 'required|unique:patients',
         ];
 
         $this->validate($request, $rules, $messages);
@@ -71,7 +72,7 @@ class PatientController extends Controller
     public function store(Request $request)
     {
         $this->performValidation($request);
-        Patient::create($request->only('name', 'dni', 'date_of_birth', 'sex', 'age', 'address', 'phone', 'civil_status', 'instruction', 'ocupation', 'condition', 'last_job', 'hosp_origin', 'code'));
+        Patient::create($request->only('name', 'dni', 'date_of_birth', 'sex', 'age', 'address', 'phone', 'civil_status', 'instruction', 'ocupation', 'condition', 'last_job', 'hosp_origin', 'code', 'nafiliation'));
 
         $notification = 'El paciente se ha registrado correctamente.';
         return redirect('patients')->with(compact('notification'));
@@ -79,7 +80,7 @@ class PatientController extends Controller
 
     public function show($id)
     {
-        
+
     }
 
     public function edit($id)
@@ -90,7 +91,7 @@ class PatientController extends Controller
 
     public function update(Request $request, $id)
     {
-        
+
         $messages = [
             'dni.digits' => 'El DNI debe tener 8 digitos.',
             'code.min' => 'El Autogenerado debe tener como mínimo 10 digitos.'
@@ -109,14 +110,15 @@ class PatientController extends Controller
             'condition' => 'min:5',
             'last_job' => 'date',
             'hosp_origin' => 'required|min:5',
-            'code' => 'required|min:10'
+            'code' => 'required|min:10',
+            'nafiliation' => 'required'
         ];
 
         $this->validate($request, $rules, $messages);
 
         $patient = Patient::findOrFail($id);
 
-        $data = $request->only('name', 'dni', 'date_of_birth', 'sex', 'age', 'address', 'phone', 'civil_status', 'instruction', 'ocupation', 'condition', 'hosp_origin', 'code');
+        $data = $request->only('name', 'dni', 'date_of_birth', 'sex', 'age', 'address', 'phone', 'civil_status', 'instruction', 'ocupation', 'condition', 'hosp_origin', 'code', 'nafiliation');
 
         $patient->fill($data);
         $patient->save();

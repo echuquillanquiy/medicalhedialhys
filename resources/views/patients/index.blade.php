@@ -46,14 +46,14 @@
             <label for="code">Autogenerado</label>
             <input type="text" name="code" class="form-control" value="{{ old('code') }}">
           </div>
-        </div> 
+        </div>
 
       </div>
       <button class="btn btn-info btn-sm" type="submit">Buscar</button>
     </form>
   </div>
-  
-  
+
+
   <div class="table-responsive">
     <!-- Projects table -->
     <table class="table align-items-center table-flush">
@@ -62,6 +62,7 @@
           <th scope="col">Nombres</th>
           <th scope="col">DNI</th>
           <th scope="col">Autogenerado</th>
+            <th scope="col">N° de Afiliación Aseguradora</th>
           <th scope="col">Opciones</th>
         </tr>
       </thead>
@@ -77,8 +78,12 @@
           <td>
             {{$patient->code}}
           </td>
+
+            <td>
+                {{$patient->nafiliation}}
+            </td>
           <td>
-            
+
             <form action="{{ url('/patients/'.$patient->id) }}" method="POST">
               @csrf
               @method('DELETE')
