@@ -149,10 +149,6 @@
                 <input type="text" name="code" class="form-control" value="{{ old('code', $patient->code) }}" required>
             </div>
 
-            <div class="form-group col-lg-6">
-                <label for="nafiliation">N° de afiliación a aseguradora</label>
-                <input type="text" name="nafiliation" class="form-control" value="{{ old('nafiliation', $patient->nafiliation) }}" required>
-            </div>
         </div>
 
 	  	<button type="submit" class="btn btn-primary">Guardar</button>
