@@ -63,7 +63,6 @@ class PatientController extends Controller
             'last_job' => 'date',
             'hosp_origin' => 'required|min:5',
             'code' => 'required|unique:patients|min:10',
-            'nafiliation' => 'required|unique:patients',
         ];
 
         $this->validate($request, $rules, $messages);
@@ -72,7 +71,7 @@ class PatientController extends Controller
     public function store(Request $request)
     {
         $this->performValidation($request);
-        Patient::create($request->only('name', 'dni', 'date_of_birth', 'sex', 'age', 'address', 'phone', 'civil_status', 'instruction', 'ocupation', 'condition', 'last_job', 'hosp_origin', 'code', 'nafiliation'));
+        Patient::create($request->only('name', 'dni', 'date_of_birth', 'sex', 'age', 'address', 'phone', 'civil_status', 'instruction', 'ocupation', 'condition', 'last_job', 'hosp_origin', 'code'));
 
         $notification = 'El paciente se ha registrado correctamente.';
         return redirect('patients')->with(compact('notification'));
@@ -117,7 +116,7 @@ class PatientController extends Controller
 
         $patient = Patient::findOrFail($id);
 
-        $data = $request->only('name', 'dni', 'date_of_birth', 'sex', 'age', 'address', 'phone', 'civil_status', 'instruction', 'ocupation', 'condition', 'hosp_origin', 'code', 'nafiliation');
+        $data = $request->only('name', 'dni', 'date_of_birth', 'sex', 'age', 'address', 'phone', 'civil_status', 'instruction', 'ocupation', 'condition', 'hosp_origin', 'code');
 
         $patient->fill($data);
         $patient->save();
