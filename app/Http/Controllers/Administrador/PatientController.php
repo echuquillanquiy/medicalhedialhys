@@ -111,7 +111,6 @@ class PatientController extends Controller
             'last_job' => 'date',
             'hosp_origin' => 'required|min:5',
             'code' => 'required|min:10',
-            'nafiliation' => 'required'
         ];
 
         $this->validate($request, $rules, $messages);
