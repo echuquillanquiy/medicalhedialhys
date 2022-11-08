@@ -148,11 +148,6 @@
             <label for="code">Codigo (Autogenerado)</label>
             <input type="text" name="code" class="form-control" value="{{ old('code') }}" required>
           </div>
-
-          <div class="form-group col-lg-6">
-              <label for="nafiliation">N° de afiliación a aseguradora</label>
-              <input type="text" name="nafiliation" class="form-control" value="{{ old('nafiliation') }}" required>
-          </div>
       </div>
 
 
