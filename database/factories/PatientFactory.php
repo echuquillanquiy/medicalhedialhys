@@ -22,6 +22,5 @@ $factory->define(Patient::class, function (Faker $faker) {
         'last_job' => $faker->date('Y-m-d'),
         'hosp_origin' => $faker->randomElement(['NINGUNA', 'OTROS']),
         'code' => $faker->randomNumber(8,true),
-        'nafiliation' => $faker->randomNumber(8)
     ];
 });

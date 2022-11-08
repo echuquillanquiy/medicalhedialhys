@@ -62,7 +62,6 @@
           <th scope="col">Nombres</th>
           <th scope="col">DNI</th>
           <th scope="col">Autogenerado</th>
-            <th scope="col">N° de Afiliación Aseguradora</th>
           <th scope="col">Opciones</th>
         </tr>
       </thead>
@@ -78,10 +77,6 @@
           <td>
             {{$patient->code}}
           </td>
-
-            <td>
-                {{$patient->nafiliation}}
-            </td>
           <td>
 
             <form action="{{ url('/patients/'.$patient->id) }}" method="POST">
