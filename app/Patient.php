@@ -9,7 +9,7 @@ class Patient extends Model
 	protected $table = "patients";
 
     protected $fillable = [
-    	'name', 'dni', 'date_of_birth', 'sex', 'age', 'address', 'phone', 'civil_status', 'instruction', 'ocupation', 'condition', 'last_job', 'hosp_origin', 'code', 'nafiliation'
+    	'name', 'dni', 'date_of_birth', 'sex', 'age', 'address', 'phone', 'civil_status', 'instruction', 'ocupation', 'condition', 'last_job', 'hosp_origin', 'code'
     ];
 
     public function scopeName($query, $name)
