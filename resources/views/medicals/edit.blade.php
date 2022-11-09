@@ -188,12 +188,6 @@
         @endif
 
       </div>-->
-
-      <div class="form-group col-sm-12 col-lg-2">
-        <label for="bicarbonat">Bicarbonato</label>
-        <input type="text" name="bicarbonat" class="form-control" value="{{ old('bicarbonat', $medical->bicarbonat) }}">
-      </div>
-
         <div class="form-group col-sm-12 col-lg-4">
             <label for="end_evaluation">Evaluación Final</label>
             <textarea class="form-control" id="" name="end_evaluation" rows="2">{{ old('end_evaluation' ,$medical->end_evaluation) }}</textarea>
