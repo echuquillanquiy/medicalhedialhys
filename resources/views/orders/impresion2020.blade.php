@@ -140,7 +140,7 @@
         <td style="font-size: 0.6rem; width: 10%"></td>
         <td style="font-size: 0.6rem; width: 10%"></td>
         <td style="font-size: 0.6rem; width: 10%">Ultrafiltrado:</td>
-        <td style="font-size: 0.6rem; border-bottom: 1px solid; width: 10%; text-align: center">{{ $order->medical->uf }} cc</td>
+        <td style="font-size: 0.5rem; border-bottom: 1px solid; width: 10%; text-align: center">{{ $order->medical->uf }} cc</td>
         <td style="font-size: 0.6rem; width: 5%"> Perfil de Uf:</td>
         <td style="font-size: 0.6rem; border-bottom: 1px solid; width: 8%; text-align: center">{{ $order->medical->profile_uf }} cc </td>
         <td style="font-size: 0.6rem; width: 6%"></td>
@@ -154,9 +154,9 @@
         <tr>
 
             <td colspan="2" style="font-size: 0.6rem; width: 10%; text-align: right">Ara de dializador:</td>
-            <td style="font-size: 0.6rem; border-bottom: 1px solid; width: 10%; text-align: center">{{ $order->medical->uf }}</td>
+            <td style="font-size: 0.5rem; border-bottom: 1px solid; width: 10%; text-align: center">{{ $order->medical->uf }}</td>
             <td colspan="2" style="font-size: 0.6rem; width: 5%; text-align: right"> Membrana de dializador:</td>
-            <td style="font-size: 0.6rem; border-bottom: 1px solid; width: 8%; text-align: center">{{ $order->medical->profile_uf }}</td>
+            <td style="font-size: 0.5rem; border-bottom: 1px solid; width: 8%; text-align: center">{{ $order->medical->profile_uf }}</td>
             <td></td>
             <td></td>
         </tr>
@@ -195,13 +195,13 @@
     <table width="100%" style="border:2px solid; border-collapse: collapse;">
     <tr>
         <td style="font-size: 0.6rem; color: white; background-color: black; text-align: left;" colspan="2"><strong>2. EVALUACIÓN FINAL </strong></td>
-        <td style="color: white; background-color: black; text-align: center;font-size: 0.6rem;">Hora de evaluacion final: {{ $order->medical->end_hour }}</td>
+        <td style="color: white; background-color: black; text-align: center;font-size: 0.5rem;">Hora de evaluacion final: {{ $order->medical->end_hour }}</td>
     </tr>
 
     <tr>
         <table width="100%" style="border:2px solid; border-collapse: collapse; border-top: none; margin-top: -2px">
             <tr>
-                <td style="font-size: 0.7rem; margin-bottom: 1px; height: 20px" colspan="2">Condicion clinica del paciente al finalizar hemidialisi y otros: {{ $order->medical->end_evaluation }}</td>
+                <td style="font-size: 0.5rem; margin-bottom: 1px; height: 20px" colspan="2">Condicion clinica del paciente al finalizar hemidialisis y otros: {{ $order->medical->end_evaluation }}</td>
             </tr>
         </table>
     </tr>
@@ -252,7 +252,7 @@
             <td style="font-size: 0.5rem; border:1px solid; text-align: center" width="1%">{{ $order->nurse->filter }}</td>
 
             <td style="font-size: 0.6rem; width:3%; text-align: center">Ultrafiltrado programado:</td>
-            <td style="font-size: 0.5rem; border:1px solid; text-align: center" width="3%">{{ $order->nurse->uf }}</td>
+            <td style="font-size: 0.5rem; border:1px solid; text-align: center" width="4%">{{ $order->nurse->uf }}</td>
 
             <td style="font-size: 0.6rem; width:2%; text-align: center"> Acc. Arterial:</td>
             <td style="font-size: 0.5rem; border:1px solid; text-align: center" width="2%">{{ $order->nurse->access_arterial }}</td>
