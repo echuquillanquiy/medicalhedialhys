@@ -23,7 +23,7 @@
     <table style="margin-top:0px;">
       <tr>
 
-        <td colspan="4" style="font-size: 0.7rem"><strong>Apellidos y Nombres: </strong></td>
+        <td colspan="4" style="font-size: 0.6rem"><strong>Apellidos y Nombres: </strong></td>
         <td width="586px" style="border-bottom: solid 1px; font-size: 0.7rem; text-transform:uppercase;">{{ $order->patient->name }}</td>
 
       </tr>
@@ -213,19 +213,19 @@
       </tr>
 
         <tr>
-            <td colspan="10" style="font-size: 0.6rem; border-bottom:1px dotted;" ><strong style="font-size:0.7rem;">S.-</strong>  {{ $order->nurse->s }}</td>
+            <td colspan="10" style="font-size: 0.6rem; border-bottom:1px dotted;" ><strong style="font-size:0.6rem;">S.-</strong>  {{ $order->nurse->s }}</td>
         </tr>
 
         <tr>
-            <td colspan="10" style="font-size: 0.6rem; border-bottom:1px dotted;" ><strong style="font-size:0.7rem">O.-</strong> {{ $order->nurse->o }}</td>
+            <td colspan="10" style="font-size: 0.6rem; border-bottom:1px dotted;" ><strong style="font-size:0.6rem">O.-</strong> {{ $order->nurse->o }}</td>
         </tr>
 
         <tr>
-            <td colspan="10" style="font-size: 0.6rem; border-bottom:1px dotted;" ><strong style="font-size:0.7rem">A.-</strong> {{ $order->nurse->a }}</td>
+            <td colspan="10" style="font-size: 0.6rem; border-bottom:1px dotted;" ><strong style="font-size:0.6rem">A.-</strong> {{ $order->nurse->a }}</td>
         </tr>
 
         <tr>
-            <td colspan="10" style="font-size: 0.6rem; border-bottom:1px dotted;" ><strong style="font-size:0.7rem">P.-</strong> {{ $order->nurse->p }}</td>
+            <td colspan="10" style="font-size: 0.6rem; border-bottom:1px dotted;" ><strong style="font-size:0.6rem">P.-</strong> {{ $order->nurse->p }}</td>
         </tr>
 
       <tr>
@@ -266,10 +266,10 @@
     <table width="100%" style="border-collapse:collapse;text-align:center; margin-top:0px" border="1px;">
 
       <tr>
-        <td style="font-size: 0.7rem; color: white; background-color: black; text-align: left;" colspan="10"><strong>I. EVOLUCIÓN DEL TRATAMIENTO DE HEMODIALISIS</strong></td>
+        <td style="font-size: 0.6rem; color: white; background-color: black; text-align: left;" colspan="10"><strong>I. EVOLUCIÓN DEL TRATAMIENTO DE HEMODIALISIS</strong></td>
       </tr>
 
-      <tr style="font-size:0.7rem;">
+      <tr style="font-size:0.6rem;">
         <th>HR</th>
         <th>P.A.</th>
         <th>Px</th>
@@ -281,7 +281,7 @@
         <th>SOL/HEMODERIVADOS</th>
         <th>OBSERVACIONES</th>
       </tr>
-      <tr style="font-size:0.7rem;">
+      <tr style="font-size:0.6rem;">
         <td height="14">{{ $order->nurse->hr }}</td>
         <td height="14">{{ $order->nurse->pa }}</td>
         <td height="14">{{ $order->nurse->fc1 }}</td>
@@ -294,7 +294,7 @@
         <td height="14" style="font-size:0.6rem !important">{{ $order->nurse->obs }}</td>
       </tr>
 
-      <tr style="font-size:0.7rem;">
+      <tr style="font-size:0.6rem;">
         <td height="14">{{ $order->nurse->hr2 }}</td>
         <td height="14">{{ $order->nurse->pa2 }}</td>
         <td height="14">{{ $order->nurse->fc2 }}</td>
@@ -307,7 +307,7 @@
         <td height="14" style="font-size:0.6rem !important">{{ $order->nurse->obs2 }}</td>
       </tr>
 
-      <tr style="font-size:0.7rem;">
+      <tr style="font-size:0.6rem;">
         <td height="14">{{ $order->nurse->hr3 }}</td>
         <td height="14">{{ $order->nurse->pa3 }}</td>
         <td height="14">{{ $order->nurse->fc3 }}</td>
@@ -320,7 +320,7 @@
         <td height="14" style="font-size:0.6rem !important">{{ $order->nurse->obs3 }}</td>
       </tr>
 
-      <tr style="font-size:0.7rem;">
+      <tr style="font-size:0.6rem;">
         <td height="14">{{ $order->nurse->hr4 }}</td>
         <td height="14">{{ $order->nurse->pa4 }}</td>
         <td height="14">{{ $order->nurse->fc4 }}</td>
@@ -333,7 +333,7 @@
         <td height="14" style="font-size:0.6rem !important">{{ $order->nurse->obs4 }}</td>
       </tr>
 
-      <tr style="font-size:0.7rem;">
+      <tr style="font-size:0.6rem;">
         <td height="14">{{ $order->nurse->hr5 }}</td>
         <td height="14">{{ $order->nurse->pa5 }}</td>
         <td height="14">{{ $order->nurse->fc5 }}</td>
@@ -346,7 +346,7 @@
         <td height="14" style="font-size:0.6rem !important">{{ $order->nurse->obs5 }}</td>
       </tr>
 
-      <tr style="font-size:0.7rem;">
+      <tr style="font-size:0.6rem;">
         <td height="14">{{ $order->nurse->hr6 }}</td>
         <td height="14">{{ $order->nurse->pa6 }}</td>
         <td height="14">{{ $order->nurse->fc6 }}</td>
@@ -359,7 +359,7 @@
         <td height="14" style="font-size:0.6rem !important">{{ $order->nurse->obs6 }}</td>
       </tr>
 
-      <tr style="font-size:0.7rem;">
+      <tr style="font-size:0.6rem;">
         <td height="14">{{ $order->nurse->hr7 }}</td>
         <td height="14">{{ $order->nurse->pa7 }}</td>
         <td height="14">{{ $order->nurse->fc7 }}</td>
@@ -378,7 +378,7 @@
         </tr>
 
       <tr>
-        <td colspan="10" style="font-size:0.7rem; text-align: left"><strong>E. OBSERVACION FINAL:</strong> {{ $order->nurse->end_observation }}</td>
+        <td colspan="10" style="font-size:0.6rem; text-align: left"><strong>E. OBSERVACION FINAL:</strong> {{ $order->nurse->end_observation }}</td>
       </tr>
 
       <tr>
@@ -397,15 +397,15 @@
       </tr>
 
         <tr>
-            <td style="font-size:0.7rem;">Hierro 20 mg Fe/mL INY 5 mL: <span style="border:1px solid #000; padding:10px">{{ $order->nurse->iron }} </span></td>
-            <td style="font-size:0.7rem;">Epoteina alfa 2000 Ul/mL: <span style="border:1px solid #000; padding:10px">{{ $order->nurse->epo2000 }} </span></td>
-            <td style="font-size:0.7rem;">Epoteina alfa 4000 Ul/mL: <span style="border:1px solid #000; padding:10px">{{ $order->nurse->epo4000 }} </span></td>
+            <td style="font-size:0.6rem;">Hierro 20 mg Fe/mL INY 5 mL: <span style="border:1px solid #000; padding:10px">{{ $order->nurse->iron }} </span></td>
+            <td style="font-size:0.6rem;">Epoteina alfa 2000 Ul/mL: <span style="border:1px solid #000; padding:10px">{{ $order->nurse->epo2000 }} </span></td>
+            <td style="font-size:0.6rem;">Epoteina alfa 4000 Ul/mL: <span style="border:1px solid #000; padding:10px">{{ $order->nurse->epo4000 }} </span></td>
         </tr>
 
         <tr>
-            <td style="font-size:0.7rem">Hidroxicobalamina 1mg/mL INY 1mL: <span style="border:1px solid #000; padding:10px">{{ $order->nurse->hidroxi }} </span></td>
-            <td style="font-size:0.7rem">Calcitriol 1 mcg/mL INY: <span style="border:1px solid #000; padding:10px">{{ $order->nurse->calcitriol }} </span></td>
-            <td style="font-size:0.7rem">Otros: <span style="border:1px solid #000; padding:10px">{{ $order->nurse->others_med }} </span></td>
+            <td style="font-size:0.6rem">Hidroxicobalamina 1mg/mL INY 1mL: <span style="border:1px solid #000; padding:10px">{{ $order->nurse->hidroxi }} </span></td>
+            <td style="font-size:0.6rem">Calcitriol 1 mcg/mL INY: <span style="border:1px solid #000; padding:10px">{{ $order->nurse->calcitriol }} </span></td>
+            <td style="font-size:0.6rem">Otros: <span style="border:1px solid #000; padding:10px">{{ $order->nurse->others_med }} </span></td>
         </tr>
     </table>
 
