@@ -213,19 +213,19 @@
       </tr>
 
         <tr>
-            <td colspan="10" style="font-size: 0.6rem; border-bottom:1px dotted;" ><strong style="font-size:0.5rem;">S.-</strong>  {{ $order->nurse->s }}</td>
+            <td colspan="10" style="font-size: 0.5rem; border-bottom:1px dotted;" ><strong style="font-size:0.6rem;">S.-</strong>  {{ $order->nurse->s }}</td>
         </tr>
 
         <tr>
-            <td colspan="10" style="font-size: 0.6rem; border-bottom:1px dotted;" ><strong style="font-size:0.5rem">O.-</strong> {{ $order->nurse->o }}</td>
+            <td colspan="10" style="font-size: 0.5rem; border-bottom:1px dotted;" ><strong style="font-size:0.6rem">O.-</strong> {{ $order->nurse->o }}</td>
         </tr>
 
         <tr>
-            <td colspan="10" style="font-size: 0.6rem; border-bottom:1px dotted;" ><strong style="font-size:0.5rem">A.-</strong> {{ $order->nurse->a }}</td>
+            <td colspan="10" style="font-size: 0.5rem; border-bottom:1px dotted;" ><strong style="font-size:0.6rem">A.-</strong> {{ $order->nurse->a }}</td>
         </tr>
 
         <tr>
-            <td colspan="10" style="font-size: 0.6rem; border-bottom:1px dotted;" ><strong style="font-size:0.5rem">P.-</strong> {{ $order->nurse->p }}</td>
+            <td colspan="10" style="font-size: 0.5rem; border-bottom:1px dotted;" ><strong style="font-size:0.6rem">P.-</strong> {{ $order->nurse->p }}</td>
         </tr>
 
       <tr>
@@ -252,7 +252,7 @@
             <td style="font-size: 0.5rem; border:1px solid; text-align: center" width="1%">{{ $order->nurse->filter }}</td>
 
             <td style="font-size: 0.6rem; width:3%; text-align: center">Ultrafiltrado programado:</td>
-            <td style="font-size: 0.5rem; border:1px solid; text-align: center" width="2%">{{ $order->nurse->uf }}</td>
+            <td style="font-size: 0.5rem; border:1px solid; text-align: center" width="3%">{{ $order->nurse->uf }}</td>
 
             <td style="font-size: 0.6rem; width:2%; text-align: center"> Acc. Arterial:</td>
             <td style="font-size: 0.5rem; border:1px solid; text-align: center" width="2%">{{ $order->nurse->access_arterial }}</td>
