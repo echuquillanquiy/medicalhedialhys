@@ -248,11 +248,11 @@
 
     <table width="100%">
         <tr>
-            <td style="font-size: 0.6rem; width:3%; text-align: center">Area/membrana de filtro:</td>
+            <td style="font-size: 0.6rem; width:2%; text-align: center">Area/membrana de filtro:</td>
             <td style="font-size: 0.5rem; border:1px solid; text-align: center" width="1%">{{ $order->nurse->filter }}</td>
 
             <td style="font-size: 0.6rem; width:3%; text-align: center">Ultrafiltrado programado:</td>
-            <td style="font-size: 0.5rem; border:1px solid; text-align: center" width="1%">{{ $order->nurse->uf }}</td>
+            <td style="font-size: 0.5rem; border:1px solid; text-align: center" width="2%">{{ $order->nurse->uf }}</td>
 
             <td style="font-size: 0.6rem; width:2%; text-align: center"> Acc. Arterial:</td>
             <td style="font-size: 0.5rem; border:1px solid; text-align: center" width="2%">{{ $order->nurse->access_arterial }}</td>
