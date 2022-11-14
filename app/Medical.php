@@ -33,7 +33,8 @@ class Medical extends Model
         'end_evaluation',
         'indications',
         'start_hour',
-        'end_hour'
+        'end_hour',
+        'signal'
 
     ];
 

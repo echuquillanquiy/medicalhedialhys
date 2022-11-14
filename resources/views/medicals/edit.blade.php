@@ -69,26 +69,31 @@
 
       @if ($medical->clinical_trouble == null)
 
-        <div class="form-group col-sm-12 col-lg-4">
+        <div class="form-group col-sm-12 col-lg-3">
           <label for="clinical_trouble">Problemas Clínicos:</label>
           <textarea class="form-control" id="" name="clinical_trouble" rows="2">{{ old('clinical_trouble', 'ERC-5 HD') }}</textarea>
         </div>
       @else
-        <div class="form-group col-sm-12 col-lg-4">
+        <div class="form-group col-sm-12 col-lg-3">
           <label for="clinical_trouble">Problemas Clínicos</label>
           <textarea class="form-control" id="" name="clinical_trouble" rows="2">{{ $medical->clinical_trouble }}</textarea>
         </div>
       @endif
 
-      <div class="form-group col-sm-12 col-lg-4">
+      <div class="form-group col-sm-12 col-lg-3">
         <label for="evaluation">Evaluación</label>
         <textarea class="form-control" id="" name="evaluation" rows="2">{{ old('evaluation' ,$medical->evaluation) }}</textarea>
       </div>
 
-      <div class="form-group col-sm-12 col-lg-4">
+      <div class="form-group col-sm-12 col-lg-3">
         <label for="indications">Indicaciones</label>
         <textarea class="form-control" id="" name="indications" rows="2">{{ old('indications', $medical->indications) }}</textarea>
       </div>
+
+          <div class="form-group col-sm-12 col-lg-3">
+              <label for="signal">Signos y Sintomas</label>
+              <textarea class="form-control" id="" name="signal" rows="2">{{ old('signal', $medical->signal) }}</textarea>
+          </div>
 
     </div>
 
