@@ -55,7 +55,7 @@
         <td style="width: 3%; font-size:0.6rem; text-align: center"><strong>N° de Sesión: </strong></td>
         <td style="border:solid 1px; width: 2%; text-align: center; font-size:0.6rem;">{{ $order->nurse->nhd }}</td>
 
-          <td style="width: 6%; font-size:0.6rem; text-align: center"><strong>Atencion en condiciones COVI 19: </strong></td>
+          <td style="width: 6%; font-size:0.6rem; text-align: center"><strong>Atencion en condiciones COVID 19: </strong></td>
           <td style="border:solid 1px; width: 2%; text-align: center; font-size:0.6rem;">{{ $order->covid }}</td>
 
       </tr>
@@ -74,7 +74,7 @@
         </tr>
 
         <tr>
-          <td style="font-size: 0.6rem; width: 10%" colspan="10">Signos - Sintomas: {{ $order->medical->signal }}</td>
+          <td style="font-size: 0.6rem; width: 10%; text-transform:uppercase;" colspan="10">Signos - Sintomas: {{ $order->medical->signal }}</td>
           <td style="font-size: 0.6rem; width: 10%; text-align:right" colspan="2">F.C: {{ $order->medical->fc }}</td>
         </tr>
 
