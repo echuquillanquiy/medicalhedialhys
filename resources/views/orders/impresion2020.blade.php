@@ -74,7 +74,7 @@
         </tr>
 
         <tr>
-          <td style="font-size: 0.6rem; width: 10%" colspan="10">Signos - Sintomas:</td>
+          <td style="font-size: 0.6rem; width: 10%" colspan="10">Signos - Sintomas: {{ $order->medical->signal }}</td>
           <td style="font-size: 0.6rem; width: 10%; text-align:right" colspan="2">F.C: {{ $order->medical->fc }}</td>
         </tr>
 
