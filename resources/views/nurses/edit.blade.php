@@ -304,7 +304,7 @@
                     <option value="INJ">INJ</option>
                     <option value="CVCL">CVCL</option>
                     <option value="CVCLP">CVCLP</option>
-                      <option value="CVCLP">CVCT</option>
+                      <option value="CVCT">CVCT</option>
                   </select>
                 </div>
 
@@ -317,7 +317,7 @@
                       <option value="INJ">INJ</option>
                       <option value="CVCL">CVCL</option>
                       <option value="CVCLP">CVCLP</option>
-                      <option value="CVCLP">CVCT</option>
+                      <option value="CVCT">CVCT</option>
                   </select>
                 </div>
 
