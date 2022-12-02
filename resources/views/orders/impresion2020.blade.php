@@ -95,7 +95,7 @@
         <table width="100%" style="border:2px solid; border-collapse: collapse; border-top: none; margin-top: -2px">
           <tr>
             <td style="font-size: 0.6rem; margin-bottom: 1px; height: 20px" colspan="">EXAMEN: {{ $order->medical->evaluation }}</td>
-            <td style="font-size: 0.6rem; margin-bottom: 1px; height: 20px" colspan="">Indicaciones: {{ $order->medical->indications }}</td>
+            <td style="font-size: 0.6rem; margin-bottom: 1px; height: 20px" colspan="">INDICACIONES: {{ $order->medical->indications }}</td>
           </tr>
         </table>
       </tr>
