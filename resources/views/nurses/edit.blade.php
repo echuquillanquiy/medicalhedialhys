@@ -702,6 +702,47 @@
                 </div>
               </div>
 
+                <div class="row text-center">
+                    <div class="form-group col-sm-12 col-lg-1">
+                        <input type="text" name="hr8" class="form-control" value="{{ old('hr8', $nurse->hr8) }}">
+                    </div>
+
+                    <div class="form-group col-sm-12 col-lg-1">
+                        <input type="text" name="pa8" class="form-control" value="{{ old('pa8', $nurse->pa8) }}">
+                    </div>
+
+                    <div class="form-group col-sm-12 col-lg-1">
+                        <input type="text" name="fc8" class="form-control" value="{{ old('fc8', $nurse->fc8) }}">
+                    </div>
+
+                    <div class="form-group col-sm-12 col-lg-1">
+                        <input type="text" name="qb8" class="form-control" value="{{ old('qb8', $nurse->qb8) }}">
+                    </div>
+
+                    <div class="form-group col-sm-12 col-lg-1">
+                        <input type="text" name="cnd8" class="form-control" value="{{ old('cnd8', $nurse->cnd8) }}">
+                    </div>
+
+                    <div class="form-group col-sm-12 col-lg-1">
+                        <input type="text" name="ra8" class="form-control" value="{{ old('ra8', $nurse->ra8) }}">
+                    </div>
+
+                    <div class="form-group col-sm-12 col-lg-1">
+                        <input type="text" name="rv8" class="form-control" value="{{ old('rv8', $nurse->rv8) }}">
+                    </div>
+
+                    <div class="form-group col-sm-12 col-lg-1">
+                        <input type="text" name="ptm8" class="form-control" value="{{ old('ptm8', $nurse->ptm8) }}">
+                    </div>
+
+                    <div class="form-group col-sm-12 col-lg-2">
+                        <textarea class="form-control" id="" name="sol_hemodev8" rows="1">{{ old('sol_hemodev8', $nurse->sol_hemodev8) }}</textarea>
+                    </div>
+
+                    <div class="form-group col-sm-12 col-lg-2">
+                        <textarea class="form-control" id="" name="obs8" rows="1">{{ old('obs8', $nurse->obs8) }}</textarea>
+                    </div>
+                </div>
 
             </div>
 

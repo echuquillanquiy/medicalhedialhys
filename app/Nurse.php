@@ -116,6 +116,17 @@ class Nurse extends Model
      'ptm7',
       'sol_hemodev7',
      'obs7',
+
+      'hr8',
+      'pa8',
+      'fc8',
+      'qb8',
+      'cnd8',
+      'ra8',
+      'rv8',
+      'ptm8',
+      'sol_hemodev8',
+      'obs8',
 ];
 
      public function order()
