@@ -1,4 +1,4 @@
-<div style="font-family: 'Arial Narrow';">
+<div style="background-image: url({{ asset('img/brand/logo_hysdialisis.png') }}); background-repeat: no-repeat; background-position: center; opacity: 0.2">
     <table style="margin-top:-10px; float: right; height: 9%">
 
         <tr>
@@ -68,7 +68,9 @@
             <td style="color: white; background-color: black; text-align: center;font-size: 0.7rem;">Hora de evaluacion inicial: {{ $order->medical->start_hour }}</td>
           </tr>
 
+
           <table width="100%" style="border:2px solid; border-collapse: collapse; margin-top: -3px;">
+
             <tr>
               <td style="font-size: 0.6rem; width: 95%; text-transform:uppercase;" colspan="10">PROBLEMAS CLINICOS: {{ $order->medical->clinical_trouble }} </td>
               <td style="font-size: 0.6rem; width: 5%; text-align:right" colspan="2">P.A: {{ $order->medical->start_pa }}</td>
