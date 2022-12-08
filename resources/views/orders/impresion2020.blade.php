@@ -1,5 +1,5 @@
 <div style="background-image: url({{ asset('img/brand/logo_hysdialisis.png') }}); background-repeat: no-repeat; background-position: center; opacity: 0.2">
-    <table style="margin-top: -30px; width: 100%">
+    <table style="margin-top: -40px; width: 100%">
 
         <tr>
             <td colspan="10" style="font-size: 0.7rem; text-align: center">
