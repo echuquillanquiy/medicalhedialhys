@@ -1,30 +1,23 @@
 <div style="background-image: url({{ asset('img/brand/logo_hysdialisis.png') }}); background-repeat: no-repeat; background-position: center; opacity: 0.2">
-    <table style="margin-top:-10px; float: right; height: 9%">
+    <table style="margin-top: -30px; width: 100%">
 
         <tr>
-            <th>
-                <img src="{{ asset('img/brand/logo_hysdialisis.png') }}" alt="logo" style="width:10%;">
-            </th>
-
-            <th style="text-align: center; font-size: 0.7rem; width: 40%">
-                <h4 width="100%">FICHA DE PRESCRIPCION Y EVOLUCIÓN DE LA SESIÓN DE HEMODIALISIS</h4>
-            </th>
+            <td colspan="10" style="font-size: 0.7rem; text-align: center">
+                <h4 style="margin-top: 100px">FICHA DE PRESCRIPCION Y EVOLUCIÓN DE LA SESIÓN DE HEMODIALISIS</h4>
+            </td>
 
 
-            <th style="font-size: 0.7rem; width: 50%">
-                <p>Coloque el adhesivo del Código de Barras y/o Lote de Dializador</p>
-            </th>
+            <td colspan="2" style="font-size: 0.5rem; border: #0a0c0d dashed 1px; padding: 20px 50px 0px 0px; text-align: center">
+                <p style="margin-top: 115px; margin-left: 10px; margin-right: -20px"> Coloque el adhesivo del Código de Barras y/o Lote de Dializador</p>
+            </td>
         </tr>
 
     </table>
-    <br>
-    <br>
-    <br>
-    <br>
+
         <table style="margin-top:0px;">
           <tr>
 
-            <td colspan="4" style="font-size: 0.6rem"><strong>Apellidos y Nombres: </strong></td>
+            <td colspan="6" style="font-size: 0.6rem; text-align: right;"><strong>Apellidos y Nombres: </strong></td>
             <td width="586px" style="border-bottom: solid 1px; font-size: 0.7rem; text-transform:uppercase;">{{ $order->patient->name }}</td>
 
           </tr>
@@ -168,7 +161,6 @@
           <tr>
             <td colspan="4" style="font-size: 0.6rem; text-align: center;">
               <br>
-              <br>
                 <br>
                 <br>
                 <br>
@@ -180,7 +172,6 @@
               Médico que Inicia HD
             </td>
             <td colspan="4" style="font-size: 0.6rem; text-align: center">
-              <br>
               <br>
                 <br>
                 <br>
