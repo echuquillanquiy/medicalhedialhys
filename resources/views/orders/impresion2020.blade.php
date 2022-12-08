@@ -8,7 +8,7 @@
 
 
             <td colspan="2" style="font-size: 0.5rem; border: #0a0c0d dashed 1px; padding: 20px 50px 0px 0px; text-align: center">
-                <p style="margin-top: 115px; margin-left: 10px; margin-right: -20px"> Coloque el adhesivo del Código de Barras y/o Lote de Dializador</p>
+                <p style="margin-top: 100px; margin-left: 10px; margin-right: -20px"> Coloque el adhesivo del Código de Barras y/o Lote de Dializador</p>
             </td>
         </tr>
 
