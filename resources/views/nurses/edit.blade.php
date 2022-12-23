@@ -226,7 +226,7 @@
 
                 <div class="form-group col-sm-12 col-lg-2">
                   <label for="position">Puesto</label>
-                  <input type="number" name="position" class="form-control" value="{{ old('position', $nurse->position) }}">
+                  <input type="text" name="position" class="form-control" value="{{ old('position', $nurse->position) }}">
                 </div>
 
                 <div class="form-group col-sm-12 col-lg-2">
