@@ -254,13 +254,7 @@
 
                 <div class="form-group col-sm-12 col-lg-2">
                   <label for="start_weight">Peso Inicial</label>
-                  <input type="text" name="start_weight" class="form-control"
-                  @if ($nurse->start_weight == null)
-                    value="{{ old('start_weight', $nurse->order->medical->start_weight) }}"
-                  @else
-                    value="{{ old('start_weight', $nurse->start_weight) }}"
-                  @endif
-                  >
+                  <input type="text" name="start_weight" class="form-control" value="{{ old('start_weight', $nurse->order->medical->start_weight) }}" readonly>
                 </div>
 
                 <div class="form-group col-sm-12 col-lg-2">
@@ -287,13 +281,7 @@
 
                 <div class="form-group col-sm-12 col-lg-2">
                   <label for="uf">UF</label>
-                  <input type="text" name="uf" class="form-control"
-                  @if($nurse->uf == null)
-                    value="{{ old('uf', $nurse->order->medical->uf) }}"
-                  @else
-                    value="{{ old('uf', $nurse->uf) }}"
-                  @endif
-                  >
+                  <input type="text" name="uf" class="form-control" value="{{ old('uf', $nurse->order->medical->uf) }}" readonly>
                 </div>
 
                 <div class="form-group col-sm-12 col-lg-2">
