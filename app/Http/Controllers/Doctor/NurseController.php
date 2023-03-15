@@ -141,7 +141,13 @@ class NurseController extends Controller
             }
         }
 
-        return view('nurses.edit', compact('nurse'));
+        $patient = $nurse->patient;
+        $fecha = Carbon::now();
+        $ultimo = $nurse->where('patient', $patient)->whereDate('created_at', '!=', $fecha)->latest()->first();
+        $ult = $ultimo->nhd += 1;
+
+
+        return view('nurses.edit', compact('nurse', 'ult'));
     }
 
     /**
