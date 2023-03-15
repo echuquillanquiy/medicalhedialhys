@@ -125,7 +125,11 @@
 
       <div class="form-group col-sm-12 col-lg-2">
         <label for="qd">QD</label>
-        <input type="text" name="qd" class="form-control" value="{{ old('qd', $medical->qd) }}">
+          @if($medical->qd)
+              <input type="text" name="qd" class="form-control" value="{{ $medical->qd }}">
+          @else
+            <input type="text" name="qd" class="form-control" value="{{ old('qd', '500') }}">
+          @endif
       </div>
 
       <div class="form-group col-sm-12 col-lg-2">
@@ -153,22 +157,41 @@
 
         <div class="form-group col-sm-12 col-lg-1">
             <label for="profile_na">Perfil Na</label>
-            <input type="text" name="profile_na" class="form-control" value="{{ old('profile_na', $medical->profile_na) }}">
+            @if($medical->profile_na)
+                <input type="text" name="profile_na" class="form-control" value="{{ $medical->profile_na }}">
+            @else
+                <input type="text" name="profile_na" class="form-control" value="{{ old('profile_na', 'PERFIL L') }}">
+            @endif
         </div>
 
       <div class="form-group col-sm-12 col-lg-2">
         <label for="area_filter">ÁREA/FILTRO</label>
-        <input type="text" name="area_filter" class="form-control" value="{{ old('area_filter', $medical->area_filter) }}">
+          @if($medical->area_filter)
+              <input type="text" name="area_filter" class="form-control" value="{{ $medical->area_filter }}">
+          @else
+              <input type="text" name="area_filter" class="form-control" value="{{ old('area_filter', '1.9') }}">
+          @endif
+
       </div>
 
       <div class="form-group col-sm-12 col-lg-2">
         <label for="membrane">MEMBRANA</label>
-        <input type="text" name="membrane" class="form-control" value="{{ old('membrane', $medical->membrane) }}">
+          @if($medical->membrane)
+              <input type="text" name="membrane" class="form-control" value="{{ $medical->membrane }}">
+          @else
+              <input type="text" name="membrane" class="form-control" value="{{ old('membrane', 'PSF') }}">
+          @endif
+
       </div>
 
         <div class="form-group col-sm-12 col-lg-2">
             <label for="profile_uf">Perfil UF:</label>
-            <input type="text" name="profile_uf" class="form-control" value="{{ old('profile_uf', $medical->profile_uf) }}">
+            @if($medical->profile_uf)
+                <input type="text" name="profile_uf" class="form-control" value="{{ $medical->profile_uf }}">
+            @else
+                <input type="text" name="profile_uf" class="form-control" value="{{ old('profile_uf', 'PERFIL L') }}">
+            @endif
+
         </div>
 
 <!--      <div class="form-group col-sm-12 col-lg-2">

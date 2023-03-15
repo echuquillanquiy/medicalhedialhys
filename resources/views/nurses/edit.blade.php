@@ -257,10 +257,17 @@
                   <input type="text" name="start_weight" class="form-control" value="{{ old('start_weight', $nurse->order->medical->start_weight) }}" readonly>
                 </div>
 
-                <div class="form-group col-sm-12 col-lg-2">
-                  <label for="end_weight">Peso Final</label>
-                  <input type="text" name="end_weight" class="form-control" value="{{ old('end_weight', $nurse->end_weight) }}">
-                </div>
+                  @if($nurse->end_weight)
+                      <div class="form-group col-sm-12 col-lg-2">
+                          <label for="end_weight">Peso Final</label>
+                          <input type="text" name="end_weight" class="form-control" value="{{ old('end_weight', $nurse->end_weight) }}">
+                      </div>
+                  @else
+                      <div class="form-group col-sm-12 col-lg-2">
+                          <label for="end_weight">Peso Final</label>
+                          <input type="text" name="end_weight" class="form-control" value="{{ old('end_weight', $nurse->order->medical->dry_weight) }}">
+                      </div>
+                  @endif
 
                 <div class="form-group col-sm-12 col-lg-2">
                   <label for="machine">N° de Maquina</label>
