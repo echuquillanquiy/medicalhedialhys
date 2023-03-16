@@ -394,7 +394,7 @@
               <div class="row text-center">
                 <div class="form-group col-sm-12 col-lg-1">
                   <label for="hr">HR</label>
-                  <input type="text" name="hr" class="form-control" value="{{ old('hr', $nurse->hr) }}">
+                  <input type="time" name="hr" class="form-control" value="{{ old('hr', $nurse->hr) }}">
                 </div>
 
                 @if($nurse->pa == null)
@@ -452,7 +452,7 @@
 
               <div class="row text-center">
                 <div class="form-group col-sm-12 col-lg-1">
-                  <input type="text" name="hr2" class="form-control" value="{{ old('hr2', $nurse->hr2) }}">
+                  <input type="time" name="hr2" class="form-control" value="{{ old('hr2', $nurse->hr2) }}">
                 </div>
 
                 <div class="form-group col-sm-12 col-lg-1">
@@ -494,7 +494,7 @@
 
               <div class="row text-center">
                 <div class="form-group col-sm-12 col-lg-1">
-                  <input type="text" name="hr3" class="form-control" value="{{ old('hr3', $nurse->hr3) }}">
+                  <input type="time" name="hr3" class="form-control" value="{{ old('hr3', $nurse->hr3) }}">
                 </div>
 
                 <div class="form-group col-sm-12 col-lg-1">
@@ -536,7 +536,7 @@
 
               <div class="row text-center">
                 <div class="form-group col-sm-12 col-lg-1">
-                  <input type="text" name="hr4" class="form-control" value="{{ old('hr4', $nurse->hr4) }}">
+                  <input type="time" name="hr4" class="form-control" value="{{ old('hr4', $nurse->hr4) }}">
                 </div>
 
                 <div class="form-group col-sm-12 col-lg-1">
@@ -578,7 +578,7 @@
 
               <div class="row text-center">
                 <div class="form-group col-sm-12 col-lg-1">
-                  <input type="text" name="hr5" class="form-control" value="{{ old('hr5', $nurse->hr5) }}">
+                  <input type="time" name="hr5" class="form-control" value="{{ old('hr5', $nurse->hr5) }}">
                 </div>
 
                 <div class="form-group col-sm-12 col-lg-1">
@@ -620,7 +620,7 @@
 
               <div class="row text-center">
                 <div class="form-group col-sm-12 col-lg-1">
-                  <input type="text" name="hr6" class="form-control" value="{{ old('hr6' , $nurse->hr6) }}">
+                  <input type="time" name="hr6" class="form-control" value="{{ old('hr6' , $nurse->hr6) }}">
                 </div>
 
                 <div class="form-group col-sm-12 col-lg-1">
@@ -662,7 +662,7 @@
 
               <div class="row text-center">
                 <div class="form-group col-sm-12 col-lg-1">
-                  <input type="text" name="hr7" class="form-control" value="{{ old('hr7', $nurse->hr7) }}">
+                  <input type="time" name="hr7" class="form-control" value="{{ old('hr7', $nurse->hr7) }}">
                 </div>
 
                 <div class="form-group col-sm-12 col-lg-1">
@@ -704,7 +704,7 @@
 
                 <div class="row text-center">
                     <div class="form-group col-sm-12 col-lg-1">
-                        <input type="text" name="hr8" class="form-control" value="{{ old('hr8', $nurse->hr8) }}">
+                        <input type="time" name="hr8" class="form-control" value="{{ old('hr8', $nurse->hr8) }}">
                     </div>
 
                     <div class="form-group col-sm-12 col-lg-1">
