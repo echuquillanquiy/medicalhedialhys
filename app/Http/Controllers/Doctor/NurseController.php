@@ -160,6 +160,10 @@ class NurseController extends Controller
                 {
                     $nurse->hr8 = Carbon::parse($nurse->hr)->addMinutes(225)->format('H:i');
                 }
+                elseif($nurse->order->medical->hour_hd == '3')
+                {
+                    $nurse->hr8 = 0;
+                }
                 else
                 {
                     $nurse->hr8 = Carbon::parse($nurse->hr)->addMinutes(210)->format('H:i');
@@ -170,10 +174,11 @@ class NurseController extends Controller
 
         $patient = $nurse->patient;
         $fecha = Carbon::now();
+        $ultimo = $nurse->where('patient', $patient)->whereDate('created_at', '!=', $fecha)->latest()->first();
+        $ult = $ultimo ? $ultimo->nhd : 0;
+
         if (!$nurse->nhd)
         {
-            $ultimo = $nurse->where('patient', $patient)->whereDate('created_at', '!=', $fecha)->latest()->first();
-            $ult = $ultimo ? $ultimo->nhd : 0;
             $nurse->nhd = $ult + 1;
         }
         else
